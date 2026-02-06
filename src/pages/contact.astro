@@ -1,0 +1,309 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Get in touch with Scale Street to discuss AI adoption for your healthcare organization.">
+
+  <!-- Page header -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="hero-badge">Get in Touch</div>
+      <h1>Let's start a conversation</h1>
+      <p>Whether you're exploring AI for the first time or ready to move on a specific initiative, we're here to help. No pitch decks, no pressure — just a practical discussion about what's possible.</p>
+    </div>
+  </section>
+
+  <!-- Contact content -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@organization.org" />
+            </div>
+            <div class="form-group">
+              <label for="org">Organization</label>
+              <input type="text" id="org" name="organization" placeholder="Your organization name" />
+            </div>
+            <div class="form-group">
+              <label for="type">Organization type</label>
+              <select id="type" name="org_type">
+                <option value="" disabled selected>Select one</option>
+                <option value="fqhc">FQHC / Community Health Center</option>
+                <option value="rural-hospital">Rural Hospital</option>
+                <option value="safety-net">Safety-Net Provider</option>
+                <option value="health-system">Health System</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about what you're looking for..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send message <span class="arrow">&rarr;</span></button>
+          </form>
+        </div>
+
+        <div class="contact-sidebar">
+          <div class="sidebar-card">
+            <h3>What to expect</h3>
+            <ol class="expect-list">
+              <li>
+                <strong>We respond within one business day</strong>
+                <p>You'll hear back from a real person — not an auto-reply.</p>
+              </li>
+              <li>
+                <strong>A 30-minute introductory call</strong>
+                <p>We'll learn about your organization and discuss where AI might fit.</p>
+              </li>
+              <li>
+                <strong>A tailored next step</strong>
+                <p>Whether that's a readiness assessment, a deeper dive, or just some resources — we'll point you in the right direction.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Direct contact</h3>
+            <div class="contact-detail">
+              <div class="contact-label">Email</div>
+              <a href="mailto:hello@scalestreet.ai" class="contact-value">hello@scalestreet.ai</a>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-label">Based in</div>
+              <span class="contact-value">The Southeast, United States</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 5rem 1.5rem 3rem;
+    background: var(--color-white);
+  }
+
+  .page-hero-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    background: rgba(15, 15, 189, 0.07);
+    padding: 0.375rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.01em;
+  }
+
+  .page-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .page-hero p {
+    font-size: 1.125rem;
+    color: var(--color-gray-500);
+    line-height: 1.7;
+  }
+
+  /* Contact grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-gray-700);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 12px;
+    background: var(--color-white);
+    color: var(--color-gray-800);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--color-gray-300);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(15, 15, 189, 0.1);
+  }
+
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.75rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Sidebar */
+  .contact-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar-card {
+    background: var(--color-gray-50);
+    border-radius: 16px;
+    padding: 1.75rem;
+  }
+
+  .sidebar-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 1.25rem;
+  }
+
+  .expect-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    counter-reset: step;
+    list-style: none;
+  }
+
+  .expect-list li {
+    counter-increment: step;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  .expect-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.375rem;
+    height: 1.375rem;
+    border-radius: 50%;
+    background: var(--color-blue);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .expect-list li strong {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-gray-800);
+    margin-bottom: 0.25rem;
+  }
+
+  .expect-list li p {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    line-height: 1.5;
+  }
+
+  .contact-detail {
+    margin-bottom: 1rem;
+  }
+
+  .contact-detail:last-child {
+    margin-bottom: 0;
+  }
+
+  .contact-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-500);
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-value {
+    font-size: 0.9375rem;
+    color: var(--color-gray-800);
+  }
+
+  a.contact-value:hover {
+    color: var(--color-blue);
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: 3.5rem 1.25rem 2.5rem;
+    }
+
+    .page-hero h1 {
+      font-size: 2rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+</style>
