@@ -6,10 +6,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Page header -->
   <section class="page-hero">
-    <div class="page-hero-inner">
-      <div class="hero-badge">About Us</div>
-      <h1>AI consulting rooted in the communities we serve</h1>
-      <p>Scale Street was founded to help healthcare organizations — from large health systems to critical access hospitals — navigate the path to AI adoption with confidence.</p>
+    <div class="page-hero-inner page-hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">About Us</div>
+        <h1>AI consulting born in Athens, Georgia — built for the communities we serve</h1>
+        <p>Scale Street was founded in Athens, GA to help healthcare organizations across the Southeast — from large health systems to critical access hospitals — navigate the path to AI adoption with confidence.</p>
+      </div>
+      <div class="hero-image">
+        <img src="/images/healthcare-team.jpg" alt="Healthcare team working together" />
+      </div>
     </div>
   </section>
 
@@ -19,9 +24,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="story-grid">
         <div class="story-content">
           <h2>Our story</h2>
-          <p>We started Scale Street after seeing healthcare organizations of all sizes struggle with the same challenge: they knew AI could transform their operations, but lacked the specialized guidance to make it happen.</p>
-          <p>From large health systems to critical access hospitals to FQHCs, the gap wasn't technology — it was support. Organizations needed a partner who understood both the promise of AI and the realities of healthcare delivery.</p>
-          <p>We set out to fill that gap. Based in the Southeast, we bring deep healthcare domain knowledge, hands-on AI implementation experience, and a commitment to helping every type of healthcare organization — regardless of size — unlock the potential of AI.</p>
+          <p>We started Scale Street in Athens, Georgia — a city known for its tight-knit community, creative energy, and deep roots in education and healthcare. It's where we live, and it shapes how we work.</p>
+          <p>We saw healthcare organizations of all sizes struggle with the same challenge: they knew AI could transform their operations, but lacked the specialized guidance to make it happen. From large health systems to critical access hospitals to FQHCs, the gap wasn't technology — it was support.</p>
+          <p>We set out to fill that gap right here from Athens. Being rooted in a community — not a corporate tower — keeps us grounded. We bring deep healthcare domain knowledge, hands-on AI implementation experience, and a commitment to helping every type of healthcare organization, regardless of size, unlock the potential of AI.</p>
         </div>
         <div class="story-image">
           <img src="/images/team-collaboration.jpg" alt="Healthcare team collaboration" />
@@ -56,7 +61,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
           </div>
           <h3>Locally Connected</h3>
-          <p>We're Southeast-based and deeply familiar with the healthcare landscape, regulatory environment, and community dynamics of this region.</p>
+          <p>We're proudly based in Athens, GA — and deeply familiar with the healthcare landscape, regulatory environment, and community dynamics of the Southeast.</p>
         </div>
       </div>
     </div>
@@ -103,7 +108,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="focus-content">
           <h2>Who we work with</h2>
-          <p>We've built deep expertise across the full spectrum of healthcare organizations, with a particular strength in the Southeast.</p>
+          <p>From our home base in Athens, Georgia, we've built deep expertise across the full spectrum of healthcare organizations throughout the Southeast.</p>
           <div class="focus-list">
             <div class="focus-item">
               <span class="focus-dot blue"></span>
@@ -154,7 +159,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .page-hero-inner {
     max-width: var(--max-width);
     margin: 0 auto;
-    max-width: 640px;
+  }
+
+  .page-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
   }
 
   .hero-badge {
@@ -395,6 +413,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   @media (max-width: 768px) {
     .page-hero {
       padding: 3.5rem 1.25rem 2.5rem;
+    }
+
+    .page-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-image img {
+      height: 240px;
     }
 
     .page-hero h1 {

@@ -2,9 +2,14 @@
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
-const { title, description = "Scale Street helps health systems, hospitals, critical access hospitals, and FQHCs adopt AI with confidence." } = Astro.props;
+const { title, description = "Scale Street helps health systems, hospitals, critical access hospitals, and FQHCs adopt AI with confidence.", ogImage = "/images/hero-healthcare.jpg" } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+const fullTitle = title === "Healthcare AI Consulting" ? "Scale Street — Healthcare AI Consulting" : `${title} | Scale Street`;
 ---
 
 <!doctype html>
@@ -13,11 +18,88 @@ const { title, description = "Scale Street helps health systems, hospitals, crit
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | Scale Street</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Page title -->
+    <title>{fullTitle}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL.href} />
+    <meta property="og:site_name" content="Scale Street" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL.href} />
+
+    <!-- Additional SEO -->
+    <meta name="author" content="Scale St. Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f0fbd" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Scale St. Solutions",
+      "alternateName": "Scale Street",
+      "url": "https://scalestreet.com",
+      "logo": "https://scalestreet.com/logo.avif",
+      "description": "Healthcare AI consulting firm helping health systems, hospitals, critical access hospitals, and FQHCs adopt AI with confidence.",
+      "email": "hello@scalestreet.com",
+      "telephone": "+1-706-206-2530",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Southeast",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Southeastern United States"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Tyler S. Wallace",
+        "honorificSuffix": "Ph.D.",
+        "jobTitle": "Principal Consultant"
+      },
+      "serviceType": [
+        "AI Readiness Assessment",
+        "AI Strategy Development",
+        "AI Implementation & Integration",
+        "AI Training & Change Management"
+      ],
+      "knowsAbout": [
+        "Healthcare AI",
+        "Clinical AI Implementation",
+        "EHR Integration",
+        "Microsoft Nuance DAX",
+        "eClinicalWorks Healow Genie AI",
+        "Microsoft 365 Copilot",
+        "FQHC Operations",
+        "Health System AI Strategy"
+      ],
+      "sameAs": [
+        "https://github.com/Tyler-Scales"
+      ]
+    })} />
   </head>
   <body>
     <header class="site-header">
@@ -31,6 +113,7 @@ const { title, description = "Scale Street helps health systems, hospitals, crit
         <ul class="nav-links">
           <li><a href="/" class:list={[{ active: Astro.url.pathname === "/" }]}>Home</a></li>
           <li><a href="/services" class:list={[{ active: Astro.url.pathname === "/services" }]}>Services</a></li>
+          <li><a href="/projects" class:list={[{ active: Astro.url.pathname === "/projects" }]}>Projects</a></li>
           <li><a href="/about" class:list={[{ active: Astro.url.pathname === "/about" }]}>About</a></li>
           <li><a href="/contact" class:list={[{ active: Astro.url.pathname === "/contact" }]}>Contact</a></li>
         </ul>
@@ -53,6 +136,7 @@ const { title, description = "Scale Street helps health systems, hospitals, crit
             <ul>
               <li><a href="/about">About</a></li>
               <li><a href="/services">Services</a></li>
+              <li><a href="/projects">Projects</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>

@@ -129,6 +129,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <img src="/images/rural-hospital.jpg" alt="Healthcare facility serving the community" />
   </section>
 
+  <!-- Featured Projects -->
+  <section class="section">
+    <div class="section-inner section-center">
+      <div class="section-header">
+        <h2>Real projects, real impact</h2>
+        <p>A few examples of the work we've done to bring AI into healthcare organizations.</p>
+      </div>
+      <div class="projects-grid">
+        <a href="/projects" class="project-card">
+          <div class="project-accent blue"></div>
+          <div class="project-card-body">
+            <span class="project-stat">100+ Providers</span>
+            <h3>Nuance DAX Rollout</h3>
+            <p>Ambient AI documentation deployed across multi-site Emergency Departments.</p>
+          </div>
+        </a>
+        <a href="/projects" class="project-card">
+          <div class="project-accent green"></div>
+          <div class="project-card-body">
+            <span class="project-stat">FQHC AI-Enabled</span>
+            <h3>Healow Genie AI</h3>
+            <p>eClinicalWorks AI install and configuration for an FQHC.</p>
+          </div>
+        </a>
+        <a href="/projects" class="project-card">
+          <div class="project-accent mint"></div>
+          <div class="project-card-body">
+            <span class="project-stat">Copilot + Agents</span>
+            <h3>M365 Copilot</h3>
+            <p>Setup, optimization, security hardening, and AI agent deployment.</p>
+          </div>
+        </a>
+        <a href="/projects" class="project-card">
+          <div class="project-accent peach"></div>
+          <div class="project-card-body">
+            <span class="project-stat">2,000+ Trained</span>
+            <h3>Training Excellence</h3>
+            <p>50+ sessions consistently rated the best technical training ever.</p>
+          </div>
+        </a>
+      </div>
+      <a href="/projects" class="btn btn-outline" style="margin-top: 2.5rem;">View all projects <span class="arrow">&rarr;</span></a>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="section cta-section">
     <div class="section-inner section-center">
@@ -377,6 +422,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     object-fit: cover;
   }
 
+  /* Featured Projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    display: flex;
+    overflow: hidden;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 16px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    text-align: left;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .project-accent {
+    width: 6px;
+    flex-shrink: 0;
+  }
+
+  .project-accent.blue { background: var(--color-blue); }
+  .project-accent.green { background: var(--color-green); }
+  .project-accent.mint { background: var(--color-blue-light); }
+  .project-accent.peach { background: var(--color-peach); }
+
+  .project-card-body {
+    padding: 1.5rem;
+  }
+
+  .project-stat {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-gray-500);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.375rem;
+  }
+
+  .project-card p {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    line-height: 1.6;
+  }
+
   /* CTA */
   .cta-section {
     background: var(--color-gray-50);
@@ -425,6 +529,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .trust-items {
       gap: 1.5rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>
