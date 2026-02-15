@@ -4,6 +4,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Projects" description="Real-world AI projects delivered for health systems, hospitals, FQHCs, and healthcare organizations across the Southeast.">
 
+  <!-- Projects Page Structured Data for AEO -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Scale Street Projects — Healthcare AI Case Studies",
+    "description": "Real-world AI implementations for healthcare organizations including Nuance DAX rollouts, eClinicalWorks Healow Genie AI for FQHCs, Microsoft 365 Copilot deployments, and healthcare AI training programs.",
+    "url": "https://scalestreet.com/projects",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Nuance DAX Rollout",
+          "description": "Ambient AI documentation deployed for 100+ providers across multi-site Emergency Departments."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "eClinicalWorks Healow Genie AI",
+          "description": "AI-assisted clinical workflow implementation for a Federally Qualified Health Center."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Microsoft 365 Copilot",
+          "description": "End-to-end Copilot setup, optimization, security hardening, and AI agent deployment."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Training Excellence",
+          "description": "50+ training sessions for 2,000+ participants, consistently rated the best technical training ever attended."
+        }
+      ]
+    }
+  })} />
+
   <!-- Page header -->
   <section class="page-hero">
     <div class="page-hero-inner page-hero-grid">

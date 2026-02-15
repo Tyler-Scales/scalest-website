@@ -2,7 +2,28 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact" description="Get in touch with Scale Street to discuss AI adoption for your healthcare organization.">
+<BaseLayout title="Contact" description="Get in touch with Scale Street to discuss AI adoption for your healthcare organization. Based in Athens, Georgia, serving healthcare organizations nationwide.">
+
+  <!-- Contact Page Structured Data -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Scale Street",
+    "description": "Get in touch with Scale Street to discuss AI adoption for your healthcare organization.",
+    "url": "https://scalestreet.com/contact",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "Scale St. Solutions",
+      "email": "hello@scalestreet.com",
+      "telephone": "+1-706-206-2530",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Athens",
+        "addressRegion": "GA",
+        "addressCountry": "US"
+      }
+    }
+  })} />
 
   <!-- Page header -->
   <section class="page-hero">
@@ -65,7 +86,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="detail-divider"></div>
         <div class="detail-item">
           <div class="detail-label">Based in</div>
-          <span class="detail-value">The Southeast, United States</span>
+          <span class="detail-value">Athens, Georgia</span>
         </div>
       </div>
     </div>

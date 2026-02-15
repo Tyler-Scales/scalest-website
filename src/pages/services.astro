@@ -1,8 +1,49 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqItems = [
+  {
+    question: "What is healthcare AI consulting?",
+    answer: "Healthcare AI consulting helps hospitals, health systems, and FQHCs evaluate, adopt, and implement artificial intelligence tools. A healthcare AI consultant bridges the gap between clinical operations and AI technology — ensuring solutions are practical, compliant, and aligned with patient care goals."
+  },
+  {
+    question: "How do I know if my hospital is ready for AI?",
+    answer: "An AI readiness assessment evaluates your infrastructure, data maturity, EHR integration capabilities, staff capacity, and organizational culture. Scale Street conducts readiness assessments that identify quick wins, gaps to address, and a prioritized roadmap for AI adoption tailored to your organization's size and resources."
+  },
+  {
+    question: "What AI tools do you implement for healthcare organizations?",
+    answer: "We implement a range of clinical and operational AI tools including Microsoft Nuance DAX for ambient clinical documentation, eClinicalWorks Healow Genie AI for FQHC workflows, and Microsoft 365 Copilot for administrative productivity. We also help evaluate and deploy other AI solutions based on your specific needs."
+  },
+  {
+    question: "Can small hospitals and FQHCs afford AI consulting?",
+    answer: "Yes. Scale Street specializes in working with critical access hospitals and Federally Qualified Health Centers. We understand lean IT teams, tight budgets, and HRSA requirements. Our approach focuses on high-impact, low-cost AI use cases that deliver measurable ROI even for smaller organizations."
+  },
+  {
+    question: "How long does an AI implementation take?",
+    answer: "Timelines vary by scope. An AI readiness assessment typically takes 2–4 weeks. A focused implementation like Nuance DAX or Healow Genie AI can take 4–12 weeks from pilot to full deployment. Strategy engagements typically run 6–8 weeks. We design every engagement to show value quickly."
+  },
+  {
+    question: "Do you work with organizations outside the Southeast?",
+    answer: "While Scale Street is based in Athens, Georgia and has deep expertise in Southeastern healthcare, we work with healthcare organizations nationwide. Our consulting model combines on-site engagement with remote support to serve clients wherever they are."
+  }
+];
 ---
 
 <BaseLayout title="Services" description="AI consulting services for health systems, hospitals, critical access hospitals, and FQHCs.">
+
+  <!-- FAQ Schema -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  })} />
 
   <!-- Page header -->
   <section class="page-hero">
@@ -127,6 +168,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3>FQHCs & Community Health Centers</h3>
           <p>Navigate AI adoption within FQHC operations — from HRSA compliance to sliding-fee-scale workflows and UDS reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="section-inner section-center">
+      <div class="section-header">
+        <h2>Frequently asked questions</h2>
+        <p>Common questions we hear from healthcare organizations exploring AI.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What is healthcare AI consulting?</h3>
+          <p>Healthcare AI consulting helps hospitals, health systems, and FQHCs evaluate, adopt, and implement artificial intelligence tools. A healthcare AI consultant bridges the gap between clinical operations and AI technology — ensuring solutions are practical, compliant, and aligned with patient care goals.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I know if my hospital is ready for AI?</h3>
+          <p>An AI readiness assessment evaluates your infrastructure, data maturity, EHR integration capabilities, staff capacity, and organizational culture. Scale Street conducts readiness assessments that identify quick wins, gaps to address, and a prioritized roadmap for AI adoption tailored to your organization's size and resources.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What AI tools do you implement for healthcare organizations?</h3>
+          <p>We implement a range of clinical and operational AI tools including Microsoft Nuance DAX for ambient clinical documentation, eClinicalWorks Healow Genie AI for FQHC workflows, and Microsoft 365 Copilot for administrative productivity. We also help evaluate and deploy other AI solutions based on your specific needs.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can small hospitals and FQHCs afford AI consulting?</h3>
+          <p>Yes. Scale Street specializes in working with critical access hospitals and Federally Qualified Health Centers. We understand lean IT teams, tight budgets, and HRSA requirements. Our approach focuses on high-impact, low-cost AI use cases that deliver measurable ROI even for smaller organizations.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does an AI implementation take?</h3>
+          <p>Timelines vary by scope. An AI readiness assessment typically takes 2–4 weeks. A focused implementation like Nuance DAX or Healow Genie AI can take 4–12 weeks from pilot to full deployment. Strategy engagements typically run 6–8 weeks. We design every engagement to show value quickly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you work with organizations outside the Southeast?</h3>
+          <p>While Scale Street is based in Athens, Georgia and has deep expertise in Southeastern healthcare, we work with healthcare organizations nationwide. Our consulting model combines on-site engagement with remote support to serve clients wherever they are.</p>
         </div>
       </div>
     </div>
@@ -323,6 +400,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 0.9375rem;
     color: var(--color-gray-500);
     line-height: 1.6;
+  }
+
+  /* FAQ */
+  .faq-list {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+  }
+
+  .faq-item {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 16px;
+    padding: 1.75rem 2rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .faq-item p {
+    font-size: 0.9375rem;
+    color: var(--color-gray-500);
+    line-height: 1.7;
   }
 
   /* CTA */

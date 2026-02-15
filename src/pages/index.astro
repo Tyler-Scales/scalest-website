@@ -4,6 +4,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Healthcare AI Consulting">
 
+  <!-- Homepage Structured Data for AEO -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Scale Street — Healthcare AI Consulting",
+    "description": "Scale Street partners with health systems, hospitals, critical access hospitals, and FQHCs to implement AI solutions that improve patient outcomes, reduce burden on staff, and drive operational efficiency.",
+    "url": "https://scalestreet.com",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-content", ".section-header"]
+    },
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "Scale St. Solutions",
+      "description": "Healthcare AI consulting firm based in Athens, Georgia helping health systems, hospitals, critical access hospitals, and FQHCs adopt AI with confidence.",
+      "url": "https://scalestreet.com"
+    }
+  })} />
+
   <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">

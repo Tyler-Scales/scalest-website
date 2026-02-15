@@ -2,7 +2,85 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About" description="Learn about Scale Street — a healthcare AI consulting firm helping health systems, hospitals, and FQHCs adopt AI.">
+<BaseLayout title="About" description="Learn about Scale Street — a healthcare AI consulting firm based in Athens, Georgia helping health systems, hospitals, and FQHCs adopt AI.">
+
+  <!-- About Page Structured Data for AEO -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Scale Street",
+    "description": "Scale Street is a healthcare AI consulting firm based in Athens, Georgia, founded by Tyler S. Wallace, Ph.D. We help health systems, hospitals, critical access hospitals, and FQHCs adopt AI with confidence.",
+    "url": "https://scalestreet.com/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Scale St. Solutions",
+      "alternateName": "Scale Street",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Athens, Georgia",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Athens",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Tyler S. Wallace",
+        "honorificSuffix": "Ph.D.",
+        "jobTitle": "Principal Consultant",
+        "description": "Healthcare AI consultant and founder of Scale Street, specializing in AI strategy, implementation, and training for healthcare organizations across the Southeast."
+      },
+      "knowsAbout": [
+        "Healthcare AI Strategy",
+        "Clinical AI Implementation",
+        "Ambient AI Documentation",
+        "Microsoft Nuance DAX",
+        "eClinicalWorks Healow Genie AI",
+        "Microsoft 365 Copilot",
+        "EHR Integration",
+        "FQHC AI Adoption",
+        "Critical Access Hospital AI",
+        "Healthcare Change Management",
+        "AI Training for Healthcare Workers"
+      ]
+    }
+  })} />
+
+  <!-- HowTo Schema for Approach -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How Scale Street Approaches Healthcare AI Adoption",
+    "description": "Scale Street's four-step approach to helping healthcare organizations adopt AI responsibly and effectively.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Listen first",
+        "text": "We start by understanding your organization — your workflows, your challenges, your patients, and your goals. AI is a tool. Understanding the problem it should solve comes first."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Start small, prove value",
+        "text": "We identify high-impact, low-risk use cases to pilot first. Early wins build confidence, demonstrate ROI, and create momentum for broader adoption."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Build capacity, not dependency",
+        "text": "Our goal is to make ourselves unnecessary. We transfer knowledge, build internal capabilities, and design for sustainability so your organization can thrive long after our engagement ends."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Measure what matters",
+        "text": "We tie everything back to outcomes — patient outcomes, operational efficiency, staff satisfaction, and financial sustainability. If AI isn't moving the needle on what matters, we adjust."
+      }
+    ]
+  })} />
 
   <!-- Page header -->
   <section class="page-hero">
