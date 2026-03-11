@@ -71,9 +71,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="section-inner">
       <div class="founder-grid">
         <div class="founder-photo">
-          <div class="photo-placeholder">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
+          <img src="/images/tyler-presenting.jpg" alt="Tyler S. Wallace, Ph.D. presenting" />
         </div>
         <div class="founder-content">
           <h2>Tyler S. Wallace, Ph.D.</h2>
@@ -314,15 +312,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     max-width: 860px;
   }
 
-  .photo-placeholder {
+  .founder-photo img {
     width: 280px;
     height: 320px;
-    background: var(--color-gray-200);
+    object-fit: cover;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-gray-500);
   }
 
   .founder-content h2 {
@@ -648,7 +642,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-align: center;
     }
 
-    .photo-placeholder {
+    .founder-photo img {
       width: 200px;
       height: 240px;
       margin: 0 auto;
