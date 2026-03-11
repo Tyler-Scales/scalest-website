@@ -165,8 +165,8 @@ const fullTitle = title === "Healthcare AI Consulting" ? "Scale Street — Healt
         </button>
         <ul class="nav-links">
           <li><a href="/" class:list={[{ active: Astro.url.pathname === "/" }]}>Home</a></li>
-          <li><a href="/services" class:list={[{ active: Astro.url.pathname === "/services" }]}>Services</a></li>
-          <li><a href="/projects" class:list={[{ active: Astro.url.pathname === "/projects" }]}>Projects</a></li>
+          <li><a href="/build" class:list={[{ active: Astro.url.pathname === "/build" }]}>Build</a></li>
+          <li><a href="/borrow" class:list={[{ active: Astro.url.pathname === "/borrow" }]}>Borrow</a></li>
           <li><a href="/about" class:list={[{ active: Astro.url.pathname === "/about" }]}>About</a></li>
           <li><a href="/contact" class:list={[{ active: Astro.url.pathname === "/contact" }]}>Contact</a></li>
         </ul>
@@ -181,24 +181,26 @@ const fullTitle = title === "Healthcare AI Consulting" ? "Scale Street — Healt
       <div class="footer-container">
         <div class="footer-brand">
           <img src="/logo.avif" alt="Scale Street" class="footer-logo-img" />
-          <p>AI consulting for healthcare organizations ready to adopt AI.</p>
+          <p>AI Talent for Healthcare. Built or Borrowed.</p>
         </div>
         <div class="footer-links">
           <div class="footer-col">
-            <h4>Company</h4>
+            <h4>Navigate</h4>
             <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/build">Build</a></li>
+              <li><a href="/borrow">Borrow</a></li>
               <li><a href="/about">About</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/projects">Projects</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Who We Serve</h4>
             <ul>
-              <li>Health Systems</li>
-              <li>Hospitals & CAHs</li>
               <li>FQHCs</li>
+              <li>Rural Hospitals</li>
+              <li>Health Center Networks</li>
+              <li>Health Systems</li>
             </ul>
           </div>
         </div>
