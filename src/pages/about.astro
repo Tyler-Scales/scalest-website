@@ -2,93 +2,45 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About" description="Learn about Scale Street — a healthcare AI consulting firm based in Athens, Georgia helping health systems, hospitals, and FQHCs adopt AI.">
+<BaseLayout title="About" description="Scale Street exists because community health organizations deserve AI talent that understands their world. Built for healthcare. Built different.">
 
   <!-- About Page Structured Data for AEO -->
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About Scale Street",
-    "description": "Scale Street is a healthcare AI consulting firm based in Athens, Georgia, led by Tyler S. Wallace, Ph.D. We combine academic rigor with real-world implementation experience to help health systems, hospitals, critical access hospitals, and FQHCs adopt AI with confidence.",
+    "description": "Scale Street is a healthcare AI consulting firm led by Tyler S. Wallace, Ph.D. We train your people, lend you specialists, and build solutions using the Microsoft tools you already pay for.",
     "url": "https://scalestreet.com/about",
     "mainEntity": {
       "@type": "Organization",
       "name": "Scale St. Solutions",
       "alternateName": "Scale Street",
-      "foundingLocation": {
-        "@type": "Place",
-        "name": "Athens, Georgia",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Athens",
-          "addressRegion": "GA",
-          "addressCountry": "US"
-        }
-      },
       "founder": {
         "@type": "Person",
         "name": "Tyler S. Wallace",
         "honorificSuffix": "Ph.D.",
-        "jobTitle": "Principal Consultant",
-        "description": "Healthcare AI consultant and principal of Scale Street, combining academic research expertise with hands-on implementation experience in AI strategy, deployment, and training for healthcare organizations across the Southeast."
+        "jobTitle": "Founder & Microsoft Certified Trainer",
+        "description": "Tyler has spent 15+ years in healthcare, from frontline hospital operations to strategy leadership at MD Anderson Cancer Center to designing AI training for 700+ professionals at USAID."
       },
       "knowsAbout": [
         "Healthcare AI Strategy",
-        "Clinical AI Implementation",
-        "Ambient AI Documentation",
-        "Microsoft Nuance DAX",
-        "eClinicalWorks Healow Genie AI",
+        "Microsoft Power BI",
+        "Microsoft Power Platform",
         "Microsoft 365 Copilot",
-        "EHR Integration",
         "FQHC AI Adoption",
-        "Critical Access Hospital AI",
-        "Healthcare Change Management",
+        "Rural Health AI",
         "AI Training for Healthcare Workers"
       ]
     }
   })} />
 
-  <!-- HowTo Schema for Approach -->
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How Scale Street Approaches Healthcare AI Adoption",
-    "description": "Scale Street's four-step approach to helping healthcare organizations adopt AI responsibly and effectively.",
-    "step": [
-      {
-        "@type": "HowToStep",
-        "position": 1,
-        "name": "Listen first",
-        "text": "We start by understanding your organization — your workflows, your challenges, your patients, and your goals. AI is a tool. Understanding the problem it should solve comes first."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 2,
-        "name": "Start small, prove value",
-        "text": "We identify high-impact, low-risk use cases to pilot first. Early wins build confidence, demonstrate ROI, and create momentum for broader adoption."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 3,
-        "name": "Build capacity, not dependency",
-        "text": "Our goal is to make ourselves unnecessary. We transfer knowledge, build internal capabilities, and design for sustainability so your organization can thrive long after our engagement ends."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 4,
-        "name": "Measure what matters",
-        "text": "We tie everything back to outcomes — patient outcomes, operational efficiency, staff satisfaction, and financial sustainability. If AI isn't moving the needle on what matters, we adjust."
-      }
-    ]
-  })} />
-
-  <!-- Page header -->
+  <!-- Hero -->
   <section class="page-hero">
     <div class="page-hero-inner page-hero-grid">
       <div class="hero-content">
-        <div class="hero-badge">About Us</div>
-        <h1>AI consulting based in Athens, Georgia — built for the communities we serve</h1>
-        <p>Scale Street is based in Athens, GA, where academic rigor meets real-world healthcare experience. We help organizations across the Southeast — from large health systems to critical access hospitals — navigate the path to AI adoption with confidence.</p>
+        <div class="hero-badge">About</div>
+        <h1>Built for Healthcare. Built Different.</h1>
+        <p>Scale Street exists because community health organizations deserve AI talent that understands their world, not enterprise consultants marking down their rates, and not tech vendors who sell tools without training.</p>
       </div>
       <div class="hero-image">
         <img src="/images/healthcare-team.jpg" alt="Healthcare team working together" />
@@ -96,15 +48,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Story with image -->
+  <!-- Our Story -->
   <section class="section">
     <div class="section-inner">
       <div class="story-grid">
         <div class="story-content">
-          <h2>Our story</h2>
-          <p>Scale Street is based in Athens, Georgia — a city shaped by world-class research institutions, a tight-knit community, and deep roots in education and healthcare. That environment is part of who we are.</p>
-          <p>We combine academic rigor with hands-on, real-world experience. Our team brings research-level depth to every engagement — the kind of structured thinking that comes from advanced study — paired with the practical know-how of having deployed AI in live clinical settings, trained thousands of end users, and navigated the messy realities of healthcare operations.</p>
-          <p>We saw healthcare organizations of all sizes struggle with the same challenge: they knew AI could transform their operations, but lacked a partner who could speak both languages — the technical and the clinical. We set out to fill that gap right here from Athens, bringing the best of both worlds to every organization we serve.</p>
+          <h2>Our Story</h2>
+          <p>Scale Street was founded by Dr. Tyler Wallace after 15+ years in healthcare, from the floor of a community hospital to the strategy offices of MD Anderson Cancer Center to the global health programs of USAID.</p>
+          <p>At every level, the pattern was the same: organizations had access to powerful technology but lacked the trained people to use it. The larger the system, the more resources they had to close that gap. The smaller the organization (the FQHC, the critical access hospital, the rural health clinic) the wider the gap grew.</p>
+          <p>Scale Street was built to serve those organizations specifically. Not as a scaled-down version of enterprise consulting. Not as a tech vendor that sells licenses and walks away. But as a partner that trains your people, lends you specialists, and builds solutions using the Microsoft tools you already pay for.</p>
+          <p>We chose Microsoft because that's what our clients have. FQHCs and rural hospitals aren't running Azure workloads or building custom ML models. They're running M365, Power BI, and Power Platform. They need someone who can make those tools work for their workflows, their data, and their budgets. That's what we do.</p>
         </div>
         <div class="story-image">
           <img src="/images/team-collaboration.jpg" alt="Healthcare team collaboration" />
@@ -113,122 +66,160 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Values -->
+  <!-- Founder -->
   <section class="section bg-light">
-    <div class="section-inner section-center">
-      <div class="section-header">
-        <h2>What drives us</h2>
-      </div>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Mission-Driven</h3>
-          <p>Every engagement starts with the same question: how does this improve care for patients? We keep outcomes at the center of everything we do.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon green">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3>Practically Minded</h3>
-          <p>We don't sell visions — we deliver working solutions. Our recommendations are always grounded in what's achievable with your current resources and constraints.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon peach">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
-          </div>
-          <h3>Locally Connected</h3>
-          <p>We're proudly based in Athens, GA — and deeply familiar with the healthcare landscape, regulatory environment, and community dynamics of the Southeast.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Approach -->
-  <section class="section bg-blue">
     <div class="section-inner">
-      <div class="approach-header">
-        <h2>Our approach</h2>
-        <p>We follow principles, not playbooks. Every organization is different, but the fundamentals of responsible AI adoption are the same.</p>
-      </div>
-      <div class="approach-grid">
-        <div class="approach-item">
-          <div class="approach-num">01</div>
-          <h3>Listen first</h3>
-          <p>We start by understanding your organization — your workflows, your challenges, your patients, and your goals. AI is a tool. Understanding the problem it should solve comes first.</p>
+      <div class="founder-grid">
+        <div class="founder-photo">
+          <div class="photo-placeholder">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
         </div>
-        <div class="approach-item">
-          <div class="approach-num">02</div>
-          <h3>Start small, prove value</h3>
-          <p>We identify high-impact, low-risk use cases to pilot first. Early wins build confidence, demonstrate ROI, and create momentum for broader adoption.</p>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">03</div>
-          <h3>Build capacity, not dependency</h3>
-          <p>Our goal is to make ourselves unnecessary. We transfer knowledge, build internal capabilities, and design for sustainability so your organization can thrive long after our engagement ends.</p>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">04</div>
-          <h3>Measure what matters</h3>
-          <p>We tie everything back to outcomes — patient outcomes, operational efficiency, staff satisfaction, and financial sustainability. If AI isn't moving the needle on what matters, we adjust.</p>
+        <div class="founder-content">
+          <h2>Tyler S. Wallace, Ph.D.</h2>
+          <p class="founder-title">Founder & Microsoft Certified Trainer</p>
+          <p>Tyler has spent 15+ years in healthcare, from frontline hospital operations to strategy leadership at MD Anderson Cancer Center to designing AI training for 700+ professionals at USAID. He teaches health informatics and AI at UGA's MHA program and developed the AI-PRH Certification, the first AI certification built for rural health, in partnership with HomeTown Health.</p>
+          <a href="https://tylersWallace.com" target="_blank" rel="noopener noreferrer" class="founder-link">Full bio at TylerSWallace.com <span class="arrow">&rarr;</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Focus areas with photo -->
+  <!-- Values -->
+  <section class="section values-section">
+    <div class="section-inner">
+      <div class="values-intro">
+        <h2>Our Values</h2>
+        <p class="values-subtitle">We are a frontier company.</p>
+        <p>Our clients depend on us to lead the way into uncharted territory. AI in community health doesn't come with a playbook. There's no established path for a 25-bed critical access hospital to adopt Copilot, or for an FQHC network to build AI readiness across 15 member organizations. We're building that path. That requires a specific kind of company with a specific set of values.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-block">
+          <div class="value-number">01</div>
+          <h3>Courage</h3>
+          <p>Venturing into the unknown takes faith and the courage to act on it. Our clients are being asked to adopt technology that didn't exist two years ago, in environments where a wrong move can affect patient care and organizational survival. We don't wait for certainty. We move forward with our clients, shoulder to shoulder, even when the path ahead isn't fully mapped. Courage isn't the absence of risk. It's the decision that the mission is worth it.</p>
+        </div>
+        <div class="value-block">
+          <div class="value-number">02</div>
+          <h3>Curiosity</h3>
+          <p>We have to ask questions and experiment constantly. The AI landscape shifts weekly. What worked last quarter may not work next quarter. We stay curious because our clients can't afford a partner who stopped learning. We test new tools, challenge our own assumptions, question vendor claims, and bring what we learn back to the organizations that depend on us. The moment we stop asking "what if" is the moment we stop being useful.</p>
+        </div>
+        <div class="value-block">
+          <div class="value-number">03</div>
+          <h3>Growth</h3>
+          <p>As individuals and as a company, we have to keep growing and evolving. Who we are today will not meet our clients' needs tomorrow. Every certification we earn, every cohort we deliver, every deployment we complete teaches us something. We invest in our own development with the same intensity we bring to developing our clients' teams. Growth isn't optional when you're leading from the front.</p>
+        </div>
+        <div class="value-block">
+          <div class="value-number">04</div>
+          <h3>Grace</h3>
+          <p>Being on the forefront means we'll make mistakes. If we're not making them, we're not experimenting enough. We offer ourselves and our teammates grace when things don't go as planned, because fear of failure is the enemy of innovation. We extend that same grace to our clients, who are learning alongside us. Nobody gets AI adoption perfect on the first try. What matters is that we keep moving forward together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnerships -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Our Partners</h2>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-logo-placeholder">HomeTown Health</div>
+          <p>Scale Street partners with HomeTown Health to deliver AI training for rural healthcare organizations. Together, we developed the AI-PRH Certification, the first and only AI certification centered on rural health, and co-deliver the AI Readiness Program for Rural Healthcare. HomeTown Health's network of rural hospitals and 80,000+ online learners through HTHU extends Scale Street's training reach across the country.</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo-placeholder">Microsoft</div>
+          <p>Scale Street's training and services are built on the Microsoft technology stack. Our team holds Microsoft certifications in Power BI, Power Platform, Copilot, and AI, and our founder is a Microsoft Certified Trainer authorized to deliver official Microsoft courseware. We are pursuing Microsoft Solutions Partner designations for Modern Work and Business Applications.</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo-placeholder">University of Georgia</div>
+          <p>Scale Street's founder teaches Health Informatics (including AI) at UGA's Masters in Health Administration program, keeping our training methodology sharp and connected to the latest research and educational best practices in healthcare AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Clients -->
   <section class="section">
     <div class="section-inner">
-      <div class="focus-grid">
-        <div class="focus-image">
-          <img src="/images/rural-hospital.jpg" alt="Rural healthcare facility" />
-        </div>
-        <div class="focus-content">
-          <h2>Who we work with</h2>
-          <p>From our home base in Athens, Georgia, we've built deep expertise across the full spectrum of healthcare organizations throughout the Southeast.</p>
-          <div class="focus-list">
-            <div class="focus-item">
-              <span class="focus-dot blue"></span>
-              <div>
-                <strong>Health Systems & Hospitals</strong>
-                <p>We help multi-facility systems and standalone hospitals build AI strategies that align clinical, operational, and technology teams.</p>
-              </div>
-            </div>
-            <div class="focus-item">
-              <span class="focus-dot green"></span>
-              <div>
-                <strong>Critical Access Hospitals</strong>
-                <p>From lean IT teams to tight budgets, we know how to deliver AI solutions that work within the constraints of smaller facilities.</p>
-              </div>
-            </div>
-            <div class="focus-item">
-              <span class="focus-dot peach"></span>
-              <div>
-                <strong>FQHCs & Community Health Centers</strong>
-                <p>We understand HRSA requirements, UDS reporting, sliding-fee workflows, and the unique operational realities of community health.</p>
-              </div>
-            </div>
+      <div class="clients-grid">
+        <div class="clients-content">
+          <h2>Our Clients</h2>
+          <p><strong>We serve:</strong> Federally Qualified Health Centers (FQHCs), Critical Access Hospitals, Rural Hospitals, Primary Care Associations (PCAs), Health Center Controlled Networks (HCCNs), and health systems exploring Microsoft AI tools.</p>
+          <p><strong>We've worked with professionals at:</strong></p>
+          <div class="client-logos-placeholder">
+            <p class="placeholder-note">[Add client logos as portfolio grows]</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section cta-section">
-    <div class="section-inner section-center">
-      <div class="section-header">
-        <h2>We'd love to learn about your organization</h2>
-        <p>Whether you're just starting to think about AI or ready to move forward, we're here to help.</p>
+  <!-- Let's Talk / Contact -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's Talk</h2>
+          <p>Whether you're an FQHC exploring AI for the first time, a network looking to train people across your member health centers, or a hospital that needs a Power BI analyst embedded with your team, Scale Street was built for exactly this conversation.</p>
+          <div class="contact-details">
+            <div class="contact-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@scalestreet.com">info@scalestreet.com</a>
+            </div>
+            <div class="contact-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Founder directly: <a href="mailto:tyler@TylerSWallace.com">tyler@TylerSWallace.com</a></span>
+            </div>
+            <div class="contact-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+17062062530">(706) 206-2530</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form name="contact" method="POST" data-netlify="true" class="contact-form">
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="organization">Organization</label>
+              <input type="text" id="organization" name="organization" />
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <input type="text" id="role" name="role" />
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm interested in:</label>
+              <select id="interest" name="interest" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Build (Training)">Build (Training)</option>
+                <option value="Borrow (Fractional Talent)">Borrow (Fractional Talent)</option>
+                <option value="Both">Both</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us what you're working on</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit <span class="arrow">&rarr;</span></button>
+          </form>
+        </div>
       </div>
-      <a href="/contact" class="btn btn-primary">Get in touch <span class="arrow">&rarr;</span></a>
     </div>
   </section>
 
 </BaseLayout>
 
 <style>
+  /* Hero */
   .page-hero {
     padding: 5rem 1.5rem 3rem;
     background: var(--color-white);
@@ -275,7 +266,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .page-hero p {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--color-gray-500);
     line-height: 1.7;
   }
@@ -305,189 +296,325 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .story-image img {
     width: 100%;
-    height: 400px;
+    height: 480px;
     object-fit: cover;
     border-radius: 20px;
   }
 
-  /* Values */
+  /* Founder */
   .bg-light {
     background: var(--color-gray-50);
   }
 
-  .values-grid {
+  .founder-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 860px;
   }
 
-  .value-card {
-    background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 16px;
-    padding: 2rem;
-  }
-
-  .value-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+  .photo-placeholder {
+    width: 280px;
+    height: 320px;
+    background: var(--color-gray-200);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.25rem;
-  }
-
-  .value-icon.blue { background: var(--color-blue); }
-  .value-icon.green { background: var(--color-green); }
-  .value-icon.peach { background: var(--color-peach); }
-
-  .value-card h3 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--color-dark);
-    margin-bottom: 0.5rem;
-  }
-
-  .value-card p {
-    font-size: 0.9375rem;
     color: var(--color-gray-500);
-    line-height: 1.6;
   }
 
-  /* Approach */
-  .bg-blue {
-    background: var(--color-blue);
-    color: var(--color-white);
-  }
-
-  .approach-header {
-    max-width: 540px;
-    margin-bottom: 3rem;
-  }
-
-  .approach-header h2 {
-    font-size: 2rem;
+  .founder-content h2 {
+    font-size: 1.75rem;
     font-weight: 900;
-    color: var(--color-white);
-    margin-bottom: 1rem;
+    color: var(--color-dark);
+    margin-bottom: 0.25rem;
     line-height: 1.2;
   }
 
-  .approach-header p {
+  .founder-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-blue);
+    margin-bottom: 1rem;
+  }
+
+  .founder-content p {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .founder-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    transition: color 0.15s;
+  }
+
+  .founder-link:hover {
+    color: var(--color-blue-light);
+  }
+
+  /* Values */
+  .values-section {
+    background: var(--color-dark);
+    color: var(--color-white);
+  }
+
+  .values-intro {
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .values-intro h2 {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-mint);
+    margin-bottom: 0.75rem;
+  }
+
+  .values-subtitle {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .values-intro > p:last-child {
     font-size: 1.0625rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
   }
 
-  .approach-grid {
+  .values-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
 
-  .approach-item {
-    background: rgba(255, 255, 255, 0.08);
+  .value-block {
+    background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2rem;
   }
 
-  .approach-num {
+  .value-number {
     font-size: 0.875rem;
     font-weight: 900;
     color: var(--color-mint);
     margin-bottom: 0.75rem;
   }
 
-  .approach-item h3 {
-    font-size: 1.125rem;
-    font-weight: 700;
+  .value-block h3 {
+    font-size: 1.375rem;
+    font-weight: 900;
     color: var(--color-white);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
-  .approach-item p {
+  .value-block p {
     font-size: 0.9375rem;
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
   }
 
-  /* Focus */
-  .focus-grid {
+  /* Partners */
+  .partners-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 
-  .focus-image img {
-    width: 100%;
-    height: 440px;
-    object-fit: cover;
-    border-radius: 20px;
+  .partner-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: box-shadow 0.2s, transform 0.2s;
   }
 
-  .focus-content h2 {
+  .partner-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .partner-logo-placeholder {
+    font-size: 1.125rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-gray-200);
+  }
+
+  .partner-card p {
+    font-size: 0.9375rem;
+    color: var(--color-gray-500);
+    line-height: 1.7;
+  }
+
+  /* Clients */
+  .clients-content {
+    max-width: 780px;
+  }
+
+  .clients-content h2 {
     font-size: 2rem;
     font-weight: 900;
     color: var(--color-dark);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
     line-height: 1.2;
   }
 
-  .focus-content > p {
-    font-size: 1.0625rem;
+  .clients-content p {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .clients-content strong {
+    color: var(--color-dark);
+  }
+
+  .client-logos-placeholder {
+    background: var(--color-gray-50);
+    border: 2px dashed var(--color-gray-200);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .placeholder-note {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    font-style: italic;
+  }
+
+  /* Contact */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .contact-info > p {
+    font-size: 1rem;
     color: var(--color-gray-500);
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
 
-  .focus-list {
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .contact-line {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--color-gray-600);
+  }
+
+  .contact-line svg {
+    flex-shrink: 0;
+    color: var(--color-blue);
+  }
+
+  .contact-line a {
+    color: var(--color-blue);
+    font-weight: 600;
+    transition: color 0.15s;
+  }
+
+  .contact-line a:hover {
+    color: var(--color-blue-light);
+  }
+
+  /* Form */
+  .contact-form-wrap {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
   }
 
-  .focus-item {
+  .form-group {
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.375rem;
   }
 
-  .focus-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 5px;
-  }
-
-  .focus-dot.blue { background: var(--color-blue); }
-  .focus-dot.green { background: var(--color-green); }
-  .focus-dot.peach { background: var(--color-peach); }
-
-  .focus-item strong {
-    display: block;
-    font-size: 1rem;
+  .form-group label {
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--color-dark);
-    margin-bottom: 0.25rem;
   }
 
-  .focus-item p {
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: var(--font-sans);
     font-size: 0.9375rem;
-    color: var(--color-gray-500);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* CTA */
-  .cta-section {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 10px;
     background: var(--color-gray-50);
-    text-align: center;
+    color: var(--color-dark);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    outline: none;
   }
 
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(15, 15, 189, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2370706e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  /* Responsive */
   @media (max-width: 768px) {
     .page-hero {
       padding: 3.5rem 1.25rem 2.5rem;
@@ -515,21 +642,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       height: 280px;
     }
 
+    .founder-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .photo-placeholder {
+      width: 200px;
+      height: 240px;
+      margin: 0 auto;
+    }
+
+    .founder-content {
+      text-align: left;
+    }
+
     .values-grid {
       grid-template-columns: 1fr;
     }
 
-    .approach-grid {
+    .partners-grid {
       grid-template-columns: 1fr;
     }
 
-    .focus-grid {
+    .contact-grid {
       grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .focus-image img {
-      height: 280px;
+      gap: 2.5rem;
     }
   }
 </style>
