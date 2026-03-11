@@ -39,6 +39,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="card-accent blue"></div>
           <div class="card-body">
             <h3>Understanding AI</h3>
+            <div class="program-format">Half day (4 hours) &middot; Virtual or on-site &middot; Interactive workshop</div>
             <p>A foundational program for healthcare professionals who want to understand what AI is, how it works, and what it means for their organization. No technical background required. This course cuts through the hype and gives your team a clear, practical understanding of AI concepts, terminology, capabilities, and limitations so they can participate in AI conversations with confidence.</p>
             <div class="card-meta">
               <span class="best-for">Best for:</span> All staff levels. Ideal as a starting point for organizations beginning their AI journey.
@@ -51,6 +52,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="card-accent green"></div>
           <div class="card-body">
             <h3>AI for Clinical Leaders</h3>
+            <div class="program-format">Full day (6 hours) &middot; Virtual or on-site &middot; Interactive workshop</div>
             <p>Designed for clinical leadership, this program focuses on how AI tools (including Microsoft 365 Copilot) can reduce documentation burden, support clinical decision-making, improve patient communication, and streamline care coordination. Clinical leaders leave with a clear picture of where AI fits into their workflows and how to champion adoption within their teams.</p>
             <div class="card-meta">
               <span class="best-for">Best for:</span> Chief Nursing Officers, Medical Directors, Department Heads, Clinical Managers, and clinical staff leading AI adoption efforts.
@@ -63,6 +65,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="card-accent mint"></div>
           <div class="card-body">
             <h3>AI for Tech Leaders</h3>
+            <div class="program-format">Full day (6 hours) &middot; Virtual or on-site &middot; Interactive workshop</div>
             <p>Built for the IT and informatics professionals responsible for deploying, configuring, and supporting AI tools across the organization. Covers Microsoft 365 Copilot administration, Power Platform governance, tenant security, data protection, and adoption monitoring. This program prepares your technical team to manage AI infrastructure confidently and securely.</p>
             <div class="card-meta">
               <span class="best-for">Best for:</span> CIOs, IT Directors, Health Informatics leads, and technical staff managing Microsoft environments.
@@ -346,6 +349,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .best-for {
     font-weight: 700;
     color: var(--color-dark);
+  }
+
+  .program-format {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 0.75rem;
   }
 
   /* Cohort */
