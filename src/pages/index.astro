@@ -155,16 +155,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Testimonial -->
+  <!-- Testimonials -->
   <section class="section bg-light">
     <div class="section-inner section-center">
-      <div class="testimonial">
-        <blockquote>
-          <p>"This was the best technical training I've ever attended. Tyler didn't just teach the tools — he understood our workflows and showed us exactly where AI fits into what we already do every day."</p>
-        </blockquote>
-        <div class="testimonial-author">
-          <span class="testimonial-name">Workshop Participant</span>
-          <span class="testimonial-role">Rural Hospital IT Director</span>
+      <div class="section-header">
+        <h2>What participants say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Truly one of the best instructors I have had in a long time. Very knowledgeable and engaging and provided great information and guidance on utilizing generative AI."</p>
+          </blockquote>
+          <span class="testimonial-role">Training Participant</span>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Tyler is an excellent instructor — he was very knowledgeable, covered material at a good pace, and had great hands-on activities to keep us engaged and learning. One of the best instructors I've ever had for a training course."</p>
+          </blockquote>
+          <span class="testimonial-role">Training Participant</span>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Tyler did a fantastic job in all areas of the training. It was fun and provided excellent content that significantly advances my knowledge of AI. I strongly encourage other learners to take his courses."</p>
+          </blockquote>
+          <span class="testimonial-role">Training Participant</span>
+        </div>
+        <div class="testimonial-card featured">
+          <blockquote>
+            <p>"I had the opportunity to participate in one of Tyler's AI training sessions, and it was truly impactful and enlightening. He provided valuable insights and practical application tips that I immediately put to use. Tyler has a unique ability to connect with and leave a lasting impact on his audience."</p>
+          </blockquote>
+          <span class="testimonial-role">Training Participant</span>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Tyler was an engaging speaker, and the course material was on point. Practical application exceeded my expectations. Excellent — I will be recommending it to all of my peers."</p>
+          </blockquote>
+          <span class="testimonial-role">Training Participant</span>
         </div>
       </div>
     </div>
@@ -625,40 +651,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border: 3px solid rgba(255, 255, 255, 0.15);
   }
 
-  /* Testimonial */
-  .testimonial {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 
-  .testimonial blockquote {
+  .testimonial-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .testimonial-card.featured {
+    grid-column: span 2;
+  }
+
+  .testimonial-card blockquote {
     margin: 0;
   }
 
-  .testimonial blockquote p {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-dark);
+  .testimonial-card blockquote p {
+    font-size: 0.9375rem;
+    color: var(--color-gray-600);
     line-height: 1.7;
     font-style: italic;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  .testimonial-author {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .testimonial-name {
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: var(--color-dark);
-  }
-
-  .testimonial-role {
+  .testimonial-card .testimonial-role {
     font-size: 0.8125rem;
+    font-weight: 600;
     color: var(--color-gray-500);
   }
 
@@ -771,6 +802,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .paths-grid {
       grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial-card.featured {
+      grid-column: span 1;
     }
 
     .serve-grid {
