@@ -17,7 +17,8 @@
       "Bash(gh auth status:*)",
       "Bash(gh auth login:*)",
       "WebFetch(domain:unsplash.com)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "mcp__Canva__create-design-from-candidate"
     ]
   }
 }
