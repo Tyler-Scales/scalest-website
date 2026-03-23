@@ -18,7 +18,11 @@
       "Bash(gh auth login:*)",
       "WebFetch(domain:unsplash.com)",
       "Bash(python3:*)",
-      "mcp__Canva__create-design-from-candidate"
+      "mcp__Canva__create-design-from-candidate",
+      "Bash(git checkout:*)",
+      "Bash(git rm:*)",
+      "Bash(git rebase:*)",
+      "Bash(GIT_EDITOR=true git rebase --continue)"
     ]
   }
 }

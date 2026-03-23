@@ -1,0 +1,70 @@
+{
+  "heroTitle": "Microsoft-Certified ",
+  "heroTitleGradient": "AI Training",
+  "heroSubtitle": "Official Microsoft AI courses for healthcare organizations. Certification-aligned training developed in partnership with Microsoft — for users, admins, and builders.",
+  "courses": {
+    "title": "Certification ",
+    "titleGradient": "Courses",
+    "subtitle": "Training aligned to Microsoft's official AI certification pathways.",
+    "items": [
+      {
+        "code": "AB-730",
+        "title": "AI for End Users",
+        "description": "Train your workforce to use Microsoft Copilot and AI-powered tools in their daily work. Covers Copilot in Word, Excel, PowerPoint, Outlook, and Teams.",
+        "audience": "All staff using Microsoft 365"
+      },
+      {
+        "code": "AB-900",
+        "title": "Microsoft 365 Administration",
+        "description": "Equip your IT and admin teams to configure, manage, and secure AI features across your Microsoft 365 environment.",
+        "audience": "IT administrators & M365 admins"
+      },
+      {
+        "code": "TBD",
+        "title": "Copilot Builders",
+        "description": "Build custom Copilot agents and AI solutions tailored to your organization's needs. For teams ready to extend beyond out-of-the-box AI tools.",
+        "audience": "IT developers & power users"
+      }
+    ]
+  },
+  "formats": {
+    "title": "Training ",
+    "titleGradient": "Formats",
+    "subtitle": "Every course is available in the format that works best for your team.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Webinars",
+        "description": "Live introductory sessions covering what's new in Microsoft AI and how it applies to healthcare workflows."
+      },
+      {
+        "number": "02",
+        "title": "Virtual Workshops",
+        "description": "Hands-on, certification-aligned training delivered remotely in small groups with guided exercises."
+      },
+      {
+        "number": "03",
+        "title": "In-Person Workshops",
+        "description": "On-site training in your environment using your organization's M365 setup and real-world scenarios."
+      },
+      {
+        "number": "04",
+        "title": "Coaching",
+        "description": "Post-training coaching to reinforce skills and drive adoption across your teams."
+      }
+    ]
+  },
+  "partnership": {
+    "title": "Developed with ",
+    "titleGradient": "Microsoft.",
+    "description": "Our Microsoft AI training programs are developed in partnership with Microsoft and aligned to their official certification pathways. Your team gets training that counts — built by people who know healthcare.",
+    "highlights": [
+      "Official certification-aligned curriculum",
+      "Healthcare-specific examples and scenarios",
+      "Hands-on labs using your M365 environment",
+      "Post-training support and adoption coaching"
+    ]
+  },
+  "ctaTitle": "Ready for Microsoft-Certified AI Training?",
+  "ctaSubtitle": "Let's find the right courses for your team."
+}

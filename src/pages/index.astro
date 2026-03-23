@@ -1,310 +1,165 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import data from '../../content/pages/home.json';
+
+const focusColors = [
+  'var(--color-mint)',
+  'var(--color-blue)',
+  'var(--color-peach)',
+];
 ---
 
-<BaseLayout title="Healthcare AI Consulting" description="Scale Street helps FQHCs, rural hospitals, and health systems close the AI talent gap through certified Microsoft training and fractional AI specialists designed for community health.">
+<BaseLayout title="Healthcare AI Training">
 
-  <!-- Homepage Structured Data for AEO -->
+  <!-- Homepage Structured Data -->
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Scale Street — AI Talent for Healthcare",
-    "description": "Scale Street helps FQHCs, rural hospitals, and health systems close the AI talent gap through certified Microsoft training and fractional AI specialists designed for community health.",
+    "name": "Scale Street — Healthcare AI Training",
+    "description": "Scale Street delivers healthcare AI training — from general AI literacy to Microsoft-certified courses and ambient AI implementation.",
     "url": "https://scalestreet.com",
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": [".hero-content", ".section-header"]
+      "cssSelector": [".hero-text", ".section-header"]
     },
     "mainEntity": {
       "@type": "ProfessionalService",
       "name": "Scale St. Solutions",
-      "description": "AI talent for healthcare. Certified Microsoft training and fractional AI specialists for FQHCs, rural hospitals, and health systems.",
+      "description": "Healthcare AI training firm based in Athens, Georgia. We deliver AI training through webinars, workshops, and coaching.",
       "url": "https://scalestreet.com"
     }
   })} />
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero-inner">
-      <div class="hero-content">
-        <h1>AI Talent for Healthcare.<br />Built or Borrowed.</h1>
-        <p>Scale Street helps FQHCs, rural hospitals, and health systems close the AI talent gap through certified Microsoft training and fractional AI specialists designed for community health.</p>
+      <div class="hero-text">
+        <p class="hero-label">{data.heroLabel}</p>
+        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span><br/>they need.</h1>
+        <p class="hero-sub">{data.heroSubtitle}</p>
         <div class="hero-actions">
-          <a href="/build" class="btn btn-primary">Build Your Talent <span class="arrow">&rarr;</span></a>
-          <a href="/borrow" class="btn btn-outline">Borrow Our Talent</a>
+          <a href="https://outlook.office.com/owa/calendar/BooktimewithTylerWallace@scalestsolutions.com/bookings/s/sGNGp0yBEkSgbnIiVwCUOQ2" class="btn btn-primary btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
+          <a href="/general-ai-training" class="btn btn-outline btn-lg">Explore Training</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="/images/tyler-presenting.jpg" alt="Tyler Wallace presenting Worker Concerns data" />
+        <img src="/images/Tyler%20Training%201.jpg" alt="Tyler Wallace leading an AI training session" />
       </div>
     </div>
+    <div class="hero-deco hero-deco-1"></div>
+    <div class="hero-deco hero-deco-2"></div>
   </section>
 
-  <!-- Social Proof Strip -->
-  <section class="section-sm trust-bar">
+  <!-- The Challenge -->
+  <section class="section section-alt">
     <div class="section-inner">
-      <div class="trust-items">
-        <div class="trust-item">
-          <span class="trust-number">Microsoft Certified</span>
-          <span class="trust-label">Trainer</span>
+      <div class="split-row reverse">
+        <div class="split-image">
+          <img src="/images/healthcare-team.jpg" alt="Community healthcare provider" />
         </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-number">2,000+</span>
-          <span class="trust-label">Healthcare Professionals Trained</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-number">50+</span>
-          <span class="trust-label">Workshops Delivered</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-number">First AI Certification</span>
-          <span class="trust-label">for Rural Health</span>
+        <div class="split-text">
+          <p class="label-tag">The Challenge</p>
+          <h2>{data.challengeTitle}<span class="gradient-text">{data.challengeTitleGradient}</span></h2>
+          <p class="split-desc">{data.challengeDescription}</p>
+          <div class="stat-row">
+            {data.challengeStats?.map((stat) => (
+              <div class="stat-chip">
+                <span class="stat-chip-value">{stat.value}</span>
+                <span class="stat-chip-label">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+          <p class="split-cta-text"><strong>{data.challengeBottomText}</strong></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="section">
-    <div class="section-inner problem-section">
-      <h2 class="problem-headline">Healthcare has an AI talent problem.</h2>
-      <p class="problem-body">The problem isn't the technology. It's that no one has trained your people to use it, and you can't hire AI specialists at community health salaries. That's the gap Scale Street was built to close.</p>
-    </div>
-  </section>
-
-  <!-- Two Paths Section -->
-  <section class="section bg-light">
-    <div class="section-inner section-center">
-      <div class="paths-hero-image">
-        <img src="/images/team-collaboration.jpg" alt="Healthcare team collaborating on AI adoption" />
-      </div>
-      <div class="paths-grid">
-        <div class="path-card">
-          <div class="path-card-inner">
-            <div class="path-icon blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3>Build Your Talent</h3>
-            <p>Your people are capable. They just haven't been trained on the tools sitting right in front of them. Our Build services develop AI skills inside your organization through certified Microsoft training, cohort-based programs, and hands-on workshops.</p>
-            <ul class="path-highlights">
-              <li>Microsoft Certified Trainer-led workshops</li>
-              <li>Healthcare-specific AI curriculum</li>
-              <li>Skills your team uses Monday morning</li>
+  <!-- Training Focus Areas -->
+  {data.trainingFocuses?.map((focus, i) => (
+    <section class={`section ${i % 2 === 0 ? '' : 'section-alt'}`}>
+      <div class="section-inner">
+        <div class={`split-row ${i % 2 === 1 ? 'reverse' : ''}`}>
+          <div class="split-text">
+            <p class="label-tag">{focus.tag}</p>
+            <h2>{focus.title}<span class="gradient-text">{focus.titleGradient}</span></h2>
+            <p class="split-desc">{focus.description}</p>
+            <ul class="check-list">
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill={focusColors[i] || 'var(--color-blue)'}/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div>
+                  <strong>{focus.checklistTitle}</strong>
+                  <span>{focus.checklistDescription}</span>
+                </div>
+              </li>
             </ul>
-            <a href="/build" class="btn btn-primary">View Build Services <span class="arrow">&rarr;</span></a>
+            <a href={focus.link} class="btn btn-primary">Learn More <span class="arrow">&rarr;</span></a>
           </div>
-        </div>
-        <div class="path-card">
-          <div class="path-card-inner">
-            <div class="path-icon green">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h3>Borrow Our Talent</h3>
-            <p>You need a Power BI dashboard built this quarter. A Copilot rollout managed properly. But your IT team of two can't do it, and a full-time hire isn't in the budget. Borrow gives you fractional access to Microsoft-certified specialists.</p>
-            <ul class="path-highlights">
-              <li>Fractional AI specialists on your schedule</li>
-              <li>No long-term contracts required</li>
-              <li>Embedded with your team, not outside it</li>
-            </ul>
-            <a href="/borrow" class="btn btn-primary">View Borrow Services <span class="arrow">&rarr;</span></a>
+          <div class="split-image">
+            <img src={`/images/${i === 0 ? 'healthcare-tech' : i === 1 ? 'healthcare-team' : 'rural-hospital'}.jpg`} alt={focus.tag + ' training'} />
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  ))}
 
-  <!-- Who We Serve Section -->
-  <section class="section">
+  <!-- Credentials -->
+  <section class="section section-alt">
+    <div class="section-inner section-center">
+      <p class="label-tag" style="text-align:center;">Credentials</p>
+      <h2 class="section-title">Built for Healthcare. <span class="gradient-text">Proven in the Field.</span></h2>
+      <p class="section-subtitle">We don't just talk about healthcare AI &mdash; we train the people who use it.</p>
+    </div>
     <div class="section-inner">
-      <div class="section-header">
-        <h2>Who we serve</h2>
-      </div>
-      <div class="serve-grid">
-        <div class="serve-card">
-          <div class="serve-icon blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <div class="card-grid">
+        {data.credentials?.map((cred) => (
+          <div class="card">
+            <span class="card-metric">{cred.metric}</span>
+            <h3>{cred.title}</h3>
+            <p>{cred.description}</p>
           </div>
-          <h3>Federally Qualified Health Centers (FQHCs)</h3>
-          <p>You serve the underserved, and your operating budget reflects it. We help FQHCs adopt AI using the Microsoft tools you already pay for, with training and talent scaled to your reality. We've sat on FQHC network boards. We understand UDS reporting, HRSA requirements, 340B complexity, and what it means to run a health center on thin margins.</p>
-        </div>
-        <div class="serve-card">
-          <div class="serve-icon green">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-          </div>
-          <h3>Critical Access & Rural Hospitals</h3>
-          <p>With 1-3 person IT teams, tight margins, and growing pressure to modernize, rural hospitals need AI help, not enterprise-priced consulting. Scale Street brings certified Microsoft training and fractional specialists who understand your workflows, your EHR constraints, and your staffing reality.</p>
-        </div>
-        <div class="serve-card">
-          <div class="serve-icon mint">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Health Center Networks (PCAs & HCCNs)</h3>
-          <p>Your member health centers face the same AI talent gap individually. Through your network, they can solve it together. Scale Street delivers training cohorts and shared fractional specialists across your members. One contract, one partner, consistent results across 5, 10, or 20 health centers.</p>
-        </div>
-        <div class="serve-card">
-          <div class="serve-icon peach">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3>Health Systems & Hospitals</h3>
-          <p>You have the licenses but not the adoption. Copilot seats going unused. Power BI reports no one trusts. Physicians pushing back on AI documentation tools. Scale Street helps health systems cut through license sprawl, drive real adoption across departments, and turn Microsoft AI investments into measurable workflow improvements.</p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section bg-light">
+  <!-- Partner Logos -->
+  <section class="section-sm">
     <div class="section-inner section-center">
-      <div class="section-header">
-        <h2>What participants say</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <blockquote>
-            <p>"Truly one of the best instructors I have had in a long time. Very knowledgeable and engaging and provided great information and guidance on utilizing generative AI."</p>
-          </blockquote>
-          <span class="testimonial-role">Training Participant</span>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>
-            <p>"Tyler is an excellent instructor — he was very knowledgeable, covered material at a good pace, and had great hands-on activities to keep us engaged and learning. One of the best instructors I've ever had for a training course."</p>
-          </blockquote>
-          <span class="testimonial-role">Training Participant</span>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>
-            <p>"Tyler did a fantastic job in all areas of the training. It was fun and provided excellent content that significantly advances my knowledge of AI. I strongly encourage other learners to take his courses."</p>
-          </blockquote>
-          <span class="testimonial-role">Training Participant</span>
-        </div>
-        <div class="testimonial-card featured">
-          <blockquote>
-            <p>"I had the opportunity to participate in one of Tyler's AI training sessions, and it was truly impactful and enlightening. He provided valuable insights and practical application tips that I immediately put to use. Tyler has a unique ability to connect with and leave a lasting impact on his audience."</p>
-          </blockquote>
-          <span class="testimonial-role">Training Participant</span>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>
-            <p>"Tyler was an engaging speaker, and the course material was on point. Practical application exceeded my expectations. Excellent — I will be recommending it to all of my peers."</p>
-          </blockquote>
-          <span class="testimonial-role">Training Participant</span>
-        </div>
+      <p class="partners-label">Trusted Partners</p>
+      <div class="partner-row">
+        {data.partners?.map((partner, i) => (
+          <Fragment>
+            {i > 0 && <span class="partner-dot"></span>}
+            <span class="partner-name">{partner}</span>
+          </Fragment>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Logo Bar -->
-  <section class="section-sm logo-bar">
-    <div class="section-inner section-center">
-      <p class="logo-bar-label">Trusted by healthcare organizations across the country</p>
-      <div class="logo-bar-items">
-        <span class="logo-bar-item">HomeTown Health</span>
-        <span class="logo-bar-item">Microsoft</span>
-        <span class="logo-bar-item">University of Georgia</span>
-        <span class="logo-bar-item">USAID</span>
-        <span class="logo-bar-item">MD Anderson</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Work -->
-  <section class="section">
-    <div class="section-inner section-center">
-      <div class="section-header">
-        <h2>Featured work</h2>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-accent blue"></div>
-          <div class="project-card-body">
-            <span class="project-stat">100+ Providers</span>
-            <h3>Nuance DAX Rollout</h3>
-            <p>Ambient AI documentation deployed across multi-site Emergency Departments.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-accent green"></div>
-          <div class="project-card-body">
-            <span class="project-stat">FQHC AI Enablement</span>
-            <h3>Healow Genie AI</h3>
-            <p>eClinicalWorks AI installation and configuration for an FQHC.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-accent mint"></div>
-          <div class="project-card-body">
-            <span class="project-stat">Copilot + Agents</span>
-            <h3>M365 Copilot Deployment</h3>
-            <p>Setup, optimization, security hardening, and AI agent deployment.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-accent peach"></div>
-          <div class="project-card-body">
-            <span class="project-stat">2,000+ Trained</span>
-            <h3>Training Excellence</h3>
-            <p>50+ workshops consistently rated the best technical training participants have experienced.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RHTP Section -->
-  <section class="section bg-blue">
-    <div class="section-inner">
-      <div class="rhtp-grid">
-        <div class="rhtp-content">
-          <h2>Change Is Coming. Is Your Team Ready?</h2>
-          <p>The $50 billion Rural Health Transformation Program is bringing new technology, new workflows, and new expectations to healthcare organizations in all 50 states through 2030.</p>
-          <p>New tools will be implemented. Existing systems will be reconfigured. Reporting requirements will shift. And your staff, the people already stretched thin, will be the ones expected to absorb it all.</p>
-          <p>The organizations that thrive through this transition won't be the ones with the biggest budgets. They'll be the ones whose teams were trained and supported before the change hit.</p>
-          <p>Scale Street helps you get your people ready now so when transformation arrives, your staff leads it instead of scrambling to survive it.</p>
-          <a href="/contact" class="btn btn-white" style="margin-top: 1.5rem;">Start preparing your team <span class="arrow">&rarr;</span></a>
-        </div>
-        <div class="rhtp-visual">
-          <img src="/images/rural-hospital.jpg" alt="Rural hospital building" class="rhtp-image" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lead Magnet -->
-  <section class="section">
-    <div class="section-inner section-center">
-      <div class="lead-magnet">
-        <div class="lead-magnet-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <h2>Not ready for a call? Start here.</h2>
-        <p>Take our free AI Readiness Scorecard. Answer 10 quick questions about your organization's current tools, skills, and goals, and get a personalized report on where you stand and what to prioritize first.</p>
-        <a href="/contact?interest=ai-readiness" class="btn btn-primary">Take the AI Readiness Scorecard <span class="arrow">&rarr;</span></a>
-        <p class="lead-magnet-note">Free. No sales call required. Results delivered instantly.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
+  <!-- CTA -->
   <section class="section cta-section">
     <div class="section-inner section-center">
-      <div class="section-header">
-        <h2>Ready to close the AI talent gap?</h2>
-        <p>Whether you want to build your team's AI skills over time or need fractional talent embedded tomorrow, let's start with a conversation. No pitch decks. No pressure. Just a clear look at where AI can make a real difference for your organization.</p>
+      <h2>{data.ctaTitle}</h2>
+      <p>{data.ctaSubtitle}</p>
+      <div class="cta-actions">
+        <a href="https://outlook.office.com/owa/calendar/BooktimewithTylerWallace@scalestsolutions.com/bookings/s/sGNGp0yBEkSgbnIiVwCUOQ2" class="btn btn-white btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" class="btn btn-outline-white btn-lg">Email Us</a>
       </div>
-      <a href="/contact" class="btn btn-primary">Schedule a Conversation <span class="arrow">&rarr;</span></a>
     </div>
+    <div class="cta-deco cta-deco-1"></div>
+    <div class="cta-deco cta-deco-2"></div>
   </section>
 
 </BaseLayout>
 
 <style>
-  /* Hero */
+  /* ===== HOMEPAGE HERO ===== */
   .hero {
-    padding: 5rem 1.5rem 0;
+    padding: 6rem 1.5rem 4rem;
     background: var(--color-white);
+    position: relative;
     overflow: hidden;
   }
 
@@ -313,24 +168,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
+  }
+
+  .hero-label {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-blue);
+    background: rgba(15, 15, 189, 0.08);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
   }
 
   .hero h1 {
     font-size: 2.75rem;
     font-weight: 900;
-    line-height: 1.1;
     color: var(--color-dark);
-    margin-bottom: 1.25rem;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
   }
 
-  .hero p {
+  .hero-sub {
     font-size: 1.0625rem;
     color: var(--color-gray-500);
     line-height: 1.7;
     margin-bottom: 2rem;
+    max-width: 480px;
   }
 
   .hero-actions {
@@ -339,494 +208,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     flex-wrap: wrap;
   }
 
-  .hero-image {
-    position: relative;
-  }
-
   .hero-image img {
     width: 100%;
-    height: 480px;
-    object-fit: cover;
-    border-radius: 24px 24px 0 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(15, 15, 189, 0.12);
   }
 
-  /* Trust bar */
-  .trust-bar {
-    border-bottom: 1px solid var(--color-gray-200);
-  }
-
-  .trust-items {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .trust-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-  }
-
-  .trust-number {
-    font-size: 1rem;
-    font-weight: 900;
-    color: var(--color-dark);
-  }
-
-  .trust-label {
-    font-size: 0.75rem;
-    color: var(--color-gray-500);
-    font-weight: 600;
-  }
-
-  .trust-divider {
-    width: 1px;
-    height: 40px;
-    background: var(--color-gray-200);
-  }
-
-  /* Problem section */
-  .problem-section {
-    max-width: 780px;
-  }
-
-  .problem-headline {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-gray-900);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
-
-  .problem-body {
-    font-size: 1.0625rem;
-    color: var(--color-gray-600);
-    line-height: 1.8;
-  }
-
-  /* Two Paths */
-  .bg-light {
-    background: var(--color-gray-50);
-  }
-
-  .paths-hero-image {
-    margin-bottom: 2.5rem;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-  .paths-hero-image img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    display: block;
-  }
-
-  .paths-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .path-card {
-    overflow: hidden;
-    background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 16px;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-
-  .path-card:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
-  }
-
-  .path-card-inner {
-    padding: 2rem;
-  }
-
-  .path-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.25rem;
-  }
-
-  .path-icon.blue { background: var(--color-blue); }
-  .path-icon.green { background: var(--color-green); }
-
-  .path-card-inner h3 {
-    font-size: 1.375rem;
-    font-weight: 900;
-    color: var(--color-dark);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .path-card-inner p {
-    font-size: 0.9375rem;
-    color: var(--color-gray-500);
-    line-height: 1.7;
-    margin-bottom: 1.25rem;
-  }
-
-  .path-highlights {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .path-highlights li {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-gray-600);
-    padding-left: 1.5rem;
-    position: relative;
-  }
-
-  .path-highlights li::before {
-    content: '';
+  .hero-deco {
     position: absolute;
-    left: 0;
-    top: 0.35em;
-    width: 8px;
-    height: 8px;
     border-radius: 50%;
-    background: var(--color-mint);
+    pointer-events: none;
   }
 
-  /* Who We Serve */
-  .serve-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+  .hero-deco-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(110, 219, 188, 0.08);
+    top: -80px;
+    right: -60px;
   }
 
-  .serve-card {
-    background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 16px;
-    padding: 2rem;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-
-  .serve-card:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
-  }
-
-  .serve-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.25rem;
-  }
-
-  .serve-icon.blue { background: var(--color-blue); }
-  .serve-icon.green { background: var(--color-green); }
-  .serve-icon.mint { background: var(--color-blue-light); }
-  .serve-icon.peach { background: var(--color-peach); }
-
-  .serve-card h3 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--color-dark);
-    margin-bottom: 0.75rem;
-  }
-
-  .serve-card p {
-    font-size: 0.9375rem;
-    color: var(--color-gray-500);
-    line-height: 1.7;
-  }
-
-  /* Featured Projects */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-
-  .project-card {
-    display: flex;
-    overflow: hidden;
-    background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 16px;
-    transition: box-shadow 0.2s, transform 0.2s;
-    text-align: left;
-  }
-
-  .project-card:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
-  }
-
-  .project-accent {
-    width: 6px;
-    flex-shrink: 0;
-  }
-
-  .project-accent.blue { background: var(--color-blue); }
-  .project-accent.green { background: var(--color-green); }
-  .project-accent.mint { background: var(--color-blue-light); }
-  .project-accent.peach { background: var(--color-peach); }
-
-  .project-card-body {
-    padding: 1.5rem;
-  }
-
-  .project-stat {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--color-gray-500);
-    margin-bottom: 0.5rem;
-  }
-
-  .project-card h3 {
-    font-size: 1.0625rem;
-    font-weight: 700;
-    color: var(--color-dark);
-    margin-bottom: 0.375rem;
-  }
-
-  .project-card p {
-    font-size: 0.875rem;
-    color: var(--color-gray-500);
-    line-height: 1.6;
-  }
-
-  /* RHTP Section */
-  .bg-blue {
-    background: var(--color-blue);
-    color: var(--color-white);
-  }
-
-  .rhtp-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .rhtp-content h2 {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--color-white);
-    line-height: 1.2;
-    margin-bottom: 1.25rem;
-  }
-
-  .rhtp-content p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-
-  .rhtp-visual {
-    display: flex;
-    justify-content: center;
-  }
-
-  .rhtp-image {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.15);
-  }
-
-  /* Testimonials */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-
-  .testimonial-card {
-    background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 16px;
-    padding: 1.75rem;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-
-  .testimonial-card:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
-  }
-
-  .testimonial-card.featured {
-    grid-column: span 2;
-  }
-
-  .testimonial-card blockquote {
-    margin: 0;
-  }
-
-  .testimonial-card blockquote p {
-    font-size: 0.9375rem;
-    color: var(--color-gray-600);
-    line-height: 1.7;
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-
-  .testimonial-card .testimonial-role {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: var(--color-gray-500);
-  }
-
-  /* Logo Bar */
-  .logo-bar {
-    border-top: 1px solid var(--color-gray-200);
-    border-bottom: 1px solid var(--color-gray-200);
-    background: var(--color-white);
-  }
-
-  .logo-bar-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-gray-500);
-    margin-bottom: 1.25rem;
-  }
-
-  .logo-bar-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-  }
-
-  .logo-bar-item {
-    font-size: 1.125rem;
-    font-weight: 900;
-    color: var(--color-gray-400);
-    letter-spacing: -0.01em;
-  }
-
-  /* Lead Magnet */
-  .lead-magnet {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .lead-magnet-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: var(--color-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-  }
-
-  .lead-magnet h2 {
-    font-size: 1.75rem;
-    font-weight: 900;
-    color: var(--color-dark);
-    margin-bottom: 0.75rem;
-    line-height: 1.2;
-  }
-
-  .lead-magnet > p {
-    font-size: 1.0625rem;
-    color: var(--color-gray-500);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-
-  .lead-magnet-note {
-    font-size: 0.8125rem;
-    color: var(--color-gray-500);
-    margin-top: 1rem;
-  }
-
-  /* CTA */
-  .cta-section {
-    background: var(--color-gray-50);
-    text-align: center;
+  .hero-deco-2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(15, 15, 189, 0.05);
+    bottom: -40px;
+    left: -60px;
   }
 
   @media (max-width: 768px) {
     .hero {
-      padding: 3rem 1.25rem 0;
+      padding: 3.5rem 1.25rem 2.5rem;
     }
 
     .hero-inner {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2.5rem;
     }
 
     .hero h1 {
       font-size: 2rem;
     }
 
-    .hero-image img {
-      height: 300px;
-      border-radius: 16px 16px 0 0;
+    .hero-sub {
+      max-width: 100%;
     }
 
-    .trust-divider {
+    .hero-image {
+      order: -1;
+    }
+
+    .hero-deco {
       display: none;
-    }
-
-    .trust-items {
-      gap: 1.5rem;
-    }
-
-    .paths-hero-image img {
-      height: 200px;
-    }
-
-    .paths-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .testimonials-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .testimonial-card.featured {
-      grid-column: span 1;
-    }
-
-    .serve-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .rhtp-grid {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .rhtp-image {
-      height: 280px;
     }
   }
 </style>

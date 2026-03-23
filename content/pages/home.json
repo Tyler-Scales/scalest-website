@@ -1,0 +1,76 @@
+{
+  "heroLabel": "Healthcare AI Training",
+  "heroTitle": "Give your team the ",
+  "heroTitleGradient": "AI skills",
+  "heroSubtitle": "Scale Street delivers healthcare-focused AI training — from general AI literacy to Microsoft-certified courses and hands-on ambient AI implementation. Webinars, workshops, and coaching designed for your organization.",
+  "challengeTitle": "AI is moving fast. ",
+  "challengeTitleGradient": "Your team can keep up.",
+  "challengeDescription": "Healthcare organizations know they need AI, but most teams haven't been trained to use it. The gap between AI potential and AI adoption is a skills gap — and that's exactly what we solve.",
+  "challengeBottomText": "Scale Street was built to close that gap.",
+  "challengeStats": [
+    { "value": "94%", "label": "report AI skills gaps" },
+    { "value": "2,000+", "label": "professionals trained" }
+  ],
+  "trainingFocuses": [
+    {
+      "tag": "General AI",
+      "title": "Build AI fluency ",
+      "titleGradient": "across your organization.",
+      "description": "From leadership to frontline staff, we help your team understand what AI can do, how to use it responsibly, and where it fits in their work.",
+      "checklistTitle": "Webinars, Workshops & Coaching",
+      "checklistDescription": "Flexible training formats that meet your team where they are — virtual or in-person.",
+      "link": "/general-ai-training",
+      "color": "var(--color-mint)"
+    },
+    {
+      "tag": "Microsoft Training",
+      "title": "Microsoft-certified ",
+      "titleGradient": "AI training.",
+      "description": "Official Microsoft AI courses for users, admins, and builders. Certification-aligned training developed in partnership with Microsoft.",
+      "checklistTitle": "AB-730, AB-900 & Copilot Builders",
+      "checklistDescription": "From end-user adoption to M365 administration to building custom Copilot solutions.",
+      "link": "/microsoft-ai-training",
+      "color": "var(--color-blue)"
+    },
+    {
+      "tag": "Provider Training",
+      "title": "Train your clinicians on ",
+      "titleGradient": "ambient documentation.",
+      "description": "Hands-on training for the ambient AI tools transforming clinical documentation — Nuance DAX and Sunio by eClinicalWorks.",
+      "checklistTitle": "Nuance DAX & Sunio/eCW",
+      "checklistDescription": "Onboarding, workflow optimization, and adoption coaching for ambient clinical AI.",
+      "link": "/ambient-ai-training",
+      "color": "var(--color-peach)"
+    }
+  ],
+  "credentials": [
+    {
+      "metric": "2,000+",
+      "title": "Professionals Trained",
+      "description": "Delivered 50+ AI training sessions consistently rated the best technical training participants have ever attended."
+    },
+    {
+      "metric": "140+",
+      "title": "Providers Onboarded",
+      "description": "Deployed ambient AI documentation (Nuance DAX) across multi-site Emergency Departments with hands-on clinician training."
+    },
+    {
+      "metric": "MHA",
+      "title": "University of Georgia",
+      "description": "Faculty in the UGA Master of Health Administration program, connecting training to academic research and the next generation of healthcare leaders."
+    },
+    {
+      "metric": "Microsoft",
+      "title": "Certified Partner",
+      "description": "Training programs developed in partnership with Microsoft, aligned to official certification pathways for healthcare organizations."
+    }
+  ],
+  "partners": [
+    "Microsoft",
+    "University of Georgia",
+    "Hometown Health",
+    "MedLink Georgia"
+  ],
+  "ctaTitle": "Ready to Upskill Your Team?",
+  "ctaSubtitle": "Let's talk about which AI training fits your organization."
+}

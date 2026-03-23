@@ -1,0 +1,66 @@
+{
+  "heroTitle": "Ambient ",
+  "heroTitleGradient": "AI Training",
+  "heroSubtitle": "Hands-on training for the ambient AI tools transforming clinical documentation. We train your clinicians to use Nuance DAX and Sunio by eClinicalWorks effectively from day one.",
+  "products": {
+    "title": "Tools We ",
+    "titleGradient": "Train On",
+    "items": [
+      {
+        "name": "Nuance DAX",
+        "fullName": "Microsoft Nuance Dragon Ambient eXperience",
+        "description": "Ambient clinical documentation that listens to patient encounters and generates clinical notes automatically. We train providers on workflow integration, note review, and optimization for maximum documentation quality.",
+        "highlights": [
+          "Provider onboarding and go-live support",
+          "Workflow optimization for your specialty",
+          "Note quality review and improvement",
+          "Adoption coaching and ongoing support"
+        ]
+      },
+      {
+        "name": "Sunio / eCW",
+        "fullName": "Sunio by eClinicalWorks",
+        "description": "AI-powered ambient documentation built into the eClinicalWorks EHR. We help your providers adopt Sunio and integrate it into their existing eCW workflows for seamless documentation.",
+        "highlights": [
+          "eClinicalWorks workflow integration",
+          "Provider training and go-live support",
+          "Documentation quality optimization",
+          "Adoption tracking and reinforcement"
+        ]
+      }
+    ]
+  },
+  "formats": {
+    "title": "Training ",
+    "titleGradient": "Formats",
+    "subtitle": "Ambient AI training designed around your go-live timeline.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Webinars",
+        "description": "Introductory sessions that build awareness and set expectations before your ambient AI rollout."
+      },
+      {
+        "number": "02",
+        "title": "Virtual Workshops",
+        "description": "Remote hands-on training for providers, walking through real encounter scenarios with the ambient AI tool."
+      },
+      {
+        "number": "03",
+        "title": "In-Person Workshops",
+        "description": "On-site, elbow-to-elbow training during go-live. The most effective format for clinical adoption."
+      },
+      {
+        "number": "04",
+        "title": "Coaching",
+        "description": "Post-go-live coaching that reinforces best practices and drives sustained adoption across your provider teams."
+      }
+    ]
+  },
+  "stats": [
+    { "value": "140+", "label": "Providers Onboarded" },
+    { "value": "Multi-Site", "label": "ED Deployments" }
+  ],
+  "ctaTitle": "Planning an Ambient AI Rollout?",
+  "ctaSubtitle": "Let's make sure your providers are ready from day one."
+}

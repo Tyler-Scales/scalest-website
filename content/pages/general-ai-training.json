@@ -1,0 +1,80 @@
+{
+  "heroTitle": "General ",
+  "heroTitleGradient": "AI Training",
+  "heroSubtitle": "Build AI fluency across your organization — from leadership to frontline staff. We help your team understand what AI can do, how to use it responsibly, and where it fits in their work.",
+  "formats": {
+    "title": "Training ",
+    "titleGradient": "Formats",
+    "subtitle": "Flexible delivery designed to meet your team where they are.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Webinars",
+        "description": "Live, interactive sessions that introduce AI concepts and use cases to large groups. Ideal for building awareness and starting the conversation across your organization."
+      },
+      {
+        "number": "02",
+        "title": "Virtual Workshops",
+        "description": "Hands-on, small-group sessions delivered remotely. Participants work through real scenarios and leave with practical skills they can apply immediately."
+      },
+      {
+        "number": "03",
+        "title": "In-Person Workshops",
+        "description": "On-site training tailored to your team's workflows and tools. The most immersive format — ideal for teams ready to put AI into practice."
+      },
+      {
+        "number": "04",
+        "title": "Coaching",
+        "description": "Ongoing one-on-one or small-group coaching that reinforces learning and supports adoption over time. Perfect for leaders driving AI strategy."
+      }
+    ]
+  },
+  "topics": {
+    "title": "What We ",
+    "titleGradient": "Cover",
+    "items": [
+      {
+        "title": "AI Fundamentals",
+        "description": "What AI is, how it works, and what it means for healthcare — explained without the jargon."
+      },
+      {
+        "title": "Responsible AI Use",
+        "description": "Ethics, bias, privacy, and governance frameworks that healthcare organizations need to understand before scaling AI."
+      },
+      {
+        "title": "AI in Your Workflow",
+        "description": "Practical applications of AI in clinical, administrative, and operational settings specific to your organization."
+      },
+      {
+        "title": "Prompt Engineering",
+        "description": "How to communicate effectively with AI tools to get better, more reliable results in day-to-day work."
+      }
+    ]
+  },
+  "whoItsFor": {
+    "title": "Who ",
+    "titleGradient": "It's For",
+    "description": "General AI training is designed for healthcare organizations at any stage of AI adoption.",
+    "items": [
+      {
+        "title": "Executive Leadership",
+        "description": "Build the strategic understanding needed to make informed AI investment decisions."
+      },
+      {
+        "title": "Clinical Teams",
+        "description": "Help providers and nurses understand how AI tools will change — and improve — their daily work."
+      },
+      {
+        "title": "Administrative Staff",
+        "description": "Equip your operations, finance, and HR teams with practical AI skills for their workflows."
+      }
+    ]
+  },
+  "stats": [
+    { "value": "2,000+", "label": "Professionals Trained" },
+    { "value": "50+", "label": "Sessions Delivered" },
+    { "value": "10", "label": "Hometown Health AI Series" }
+  ],
+  "ctaTitle": "Ready to Build AI Fluency Across Your Team?",
+  "ctaSubtitle": "Let's design a training program that fits your organization."
+}
