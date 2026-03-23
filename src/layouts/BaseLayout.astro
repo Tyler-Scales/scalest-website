@@ -161,9 +161,14 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
           <span></span>
         </button>
         <ul class="nav-links">
-          <li><a href="/general-ai-training">General AI Training</a></li>
-          <li><a href="/microsoft-ai-training">Microsoft Training</a></li>
-          <li><a href="/ambient-ai-training">Provider Training</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-expanded="false">Training <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/general-ai-training">General AI</a></li>
+              <li><a href="/microsoft-ai-training">Microsoft</a></li>
+              <li><a href="/ambient-ai-training">Providers</a></li>
+            </ul>
+          </li>
           <li><a href="/about">About</a></li>
           <li><a href="https://outlook.office.com/owa/calendar/BooktimewithTylerWallace@scalestsolutions.com/bookings/s/sGNGp0yBEkSgbnIiVwCUOQ2" class="btn btn-primary btn-sm nav-cta">Book a Call</a></li>
         </ul>
@@ -219,10 +224,29 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
         navLinks?.classList.toggle('open');
       });
 
+      // Dropdown toggle
+      const dropdown = document.querySelector('.nav-dropdown');
+      const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+      dropdownToggle?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown?.classList.toggle('open');
+        const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+        dropdownToggle.setAttribute('aria-expanded', String(!expanded));
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!dropdown?.contains(e.target as Node)) {
+          dropdown?.classList.remove('open');
+          dropdownToggle?.setAttribute('aria-expanded', 'false');
+        }
+      });
+
       // Close mobile menu on link click
       navLinks?.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           navLinks.classList.remove('open');
+          dropdown?.classList.remove('open');
           toggle?.setAttribute('aria-expanded', 'false');
         });
       });
@@ -233,6 +257,11 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
         const href = (a.getAttribute('href') || '').replace(/\/$/, '') || '/';
         if (href === currentPath) {
           a.classList.add('active');
+          // If active link is inside dropdown, mark parent
+          const parentDropdown = a.closest('.nav-dropdown');
+          if (parentDropdown) {
+            parentDropdown.classList.add('has-active');
+          }
         }
       });
     </script>
@@ -939,6 +968,46 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
     line-height: 1.6;
   }
 
+  /* ===== TESTIMONIAL ===== */
+  .testimonial-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .testimonial-card {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .testimonial-quote {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--color-gray-700);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .testimonial-quote::before {
+    content: '\201C';
+    font-size: 4rem;
+    font-style: normal;
+    color: var(--color-blue);
+    opacity: 0.15;
+    position: absolute;
+    top: -1.5rem;
+    left: -0.5rem;
+    line-height: 1;
+  }
+
+  .testimonial-attr {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-500);
+  }
+
   /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
     .card-grid {
@@ -1080,6 +1149,83 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
     border-radius: 1px;
   }
 
+  /* ===== DROPDOWN ===== */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-toggle {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-gray-600);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0;
+    transition: color 0.2s;
+  }
+
+  .nav-dropdown-toggle:hover,
+  .nav-dropdown.has-active > .nav-dropdown-toggle {
+    color: var(--color-blue);
+  }
+
+  .dropdown-chevron {
+    transition: transform 0.2s;
+  }
+
+  .nav-dropdown.open .dropdown-chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    min-width: 180px;
+    z-index: 200;
+    list-style: none;
+  }
+
+  .nav-dropdown.open .nav-dropdown-menu {
+    display: block;
+  }
+
+  .nav-dropdown-menu li {
+    list-style: none;
+  }
+
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-gray-600);
+    border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown-menu a:hover {
+    background: var(--color-gray-100, #f5f5f5);
+    color: var(--color-blue);
+  }
+
+  .nav-dropdown-menu a.active {
+    color: var(--color-blue);
+  }
+
   .nav-cta {
     color: var(--color-white) !important;
   }
@@ -1204,6 +1350,26 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
 
     .nav-links.open {
       display: flex;
+    }
+
+    .nav-dropdown-menu {
+      position: static;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      padding: 0 0 0 1rem;
+      min-width: 0;
+      border-radius: 0;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .nav-dropdown-menu a {
+      padding: 0.35rem 0;
     }
 
     .nav-cta {

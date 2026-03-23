@@ -81,9 +81,19 @@ import data from '../../content/pages/microsoft-ai-training.json';
             ))}
           </ul>
         </div>
-        <div class="split-image">
-          <img src="/images/healthcare-team.jpg" alt="Microsoft partnership" />
+        <div class="split-image mct-badge-wrap">
+          <img src="/images/MCTBadgeMark.svg" alt="Microsoft Certified Trainer" class="mct-badge" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial-section">
+    <div class="section-inner">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">Tyler is an excellent instructor — he was very knowledgeable, covered material at a good pace, and had great hands-on activities to keep us engaged and learning. One of the best instructors I've ever had for a training course.</p>
+        <p class="testimonial-attr">Training Participant</p>
       </div>
     </div>
   </section>
@@ -105,6 +115,22 @@ import data from '../../content/pages/microsoft-ai-training.json';
 </BaseLayout>
 
 <style>
+  .mct-badge-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    box-shadow: none;
+    border: none;
+  }
+
+  .mct-badge {
+    max-width: 280px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   .course-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

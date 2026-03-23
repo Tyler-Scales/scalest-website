@@ -35,7 +35,7 @@ const focusColors = [
     <div class="hero-inner">
       <div class="hero-text">
         <p class="hero-label">{data.heroLabel}</p>
-        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span><br/>they need.</h1>
+        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span> they need.</h1>
         <p class="hero-sub">{data.heroSubtitle}</p>
         <div class="hero-actions">
           <a href="https://outlook.office.com/owa/calendar/BooktimewithTylerWallace@scalestsolutions.com/bookings/s/sGNGp0yBEkSgbnIiVwCUOQ2" class="btn btn-primary btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
@@ -95,8 +95,12 @@ const focusColors = [
             </ul>
             <a href={focus.link} class="btn btn-primary">Learn More <span class="arrow">&rarr;</span></a>
           </div>
-          <div class="split-image">
-            <img src={`/images/${i === 0 ? 'healthcare-tech' : i === 1 ? 'healthcare-team' : 'rural-hospital'}.jpg`} alt={focus.tag + ' training'} />
+          <div class={`split-image ${i === 1 ? 'mct-badge-wrap' : ''}`}>
+            {i === 1 ? (
+              <img src="/images/MCTBadgeMark.svg" alt="Microsoft Certified Trainer" class="mct-badge" />
+            ) : (
+              <img src={`/images/${i === 0 ? 'healthcare-tech' : 'rural-hospital'}.jpg`} alt={focus.tag + ' training'} />
+            )}
           </div>
         </div>
       </div>
@@ -119,6 +123,16 @@ const focusColors = [
             <p>{cred.description}</p>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial-section">
+    <div class="section-inner">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">I had the opportunity to participate in one of Tyler's AI training sessions, and it was truly impactful and enlightening. He provided valuable insights and practical application tips that I immediately put to use. Through his wealth of knowledge and inspirational delivery, Tyler has a unique ability to connect with and leave a lasting impact on his audience.</p>
+        <p class="testimonial-attr">Training Participant</p>
       </div>
     </div>
   </section>
@@ -261,5 +275,21 @@ const focusColors = [
     .hero-deco {
       display: none;
     }
+  }
+
+  .mct-badge-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    box-shadow: none;
+    border: none;
+  }
+
+  .mct-badge {
+    max-width: 280px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
   }
 </style>
