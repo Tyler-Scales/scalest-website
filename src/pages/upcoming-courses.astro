@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import data from '../../content/pages/upcoming-courses.json';
+
+const statusColors = {
+  open: { bg: '#e6f9f0', text: '#095c44', label: 'Registration Open' },
+  waitlist: { bg: '#fff8e6', text: '#993a0e', label: 'Waitlist' },
+  'sold-out': { bg: '#f0f0f0', text: '#70706e', label: 'Sold Out' },
+};
+
+const categoryLabels = {
+  general: 'General AI',
+  microsoft: 'Microsoft',
+  provider: 'Provider',
+};
+---
+
+<BaseLayout
+  title="Upcoming Courses"
+  description="Browse and register for upcoming healthcare AI training courses. Virtual workshops, Microsoft-certified courses, and ambient AI training."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <p class="hero-badge">Register Now</p>
+        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span></h1>
+        <p class="hero-sub">{data.heroSubtitle}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Listings -->
+  {data.courses && data.courses.length > 0 ? (
+    <section class="section">
+      <div class="section-inner">
+        <div class="course-listing-grid">
+          {data.courses.map((course) => {
+            const status = statusColors[course.status] || statusColors.open;
+            const catLabel = categoryLabels[course.category] || course.category;
+            return (
+              <div class="course-listing-card">
+                <div class="course-listing-header">
+                  <span class="course-category" data-category={course.category}>{catLabel}</span>
+                  <span class="course-status" style={`background:${status.bg};color:${status.text};`}>{status.label}</span>
+                </div>
+                <h3 class="course-listing-title">{course.title}</h3>
+                <p class="course-listing-desc">{course.description}</p>
+
+                <div class="course-listing-details">
+                  <div class="course-detail">
+                    <svg viewBox="0 0 20 20" fill="none" class="detail-icon"><rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 1v4M14 1v4M2 8h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>{course.date}</span>
+                  </div>
+                  <div class="course-detail">
+                    <svg viewBox="0 0 20 20" fill="none" class="detail-icon"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 5v5l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>{course.time}</span>
+                  </div>
+                  <div class="course-detail">
+                    <svg viewBox="0 0 20 20" fill="none" class="detail-icon"><path d="M10 2C6.13 2 3 5.13 3 9c0 5.25 7 9 7 9s7-3.75 7-9c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                    <span>{course.format} — {course.location}</span>
+                  </div>
+                  <div class="course-detail">
+                    <svg viewBox="0 0 20 20" fill="none" class="detail-icon"><path d="M4 17v-1a4 4 0 014-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="6" r="3.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                    <span>{course.audience}</span>
+                  </div>
+                  <div class="course-detail">
+                    <svg viewBox="0 0 20 20" fill="none" class="detail-icon"><path d="M3 10h14M10 3v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>{course.duration} · {course.instructor}</span>
+                  </div>
+                  {course.spotsRemaining !== null && (
+                    <div class="course-detail spots">
+                      <svg viewBox="0 0 20 20" fill="none" class="detail-icon"><path d="M4 17v-1a4 4 0 014-4h4a4 4 0 014 4v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="6" r="3.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                      <span>{course.spotsRemaining} spots remaining</span>
+                    </div>
+                  )}
+                </div>
+
+                <div class="course-listing-footer">
+                  <span class="course-price">{course.price}</span>
+                  {course.status === 'sold-out' ? (
+                    <span class="btn btn-disabled">Sold Out</span>
+                  ) : (
+                    <a href={course.stripeLink} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                      {course.status === 'waitlist' ? 'Join Waitlist' : 'Register'} <span class="arrow">&rarr;</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="section">
+      <div class="section-inner section-center">
+        <div class="empty-state">
+          <h2>No Courses Scheduled</h2>
+          <p>{data.emptyMessage}</p>
+          <a href="https://outlook.office.com/owa/calendar/BooktimewithTylerWallace@scalestsolutions.com/bookings/s/sGNGp0yBEkSgbnIiVwCUOQ2" class="btn btn-primary btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="section-inner section-center">
+      <h2>{data.ctaTitle}</h2>
+      <p>{data.ctaSubtitle}</p>
+      <div class="cta-actions">
+        <a href="https://outlook.office.com/owa/calendar/BooktimewithTylerWallace@scalestsolutions.com/bookings/s/sGNGp0yBEkSgbnIiVwCUOQ2" class="btn btn-white btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" class="btn btn-outline-white btn-lg">Email Us</a>
+      </div>
+    </div>
+    <div class="cta-deco cta-deco-1"></div>
+    <div class="cta-deco cta-deco-2"></div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Course listing grid — 2 columns */
+  .course-listing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Course card */
+  .course-listing-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .course-listing-card:hover {
+    box-shadow: 0 10px 40px rgba(11, 34, 57, 0.1);
+    transform: translateY(-4px);
+  }
+
+  /* Header: category + status */
+  .course-listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  .course-category {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-blue);
+    background: rgba(15, 15, 189, 0.08);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+  }
+
+  .course-category[data-category="microsoft"] {
+    color: var(--color-blue-light);
+    background: rgba(69, 129, 255, 0.1);
+  }
+
+  .course-category[data-category="provider"] {
+    color: var(--color-green);
+    background: rgba(9, 92, 68, 0.08);
+  }
+
+  .course-status {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  /* Title & description */
+  .course-listing-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .course-listing-desc {
+    font-size: 0.9375rem;
+    color: var(--color-gray-500);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Details list */
+  .course-listing-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .course-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+  }
+
+  .course-detail.spots {
+    color: var(--color-green);
+    font-weight: 600;
+  }
+
+  .detail-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--color-gray-400);
+  }
+
+  .course-detail.spots .detail-icon {
+    color: var(--color-green);
+  }
+
+  /* Footer: price + button */
+  .course-listing-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .course-price {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-dark);
+  }
+
+  .btn-disabled {
+    background: var(--color-gray-200);
+    color: var(--color-gray-500);
+    padding: 0.625rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: not-allowed;
+  }
+
+  /* Empty state */
+  .empty-state {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .empty-state h2 {
+    margin-bottom: 1rem;
+  }
+
+  .empty-state p {
+    color: var(--color-gray-500);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .course-listing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
