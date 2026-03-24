@@ -137,17 +137,23 @@ const focusColors = [
     </div>
   </section>
 
-  <!-- Partner Logos -->
+  <!-- Client Logos -->
   <section class="section-sm">
     <div class="section-inner section-center">
-      <p class="partners-label">Trusted Partners</p>
-      <div class="partner-row">
-        {data.partners?.map((partner, i) => (
-          <Fragment>
-            {i > 0 && <span class="partner-dot"></span>}
-            <span class="partner-name">{partner}</span>
-          </Fragment>
-        ))}
+      <p class="partners-label">Trusted By</p>
+      <div class="logo-grid">
+        <img src="/images/logos/piedmont-healthcare.png" alt="Piedmont Healthcare" />
+        <img src="/images/logos/bon-secours-mercy-health.png" alt="Bon Secours Mercy Health" />
+        <img src="/images/logos/scp-health.png" alt="SCP Health" />
+        <img src="/images/logos/medlink-georgia.png" alt="MedLink Georgia" />
+        <img src="/images/logos/elbert-memorial.png" alt="Elbert Memorial Hospital" />
+        <img src="/images/logos/georgia-primary-care.png" alt="Georgia Primary Care Association" />
+        <img src="/images/logos/georgia-nurses-association.png" alt="Georgia Nurses Association" />
+        <img src="/images/logos/hope-for-georgia-moms.png" alt="Hope for Georgia Moms" />
+        <img src="/images/logos/uga.png" alt="University of Georgia" />
+        <img src="/images/logos/athens-tech.png" alt="Athens Technical College" />
+        <img src="/images/logos/fda.png" alt="FDA" />
+        <img src="/images/logos/usaid.jpg" alt="USAID" />
       </div>
     </div>
   </section>
@@ -291,5 +297,44 @@ const focusColors = [
     height: auto;
     border-radius: 0;
     box-shadow: none;
+  }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem 3rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .logo-grid img {
+    max-height: 50px;
+    max-width: 140px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
+  }
+
+  .logo-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .logo-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
