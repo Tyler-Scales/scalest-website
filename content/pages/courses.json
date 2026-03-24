@@ -1,12 +1,12 @@
 {
   "heroTitle": "Upcoming ",
   "heroTitleGradient": "Courses",
-  "heroSubtitle": "Browse our scheduled virtual training sessions. Enroll online and join from anywhere.",
+  "heroSubtitle": "Browse our virtual training sessions. Enroll online and join from anywhere.",
   "courses": [
     {
       "title": "AI Foundations for Healthcare",
-      "date": "2026-04-15",
-      "time": "10:00 AM – 2:00 PM ET",
+      "date": "",
+      "time": "Coming Soon",
       "format": "Virtual",
       "duration": "4 hours",
       "price": 299,
@@ -19,14 +19,13 @@
         "Identifying AI opportunities in your role"
       ],
       "instructor": "Tyler S. Wallace, Ph.D.",
-      "spotsRemaining": 20,
       "stripeUrl": "",
       "category": "general"
     },
     {
       "title": "AI for Healthcare Leaders",
-      "date": "2026-04-22",
-      "time": "1:00 PM – 4:00 PM ET",
+      "date": "",
+      "time": "Coming Soon",
       "format": "Virtual",
       "duration": "3 hours",
       "price": 349,
@@ -39,14 +38,13 @@
         "Change management for AI adoption"
       ],
       "instructor": "Tyler S. Wallace, Ph.D.",
-      "spotsRemaining": 15,
       "stripeUrl": "",
       "category": "general"
     },
     {
       "title": "Microsoft 365 Copilot for End Users (AB-730)",
-      "date": "2026-05-06",
-      "time": "9:00 AM – 5:00 PM ET",
+      "date": "",
+      "time": "Coming Soon",
       "format": "Virtual",
       "duration": "Full day (8 hours)",
       "price": 599,
@@ -59,14 +57,13 @@
         "Real-world healthcare use cases"
       ],
       "instructor": "Tyler S. Wallace, Ph.D.",
-      "spotsRemaining": 25,
       "stripeUrl": "",
       "category": "microsoft"
     },
     {
       "title": "Microsoft 365 Copilot for Admins (AB-900)",
-      "date": "2026-05-20",
-      "time": "9:00 AM – 5:00 PM ET",
+      "date": "",
+      "time": "Coming Soon",
       "format": "Virtual",
       "duration": "Full day (8 hours)",
       "price": 699,
@@ -79,7 +76,6 @@
         "Rollout planning and change management"
       ],
       "instructor": "Tyler S. Wallace, Ph.D.",
-      "spotsRemaining": 20,
       "stripeUrl": "https://buy.stripe.com/28EdR99uX1cdeYGb7W3F600",
       "category": "microsoft"
     }

@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import data from '../../content/pages/courses.json';
 
 const today = new Date().toISOString().split('T')[0];
-const upcomingCourses = data.courses.filter(c => c.date >= today);
+const upcomingCourses = data.courses.filter(c => !c.date || c.date >= today);
 const categoryLabels: Record<string, string> = {
   general: 'General AI',
   microsoft: 'Microsoft',
@@ -39,8 +39,9 @@ const categoryLabels: Record<string, string> = {
       ) : (
         <div class="course-list">
           {upcomingCourses.map((course) => {
-            const courseDate = new Date(course.date + 'T12:00:00');
-            const dateStr = courseDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+            const dateStr = course.date
+              ? new Date(course.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
+              : 'Coming Soon';
             const isMicrosoft = course.category === 'microsoft';
             return (
               <div class="course-card">
