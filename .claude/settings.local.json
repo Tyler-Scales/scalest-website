@@ -33,7 +33,10 @@
       "Bash(mv image13.png piedmont-healthcare.png)",
       "Bash(sips -g pixelWidth -g pixelHeight \"/Users/tswallac/scalest-website/public/images/Tyler Training 1.jpg\")",
       "Bash(sips -s format jpeg -s formatOptions 70 -Z 1600 \"/Users/tswallac/scalest-website/public/images/Ambient.png\" --out \"/Users/tswallac/scalest-website/public/images/ambient.jpg\")",
-      "Bash(sips -s format jpeg -s formatOptions 70 -Z 1600 \"/Users/tswallac/scalest-website/public/images/Training Room.png\" --out \"/Users/tswallac/scalest-website/public/images/training-room.jpg\")"
+      "Bash(sips -s format jpeg -s formatOptions 70 -Z 1600 \"/Users/tswallac/scalest-website/public/images/Training Room.png\" --out \"/Users/tswallac/scalest-website/public/images/training-room.jpg\")",
+      "Bash(sips -s format jpeg -s formatOptions 70 -Z 1600 \"/Users/tswallac/scalest-website/public/images/Gemini_Generated_Image_6oucki6oucki6ouc.png\" --out \"/Users/tswallac/scalest-website/public/images/rural-community.jpg\")",
+      "Bash(sips -s format jpeg -s formatOptions 70 -Z 1600 \"/Users/tswallac/scalest-website/public/images/Gemini_Generated_Image_uyxcryuyxcryuyxc.png\" --out \"/Users/tswallac/scalest-website/public/images/conference-room.jpg\")",
+      "Bash(sips -s format jpeg -s formatOptions 70 -Z 1600 \"/Users/tswallac/scalest-website/public/images/Gemini_Generated_Image_whj40iwhj40iwhj4.png\" --out \"/Users/tswallac/scalest-website/public/images/hospital-exterior.jpg\")"
     ]
   }
 }

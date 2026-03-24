@@ -5,12 +5,12 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = "Scale Street delivers healthcare AI training — from general AI literacy to Microsoft-certified courses and ambient AI implementation. Give your team the skills they need.", ogImage = "/images/hero-healthcare.jpg" } = Astro.props;
+const { title, description = "Scale Street delivers healthcare AI training. From general AI literacy to Microsoft-certified courses and ambient AI implementation. Give your team the skills they need.", ogImage = "/images/hero-healthcare.jpg" } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
-const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${title} | Scale Street`;
+const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${title} | Scale Street`;
 ---
 
 <!doctype html>
@@ -63,7 +63,7 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
       "alternateName": "Scale Street",
       "url": "https://scalestreet.com",
       "logo": "https://scalestreet.com/logo.avif",
-      "description": "Scale Street delivers healthcare AI training — from general AI literacy to Microsoft-certified courses and ambient AI implementation. Give your team the skills they need.",
+      "description": "Scale Street delivers healthcare AI training. From general AI literacy to Microsoft-certified courses and ambient AI implementation. Give your team the skills they need.",
       "email": "hello@scalestreet.com",
       "telephone": "+1-706-206-2530",
       "address": {
