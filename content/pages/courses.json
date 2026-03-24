@@ -1,0 +1,90 @@
+{
+  "heroTitle": "Upcoming ",
+  "heroTitleGradient": "Courses",
+  "heroSubtitle": "Browse our scheduled virtual training sessions. Enroll online and join from anywhere.",
+  "courses": [
+    {
+      "title": "AI Foundations for Healthcare",
+      "date": "2026-04-15",
+      "time": "10:00 AM – 2:00 PM ET",
+      "format": "Virtual",
+      "duration": "4 hours",
+      "price": 299,
+      "description": "A comprehensive introduction to AI for healthcare professionals. Learn what AI can do, how to use it responsibly, and where it fits in your daily work.",
+      "audience": "All healthcare staff — clinical, administrative, and leadership",
+      "topics": [
+        "What AI is (and isn't)",
+        "Hands-on prompting with ChatGPT & Copilot",
+        "AI ethics and responsible use in healthcare",
+        "Identifying AI opportunities in your role"
+      ],
+      "instructor": "Tyler S. Wallace, Ph.D.",
+      "spotsRemaining": 20,
+      "stripeUrl": "",
+      "category": "general"
+    },
+    {
+      "title": "AI for Healthcare Leaders",
+      "date": "2026-04-22",
+      "time": "1:00 PM – 4:00 PM ET",
+      "format": "Virtual",
+      "duration": "3 hours",
+      "price": 349,
+      "description": "Strategic AI training designed for executives, directors, and managers. Understand the AI landscape, evaluate vendor solutions, and build an AI roadmap for your organization.",
+      "audience": "C-suite, directors, department managers",
+      "topics": [
+        "The AI landscape in healthcare",
+        "Evaluating AI tools and vendors",
+        "Building an organizational AI strategy",
+        "Change management for AI adoption"
+      ],
+      "instructor": "Tyler S. Wallace, Ph.D.",
+      "spotsRemaining": 15,
+      "stripeUrl": "",
+      "category": "general"
+    },
+    {
+      "title": "Microsoft 365 Copilot for End Users (AB-730)",
+      "date": "2026-05-06",
+      "time": "9:00 AM – 5:00 PM ET",
+      "format": "Virtual",
+      "duration": "Full day (8 hours)",
+      "price": 599,
+      "description": "Official Microsoft course on adopting Copilot across Word, Excel, PowerPoint, Outlook, and Teams. Hands-on labs included.",
+      "audience": "End users of Microsoft 365 applications",
+      "topics": [
+        "Copilot in Word, Excel, PowerPoint",
+        "Copilot in Outlook and Teams",
+        "Effective prompting techniques",
+        "Real-world healthcare use cases"
+      ],
+      "instructor": "Tyler S. Wallace, Ph.D.",
+      "spotsRemaining": 25,
+      "stripeUrl": "",
+      "category": "microsoft"
+    },
+    {
+      "title": "Microsoft 365 Copilot for Admins (AB-900)",
+      "date": "2026-05-20",
+      "time": "9:00 AM – 5:00 PM ET",
+      "format": "Virtual",
+      "duration": "Full day (8 hours)",
+      "price": 699,
+      "description": "Official Microsoft course for IT administrators deploying and managing Copilot across your organization. Covers licensing, security, governance, and rollout planning.",
+      "audience": "IT administrators, M365 admins, and technical leads",
+      "topics": [
+        "Copilot licensing and deployment",
+        "Security, compliance, and data governance",
+        "Admin controls and usage analytics",
+        "Rollout planning and change management"
+      ],
+      "instructor": "Tyler S. Wallace, Ph.D.",
+      "spotsRemaining": 20,
+      "stripeUrl": "",
+      "category": "microsoft"
+    }
+  ],
+  "ctaTitle": "Need training for your whole team?",
+  "ctaSubtitle": "We bring our training on site — customized for your organization, your tools, and your workflows.",
+  "bookingUrl": "https://outlook.office.com/owa/calendar/BooktimewithTylerWallace@scalestsolutions.com/bookings/s/sGNGp0yBEkSgbnIiVwCUOQ2"
+}

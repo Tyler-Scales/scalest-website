@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import data from '../../content/pages/courses.json';
+
+const today = new Date().toISOString().split('T')[0];
+const upcomingCourses = data.courses.filter(c => c.date >= today);
+const categoryLabels: Record<string, string> = {
+  general: 'General AI',
+  microsoft: 'Microsoft',
+  provider: 'Provider',
+};
+---
+
+<BaseLayout
+  title="Upcoming Courses"
+  description="Browse and enroll in upcoming virtual AI training courses from Scale Street. Microsoft-certified and general AI courses for healthcare professionals."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <p class="hero-badge">Virtual Training</p>
+        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span></h1>
+        <p class="hero-sub">{data.heroSubtitle}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Listings -->
+  <section class="section">
+    <div class="section-inner">
+      {upcomingCourses.length === 0 ? (
+        <div class="empty-state">
+          <h2>No upcoming courses scheduled</h2>
+          <p>Check back soon or book a call to discuss custom training for your organization.</p>
+          <a href={data.bookingUrl} class="btn btn-primary btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
+        </div>
+      ) : (
+        <div class="course-list">
+          {upcomingCourses.map((course) => {
+            const courseDate = new Date(course.date + 'T12:00:00');
+            const dateStr = courseDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+            const isMicrosoft = course.category === 'microsoft';
+            return (
+              <div class="course-card">
+                <div class="course-header">
+                  <div class="course-meta">
+                    <span class={`course-category cat-${course.category}`}>{categoryLabels[course.category] || course.category}</span>
+                    {isMicrosoft && <img src="/images/MCTBadgeMark.svg" alt="Microsoft Certified Trainer" class="course-mct" />}
+                  </div>
+                  <h2 class="course-title">{course.title}</h2>
+                  <p class="course-desc">{course.description}</p>
+                </div>
+
+                <div class="course-details">
+                  <div class="course-info-grid">
+                    <div class="course-info-item">
+                      <span class="info-label">Date</span>
+                      <span class="info-value">{dateStr}</span>
+                    </div>
+                    <div class="course-info-item">
+                      <span class="info-label">Time</span>
+                      <span class="info-value">{course.time}</span>
+                    </div>
+                    <div class="course-info-item">
+                      <span class="info-label">Format</span>
+                      <span class="info-value">{course.format}</span>
+                    </div>
+                    <div class="course-info-item">
+                      <span class="info-label">Duration</span>
+                      <span class="info-value">{course.duration}</span>
+                    </div>
+                    <div class="course-info-item">
+                      <span class="info-label">Instructor</span>
+                      <span class="info-value">{course.instructor}</span>
+                    </div>
+                    <div class="course-info-item">
+                      <span class="info-label">Spots Remaining</span>
+                      <span class="info-value spots">{course.spotsRemaining}</span>
+                    </div>
+                  </div>
+
+                  <div class="course-audience">
+                    <span class="info-label">Who It's For</span>
+                    <p>{course.audience}</p>
+                  </div>
+
+                  <div class="course-topics">
+                    <span class="info-label">What You'll Learn</span>
+                    <ul>
+                      {course.topics.map((topic: string) => (
+                        <li>
+                          <svg class="topic-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--color-mint)"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          {topic}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="course-footer">
+                  <div class="course-price">
+                    <span class="price-amount">${course.price}</span>
+                    <span class="price-label">per person</span>
+                  </div>
+                  {course.stripeUrl ? (
+                    <a href={course.stripeUrl} class="btn btn-primary btn-lg" target="_blank" rel="noopener">Enroll Now <span class="arrow">&rarr;</span></a>
+                  ) : (
+                    <a href={`mailto:hello@scalestreet.com?subject=Enroll: ${course.title} (${dateStr})`} class="btn btn-primary btn-lg">Enroll Now <span class="arrow">&rarr;</span></a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- On-Site CTA -->
+  <section class="section cta-section">
+    <div class="section-inner section-center">
+      <h2>{data.ctaTitle}</h2>
+      <p>{data.ctaSubtitle}</p>
+      <div class="cta-actions">
+        <a href={data.bookingUrl} class="btn btn-white btn-lg">Bring Us On Site <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" class="btn btn-outline-white btn-lg">Email Us</a>
+      </div>
+    </div>
+    <div class="cta-deco cta-deco-1"></div>
+    <div class="cta-deco cta-deco-2"></div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .course-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .course-card:hover {
+    box-shadow: 0 10px 40px rgba(11, 34, 57, 0.08);
+  }
+
+  .course-header {
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .course-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .course-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    color: white;
+  }
+
+  .cat-general { background: var(--color-mint); color: var(--color-dark); }
+  .cat-microsoft { background: var(--color-blue); }
+  .cat-provider { background: var(--color-peach); color: var(--color-dark); }
+
+  .course-mct {
+    height: 36px;
+    width: auto;
+  }
+
+  .course-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .course-desc {
+    font-size: 1rem;
+    color: var(--color-gray-500);
+    line-height: 1.6;
+  }
+
+  .course-details {
+    padding: 1.5rem 2rem;
+  }
+
+  .course-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .course-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-400);
+  }
+
+  .info-value {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-dark);
+  }
+
+  .spots {
+    color: var(--color-mint);
+  }
+
+  .course-audience {
+    margin-bottom: 1.5rem;
+  }
+
+  .course-audience p {
+    margin-top: 0.25rem;
+    font-size: 0.9375rem;
+    color: var(--color-gray-500);
+  }
+
+  .course-topics ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .course-topics li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-dark);
+  }
+
+  .topic-check {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .course-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: var(--color-gray-50);
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .course-price {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-dark);
+  }
+
+  .price-label {
+    font-size: 0.8125rem;
+    color: var(--color-gray-400);
+    font-weight: 600;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  .empty-state h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .empty-state p {
+    color: var(--color-gray-500);
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .course-info-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-topics ul {
+      grid-template-columns: 1fr;
+    }
+
+    .course-footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .course-header,
+    .course-details,
+    .course-footer {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+</style>
