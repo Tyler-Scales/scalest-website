@@ -60,6 +60,10 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
             <h3>{data.leadership?.name}</h3>
             <p class="bio-role">{data.leadership?.role}</p>
             <p class="bio-desc">{data.leadership?.shortBio}</p>
+            <a href="https://linkedin.com/in/tylerwallace" target="_blank" rel="noopener" class="bio-linkedin">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
           </div>
         </div>
         <div class="split-text">
@@ -142,6 +146,27 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
     </div>
   </section>
 
+  <!-- Client Logos -->
+  <section class="section-sm">
+    <div class="section-inner section-center">
+      <p class="partners-label">Organizations We've Trained</p>
+      <div class="logo-grid">
+        <img src="/images/logos/piedmont-healthcare.png" alt="Piedmont Healthcare" />
+        <img src="/images/logos/bon-secours-mercy-health.png" alt="Bon Secours Mercy Health" />
+        <img src="/images/logos/scp-health.png" alt="SCP Health" />
+        <img src="/images/logos/medlink-georgia.png" alt="MedLink Georgia" />
+        <img src="/images/logos/elbert-memorial.png" alt="Elbert Memorial Hospital" />
+        <img src="/images/logos/georgia-primary-care.png" alt="Georgia Primary Care Association" />
+        <img src="/images/logos/georgia-nurses-association.png" alt="Georgia Nurses Association" />
+        <img src="/images/logos/hope-for-georgia-moms.png" alt="Hope for Georgia Moms" />
+        <img src="/images/logos/uga.png" alt="University of Georgia" />
+        <img src="/images/logos/athens-tech.png" alt="Athens Technical College" />
+        <img src="/images/logos/fda.png" alt="FDA" />
+        <img src="/images/logos/usaid.jpg" alt="USAID" />
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials -->
   <section class="testimonial-section section-alt">
     <div class="section-inner">
@@ -167,3 +192,70 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
   </section>
 
 </BaseLayout>
+
+<style>
+  .bio-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .bio-linkedin:hover {
+    color: var(--color-dark);
+  }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem 3rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .logo-grid img {
+    max-height: 50px;
+    max-width: 140px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
+  }
+
+  .logo-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .partners-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-gray-400);
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .logo-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -12,13 +12,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
 .env.production
-
-# TinaCMS generated files
-tina/__generated__
 
 # macOS-specific files
 .DS_Store

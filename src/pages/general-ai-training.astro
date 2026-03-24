@@ -10,6 +10,15 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
   description="Build AI fluency across your healthcare organization. Webinars, workshops, and coaching designed for leadership, clinical teams, and administrative staff."
 >
 
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "General AI Training for Healthcare",
+    "description": "Build AI fluency across your healthcare organization. Webinars, workshops, and coaching designed for leadership, clinical teams, and administrative staff.",
+    "provider": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
+    "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." }
+  })} />
+
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-inner">

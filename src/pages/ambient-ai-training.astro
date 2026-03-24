@@ -8,6 +8,15 @@ import data from '../../content/pages/ambient-ai-training.json';
   description="Hands-on training for Nuance DAX and Sunio by eClinicalWorks. We train your clinicians to use ambient AI documentation tools effectively from day one."
 >
 
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Ambient AI Training for Healthcare Providers",
+    "description": "Hands-on training for Nuance DAX and Sunio by eClinicalWorks. Ambient clinical documentation AI training.",
+    "provider": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
+    "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." }
+  })} />
+
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-inner">

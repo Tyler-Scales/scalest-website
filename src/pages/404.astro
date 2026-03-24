@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page Not Found" description="The page you're looking for doesn't exist.">
+  <section class="error-page">
+    <div class="error-inner">
+      <span class="error-code">404</span>
+      <h1>Page not found</h1>
+      <p>The page you're looking for doesn't exist or has been moved.</p>
+      <div class="error-actions">
+        <a href="/" class="btn btn-primary btn-lg">Back to Home <span class="arrow">&rarr;</span></a>
+        <a href="/courses" class="btn btn-outline btn-lg">View Courses</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .error-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+
+  .error-inner {
+    max-width: 500px;
+  }
+
+  .error-code {
+    font-size: 6rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .error-page h1 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .error-page p {
+    color: var(--color-gray-500);
+    margin-bottom: 2rem;
+    font-size: 1.0625rem;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

@@ -8,6 +8,16 @@ import data from '../../content/pages/microsoft-ai-training.json';
   description="Official Microsoft AI courses for healthcare organizations. AB-730, AB-900, and Copilot Builders training developed in partnership with Microsoft."
 >
 
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Microsoft-Certified AI Training",
+    "description": "Official Microsoft AI courses for healthcare organizations. AB-730, AB-900, and Copilot Builders training.",
+    "provider": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
+    "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." },
+    "educationalCredentialAwarded": "Microsoft Certification"
+  })} />
+
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-inner">

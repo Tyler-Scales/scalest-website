@@ -216,6 +216,11 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
       </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" id="backToTop">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4m0 0L4 10m6-6l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
     <script>
       // Mobile menu toggle
       const toggle = document.querySelector('.mobile-toggle');
@@ -265,6 +270,39 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
             parentDropdown.classList.add('has-active');
           }
         }
+      });
+
+      // Scroll-reveal animations
+      const revealElements = document.querySelectorAll('.section, .section-sm, .section-alt, .page-hero, .testimonial-section, .cta-section');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      revealElements.forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+      });
+
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) {
+          backToTop?.classList.add('visible');
+        } else {
+          backToTop?.classList.remove('visible');
+        }
+      });
+      backToTop?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Lazy loading for below-fold images
+      document.querySelectorAll('img').forEach((img, i) => {
+        if (i > 0) img.setAttribute('loading', 'lazy');
       });
     </script>
   </body>
@@ -1386,5 +1424,50 @@ const fullTitle = isHomepage ? "Scale Street — Healthcare AI Training" : `${ti
     .footer-links {
       gap: 2.5rem;
     }
+  }
+
+  /* Scroll reveal animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Back to top button */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 12px rgba(15, 15, 189, 0.3);
+    z-index: 100;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    background: var(--color-dark);
   }
 </style>

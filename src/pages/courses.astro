@@ -115,6 +115,18 @@ const categoryLabels: Record<string, string> = {
     </div>
   </section>
 
+  <!-- Email Signup -->
+  <section class="section section-alt">
+    <div class="section-inner section-center">
+      <h2>Get Notified When Courses Go Live</h2>
+      <p class="signup-sub">Drop your email and we'll let you know when new courses are scheduled.</p>
+      <form class="signup-form" action="mailto:hello@scalestreet.com" method="get" enctype="text/plain">
+        <input type="email" name="subject" placeholder="your@email.com" required class="signup-input" />
+        <button type="submit" class="btn btn-primary btn-lg">Notify Me <span class="arrow">&rarr;</span></button>
+      </form>
+    </div>
+  </section>
+
   <!-- On-Site CTA -->
   <section class="section cta-section">
     <div class="section-inner section-center">
@@ -302,6 +314,33 @@ const categoryLabels: Record<string, string> = {
     margin-bottom: 2rem;
   }
 
+  .signup-sub {
+    color: var(--color-gray-500);
+    margin-bottom: 1.5rem;
+  }
+
+  .signup-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .signup-input {
+    flex: 1;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 100px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .signup-input:focus {
+    border-color: var(--color-primary);
+  }
+
   @media (max-width: 768px) {
     .course-info-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -322,6 +361,10 @@ const categoryLabels: Record<string, string> = {
     .course-footer {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
+    }
+
+    .signup-form {
+      flex-direction: column;
     }
   }
 </style>

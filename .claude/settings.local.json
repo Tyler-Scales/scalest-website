@@ -22,7 +22,16 @@
       "Bash(git checkout:*)",
       "Bash(git rm:*)",
       "Bash(git rebase:*)",
-      "Bash(GIT_EDITOR=true git rebase --continue)"
+      "Bash(GIT_EDITOR=true git rebase --continue)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(mv image8.png uga.png)",
+      "Bash(mv image9.png bon-secours-mercy-health.png)",
+      "Bash(mv image10.png athens-tech.png)",
+      "Bash(mv image12.png medlink-georgia.png)",
+      "Bash(mv image13.png piedmont-healthcare.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight \"/Users/tswallac/scalest-website/public/images/Tyler Training 1.jpg\")"
     ]
   }
 }

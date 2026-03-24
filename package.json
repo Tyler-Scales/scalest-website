@@ -3,15 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "npx tinacms dev -c \"astro dev\"",
-    "build": "npx tinacms build --local --skip-cloud-checks && astro build",
+    "dev": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@tinacms/cli": "^2.1.7",
-    "astro": "^5.17.1",
-    "tinacms": "^3.5.1"
+    "astro": "^5.17.1"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.7.0"
