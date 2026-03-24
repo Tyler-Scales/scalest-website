@@ -1,7 +1,7 @@
 {
   "heroTitle": "Ambient ",
   "heroTitleGradient": "AI Training",
-  "heroSubtitle": "Hands-on training for the tools transforming clinical documentation. We train your clinicians to use Nuance DAX and Sunio by eClinicalWorks effectively from day one.",
+  "heroSubtitle": "Hands-on training for the tools transforming clinical documentation. We train your clinicians to use Nuance DAX and Sunoh.ai by eClinicalWorks effectively from day one.",
   "products": {
     "title": "Tools We ",
     "titleGradient": "Train On",
@@ -18,9 +18,9 @@
         ]
       },
       {
-        "name": "Sunio / eCW",
-        "fullName": "Sunio by eClinicalWorks",
-        "description": "Ambient documentation built into the eClinicalWorks EHR. We help your providers adopt Sunio and integrate it into their existing eCW workflows for seamless documentation.",
+        "name": "Sunoh.ai / eCW",
+        "fullName": "Sunoh.ai by eClinicalWorks",
+        "description": "Ambient documentation built into the eClinicalWorks EHR. We help your providers adopt Sunoh.ai and integrate it into their existing eCW workflows for seamless documentation.",
         "highlights": [
           "eClinicalWorks workflow integration",
           "Provider training and go-live support",

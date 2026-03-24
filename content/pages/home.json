@@ -36,8 +36,8 @@
       "tag": "Provider Training",
       "title": "Train your clinicians on ",
       "titleGradient": "ambient documentation.",
-      "description": "Hands-on training for the tools transforming clinical documentation: Nuance DAX and Sunio by eClinicalWorks.",
-      "checklistTitle": "Nuance DAX & Sunio/eCW",
+      "description": "Hands-on training for the tools transforming clinical documentation: Nuance DAX and Sunoh.ai by eClinicalWorks.",
+      "checklistTitle": "Nuance DAX & Sunoh.ai/eCW",
       "checklistDescription": "Onboarding, workflow optimization, and adoption coaching for ambient clinical documentation.",
       "link": "/ambient-ai-training",
       "color": "var(--color-peach)"
