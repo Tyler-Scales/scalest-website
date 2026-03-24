@@ -2,10 +2,10 @@
   "heroLabel": "Healthcare AI Training",
   "heroTitle": "Give your team the ",
   "heroTitleGradient": "AI skills",
-  "heroSubtitle": "Scale Street delivers healthcare-focused AI training — from general AI literacy to Microsoft-certified courses and hands-on ambient AI implementation. Webinars, workshops, and coaching designed for your organization.",
+  "heroSubtitle": "Scale Street delivers healthcare-focused AI training, from general literacy to Microsoft-certified courses and hands-on ambient documentation. Webinars, workshops, and coaching designed for your organization.",
   "challengeTitle": "AI is moving fast. ",
   "challengeTitleGradient": "Your team can keep up.",
-  "challengeDescription": "Healthcare organizations know they need AI, but most teams haven't been trained to use it. The gap between AI potential and AI adoption is a skills gap — and that's exactly what we solve.",
+  "challengeDescription": "Healthcare organizations know they need AI, but most teams haven't been trained to use it. The gap between potential and adoption is a skills gap, and that's exactly what we solve.",
   "challengeBottomText": "Scale Street was built to close that gap.",
   "challengeStats": [
     { "value": "94%", "label": "report AI skills gaps" },
@@ -14,11 +14,11 @@
   "trainingFocuses": [
     {
       "tag": "General AI",
-      "title": "Build AI fluency ",
+      "title": "Build AI skills ",
       "titleGradient": "across your organization.",
       "description": "From leadership to frontline staff, we help your team understand what AI can do, how to use it responsibly, and where it fits in their work.",
       "checklistTitle": "Webinars, Workshops & Coaching",
-      "checklistDescription": "Flexible training formats that meet your team where they are — virtual or in-person.",
+      "checklistDescription": "Flexible training formats that meet your team where they are, virtual or in-person.",
       "link": "/general-ai-training",
       "color": "var(--color-mint)"
     },
@@ -36,9 +36,9 @@
       "tag": "Provider Training",
       "title": "Train your clinicians on ",
       "titleGradient": "ambient documentation.",
-      "description": "Hands-on training for the ambient AI tools transforming clinical documentation — Nuance DAX and Sunio by eClinicalWorks.",
+      "description": "Hands-on training for the tools transforming clinical documentation: Nuance DAX and Sunio by eClinicalWorks.",
       "checklistTitle": "Nuance DAX & Sunio/eCW",
-      "checklistDescription": "Onboarding, workflow optimization, and adoption coaching for ambient clinical AI.",
+      "checklistDescription": "Onboarding, workflow optimization, and adoption coaching for ambient clinical documentation.",
       "link": "/ambient-ai-training",
       "color": "var(--color-peach)"
     }
@@ -47,21 +47,21 @@
     {
       "metric": "2,000+",
       "title": "Professionals Trained",
-      "description": "Delivered 50+ AI training sessions consistently rated the best technical training participants have ever attended."
+      "description": "Delivered 50+ training sessions consistently rated the best technical training participants have ever attended."
     },
     {
       "metric": "140+",
       "title": "Providers Onboarded",
-      "description": "Deployed ambient AI documentation (Nuance DAX) across multi-site Emergency Departments with hands-on clinician training."
+      "description": "Deployed ambient documentation (Nuance DAX) across multi-site Emergency Departments with hands-on clinician training."
     },
     {
       "metric": "MHA",
       "title": "University of Georgia",
-      "description": "Faculty in the UGA Master of Health Administration program, connecting training to academic research and the next generation of healthcare leaders."
+      "description": "Faculty in the UGA Master of Health Administration program, teaching Health Informatics and connecting training to the next generation of healthcare leaders."
     },
     {
       "metric": "Microsoft",
-      "title": "Certified Partner",
+      "title": "Certified Trainer",
       "description": "Training programs developed in partnership with Microsoft, aligned to official certification pathways for healthcare organizations."
     }
   ],
@@ -72,5 +72,5 @@
     "MedLink Georgia"
   ],
   "ctaTitle": "Ready to Upskill Your Team?",
-  "ctaSubtitle": "Let's talk about which AI training fits your organization."
+  "ctaSubtitle": "Let's talk about which training fits your organization."
 }

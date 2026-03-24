@@ -1,7 +1,7 @@
 {
   "heroTitle": "Ambient ",
   "heroTitleGradient": "AI Training",
-  "heroSubtitle": "Hands-on training for the ambient AI tools transforming clinical documentation. We train your clinicians to use Nuance DAX and Sunio by eClinicalWorks effectively from day one.",
+  "heroSubtitle": "Hands-on training for the tools transforming clinical documentation. We train your clinicians to use Nuance DAX and Sunio by eClinicalWorks effectively from day one.",
   "products": {
     "title": "Tools We ",
     "titleGradient": "Train On",
@@ -20,7 +20,7 @@
       {
         "name": "Sunio / eCW",
         "fullName": "Sunio by eClinicalWorks",
-        "description": "AI-powered ambient documentation built into the eClinicalWorks EHR. We help your providers adopt Sunio and integrate it into their existing eCW workflows for seamless documentation.",
+        "description": "Ambient documentation built into the eClinicalWorks EHR. We help your providers adopt Sunio and integrate it into their existing eCW workflows for seamless documentation.",
         "highlights": [
           "eClinicalWorks workflow integration",
           "Provider training and go-live support",
@@ -33,17 +33,17 @@
   "formats": {
     "title": "Training ",
     "titleGradient": "Formats",
-    "subtitle": "Ambient AI training designed around your go-live timeline.",
+    "subtitle": "Training designed around your go-live timeline.",
     "items": [
       {
         "number": "01",
         "title": "Webinars",
-        "description": "Introductory sessions that build awareness and set expectations before your ambient AI rollout."
+        "description": "Introductory sessions that build awareness and set expectations before your rollout."
       },
       {
         "number": "02",
         "title": "Virtual Workshops",
-        "description": "Remote hands-on training for providers, walking through real encounter scenarios with the ambient AI tool."
+        "description": "Remote hands-on training for providers, walking through real encounter scenarios with the tool."
       },
       {
         "number": "03",
@@ -61,6 +61,6 @@
     { "value": "140+", "label": "Providers Onboarded" },
     { "value": "Multi-Site", "label": "ED Deployments" }
   ],
-  "ctaTitle": "Planning an Ambient AI Rollout?",
+  "ctaTitle": "Planning an Ambient Rollout?",
   "ctaSubtitle": "Let's make sure your providers are ready from day one."
 }

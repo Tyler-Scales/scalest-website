@@ -1,7 +1,7 @@
 {
   "heroTitle": "General ",
   "heroTitleGradient": "AI Training",
-  "heroSubtitle": "Build AI fluency across your organization — from leadership to frontline staff. We help your team understand what AI can do, how to use it responsibly, and where it fits in their work.",
+  "heroSubtitle": "Build AI skills across your organization, from leadership to frontline staff. We help your team understand what AI can do, how to use it responsibly, and where it fits in their work.",
   "formats": {
     "title": "Training ",
     "titleGradient": "Formats",
@@ -20,7 +20,7 @@
       {
         "number": "03",
         "title": "In-Person Workshops",
-        "description": "On-site training tailored to your team's workflows and tools. The most immersive format — ideal for teams ready to put AI into practice."
+        "description": "On-site training tailored to your team's workflows and tools. The most immersive format for teams ready to put AI into practice."
       },
       {
         "number": "04",
@@ -35,7 +35,7 @@
     "items": [
       {
         "title": "AI Fundamentals",
-        "description": "What AI is, how it works, and what it means for healthcare — explained without the jargon."
+        "description": "What AI is, how it works, and what it means for healthcare, explained without the jargon."
       },
       {
         "title": "Responsible AI Use",
@@ -43,7 +43,7 @@
       },
       {
         "title": "AI in Your Workflow",
-        "description": "Practical applications of AI in clinical, administrative, and operational settings specific to your organization."
+        "description": "Practical applications in clinical, administrative, and operational settings specific to your organization."
       },
       {
         "title": "Prompt Engineering",
@@ -54,19 +54,19 @@
   "whoItsFor": {
     "title": "Who ",
     "titleGradient": "It's For",
-    "description": "General AI training is designed for healthcare organizations at any stage of AI adoption.",
+    "description": "General AI training is designed for healthcare organizations at any stage of adoption.",
     "items": [
       {
         "title": "Executive Leadership",
-        "description": "Build the strategic understanding needed to make informed AI investment decisions."
+        "description": "Build the strategic understanding needed to make informed investment decisions."
       },
       {
         "title": "Clinical Teams",
-        "description": "Help providers and nurses understand how AI tools will change — and improve — their daily work."
+        "description": "Help providers and nurses understand how AI tools will change and improve their daily work."
       },
       {
         "title": "Administrative Staff",
-        "description": "Equip your operations, finance, and HR teams with practical AI skills for their workflows."
+        "description": "Equip your operations, finance, and HR teams with practical skills for their workflows."
       }
     ]
   },
@@ -75,6 +75,6 @@
     { "value": "50+", "label": "Sessions Delivered" },
     { "value": "10", "label": "Hometown Health AI Series" }
   ],
-  "ctaTitle": "Ready to Build AI Fluency Across Your Team?",
+  "ctaTitle": "Ready to Build AI Skills Across Your Team?",
   "ctaSubtitle": "Let's design a training program that fits your organization."
 }

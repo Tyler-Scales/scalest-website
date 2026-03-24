@@ -1,11 +1,11 @@
 {
   "heroTitle": "Microsoft-Certified ",
   "heroTitleGradient": "AI Training",
-  "heroSubtitle": "Official Microsoft AI courses for healthcare organizations. Certification-aligned training developed in partnership with Microsoft — for users, admins, and builders.",
+  "heroSubtitle": "Official Microsoft AI courses for healthcare organizations. Certification-aligned training developed in partnership with Microsoft, for users, admins, and builders.",
   "courses": {
     "title": "Certification ",
     "titleGradient": "Courses",
-    "subtitle": "Training aligned to Microsoft's official AI certification pathways.",
+    "subtitle": "Training aligned to Microsoft's official certification pathways.",
     "items": [
       {
         "code": "AB-730",
@@ -22,7 +22,7 @@
       {
         "code": "TBD",
         "title": "Copilot Builders",
-        "description": "Build custom Copilot agents and AI solutions tailored to your organization's needs. For teams ready to extend beyond out-of-the-box AI tools.",
+        "description": "Build custom Copilot agents and solutions tailored to your organization's needs. For teams ready to extend beyond out-of-the-box tools.",
         "audience": "IT developers & power users"
       }
     ]
@@ -57,7 +57,7 @@
   "partnership": {
     "title": "Developed with ",
     "titleGradient": "Microsoft.",
-    "description": "Our Microsoft AI training programs are developed in partnership with Microsoft and aligned to their official certification pathways. Your team gets training that counts — built by people who know healthcare.",
+    "description": "Our Microsoft training programs are developed in partnership with Microsoft and aligned to their official certification pathways. Your team gets training that counts, built by people who know healthcare.",
     "highlights": [
       "Official certification-aligned curriculum",
       "Healthcare-specific examples and scenarios",
@@ -65,6 +65,6 @@
       "Post-training support and adoption coaching"
     ]
   },
-  "ctaTitle": "Ready for Microsoft-Certified AI Training?",
+  "ctaTitle": "Ready for Microsoft-Certified Training?",
   "ctaSubtitle": "Let's find the right courses for your team."
 }

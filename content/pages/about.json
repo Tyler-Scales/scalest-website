@@ -3,30 +3,30 @@
   "heroTitleGradient": "the communities we serve.",
   "heroSubtitle": "Based in Athens, Georgia, where academic rigor meets real-world healthcare experience.",
   "story": {
-    "title": "We don\u2019t just teach. ",
-    "titleGradient": "We train.",
+    "title": "Training that ",
+    "titleGradient": "actually sticks.",
     "paragraphs": [
-      "Scale Street was built to solve a specific problem: healthcare organizations know they need AI, but their teams haven\u2019t been trained to use it.",
-      "We bring together academic depth from the University of Georgia and hands-on implementation experience from the organizations we serve. The result is AI training that\u2019s grounded in evidence and built for the real world.",
-      "Our goal is simple: give your people the AI skills they need so your organization can move forward on its own terms."
+      "Healthcare organizations know they need AI, but their teams haven't been trained to use it.",
+      "Scale Street combines academic depth from the University of Georgia with hands-on experience from the organizations we serve. The result is training that's grounded in evidence and built for the real world.",
+      "Our goal is simple: give your people the skills they need so your organization can move forward on its own terms."
     ]
   },
   "leadership": {
-    "sectionTitle": "A team that speaks ",
-    "sectionTitleGradient": "healthcare and AI.",
+    "sectionTitle": "Meet ",
+    "sectionTitleGradient": "Tyler.",
     "name": "Tyler S. Wallace, Ph.D.",
-    "role": "Principal Consultant",
-    "shortBio": "15+ years in healthcare strategy. Faculty at UGA\u2019s Master of Health Administration program. Former strategy roles at MD Anderson Cancer Center and USAID.",
+    "role": "Founder & Lead Trainer",
+    "shortBio": "International trainer. UGA faculty. Microsoft Certified Trainer.",
     "paragraphs": [
-      "Scale Street was founded by Tyler Wallace, Ph.D., with 15+ years in healthcare strategy spanning MD Anderson Cancer Center, USAID, and now the healthcare organizations across the Southeast that we serve every day.",
-      "As faculty in the University of Georgia\u2019s Master of Health Administration program, Tyler bridges the gap between academic research and practical implementation \u2014 bringing evidence-based approaches to every training engagement.",
-      "Our team combines deep healthcare operations expertise with hands-on AI training experience. We don\u2019t just understand the technology \u2014 we understand the workflows, the politics, and the people who make healthcare work."
+      "Tyler Wallace, Ph.D. is an international trainer who has trained over 2,000 professionals across healthcare, government, and higher education. He brings 15+ years of experience spanning MD Anderson Cancer Center, USAID, and healthcare organizations across the Southeast.",
+      "As faculty in the University of Georgia's Master of Health Administration program, Tyler teaches Health Informatics and connects classroom learning with what's happening in the field.",
+      "Tyler is a Microsoft Certified Trainer (MCT), delivering official Microsoft AI courses for users, administrators, and builders. He combines deep healthcare knowledge with practical, hands-on instruction that participants consistently rate as the best training they've attended."
     ]
   },
   "values": [
     {
       "title": "Mission-Driven",
-      "description": "We work in healthcare because it matters. Every training engagement is measured by its impact on the people and communities our clients serve.",
+      "description": "We work in healthcare because it matters. Every training is measured by its impact on the people and communities our clients serve.",
       "color": "blue"
     },
     {
@@ -36,13 +36,13 @@
     },
     {
       "title": "Locally Connected",
-      "description": "Based in Athens, Georgia, we\u2019re embedded in the communities we serve. We understand the unique challenges of healthcare in the Southeast.",
+      "description": "Based in Athens, Georgia, we're embedded in the communities we serve. We understand the unique challenges of healthcare in the Southeast.",
       "color": "peach"
     }
   ],
   "approach": {
     "title": "How We Work",
-    "subtitle": "Four principles that guide every training engagement.",
+    "subtitle": "Four principles that guide every training.",
     "steps": [
       {
         "number": "Step 01",
@@ -52,7 +52,7 @@
       {
         "number": "Step 02",
         "title": "Meet Your Team Where They Are",
-        "description": "We assess current AI fluency and design training that builds from where your people actually are."
+        "description": "We assess current skill levels and design training that builds from where your people actually are."
       },
       {
         "number": "Step 03",
@@ -62,29 +62,29 @@
       {
         "number": "Step 04",
         "title": "Reinforce and Sustain",
-        "description": "Training doesn\u2019t end in the classroom. We provide coaching and follow-up to drive lasting adoption."
+        "description": "Training doesn't end in the classroom. We provide coaching and follow-up to drive lasting adoption."
       }
     ]
   },
   "whoWeWorkWith": {
     "title": "Healthcare organizations ",
     "titleGradient": "ready to upskill.",
-    "description": "From large health systems to rural critical access hospitals, we train teams that are serious about AI adoption.",
+    "description": "From large health systems to rural critical access hospitals, we train teams that are serious about getting their people ready.",
     "items": [
       {
         "title": "Health Systems",
-        "description": "Multi-site organizations building AI fluency across clinical and administrative teams."
+        "description": "Multi-site organizations building skills across clinical and administrative teams."
       },
       {
         "title": "Critical Access Hospitals",
-        "description": "Rural hospitals that need AI training but can\u2019t justify a full-time hire to deliver it."
+        "description": "Rural hospitals that need training but can't justify a full-time hire to deliver it."
       },
       {
         "title": "Federally Qualified Health Centers",
-        "description": "Community health centers equipping staff with AI skills to serve underserved populations more effectively."
+        "description": "Community health centers equipping staff with the skills to serve underserved populations more effectively."
       }
     ]
   },
-  "ctaTitle": "We\u2019d Love to Learn About Your Organization.",
-  "ctaSubtitle": "Let\u2019s talk about which AI training fits your team."
+  "ctaTitle": "We'd Love to Learn About Your Organization.",
+  "ctaSubtitle": "Let's talk about which training fits your team."
 }
