@@ -60,9 +60,9 @@
       "description": "Faculty in the UGA Master of Health Administration program, teaching Health Informatics and connecting training to the next generation of healthcare leaders."
     },
     {
-      "metric": "Microsoft",
-      "title": "Certified Trainer",
-      "description": "Training programs developed in partnership with Microsoft, aligned to official certification pathways for healthcare organizations."
+      "metric": "MCT",
+      "title": "Microsoft Certified Trainer",
+      "description": "Official Microsoft curriculum developed and delivered by a Microsoft Certified Trainer with deep healthcare experience."
     }
   ],
   "partners": [

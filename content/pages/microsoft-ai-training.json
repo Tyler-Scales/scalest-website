@@ -55,11 +55,11 @@
     ]
   },
   "partnership": {
-    "title": "Developed with ",
-    "titleGradient": "Microsoft.",
-    "description": "Our Microsoft training programs are developed in partnership with Microsoft and aligned to their official certification pathways. Your team gets training that counts, built by people who know healthcare.",
+    "title": "Delivered by a ",
+    "titleGradient": "Microsoft Certified Trainer.",
+    "description": "Our courses are developed and delivered by a Microsoft Certified Trainer (MCT) with deep healthcare experience. You get official Microsoft curriculum taught by someone who understands your world.",
     "highlights": [
-      "Official certification-aligned curriculum",
+      "Official Microsoft curriculum delivered by an MCT",
       "Healthcare-specific examples and scenarios",
       "Hands-on labs using your M365 environment",
       "Post-training support and adoption coaching"
