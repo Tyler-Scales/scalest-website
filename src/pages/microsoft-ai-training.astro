@@ -15,7 +15,47 @@ import data from '../../content/pages/microsoft-ai-training.json';
     "description": "Official Microsoft AI courses for healthcare organizations. AB-730, AB-900, and Copilot Builders training.",
     "provider": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
     "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." },
-    "educationalCredentialAwarded": "Microsoft Certification"
+    "educationalCredentialAwarded": "Microsoft Certification",
+    "courseMode": ["online", "onsite"],
+    "hasCourseInstance": [
+      { "@type": "CourseInstance", "name": "Microsoft 365 Copilot for End Users (AB-730)", "courseMode": "online" },
+      { "@type": "CourseInstance", "name": "Microsoft 365 Copilot for Admins (AB-900)", "courseMode": "online" },
+      { "@type": "CourseInstance", "name": "Copilot Builders", "courseMode": "online" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
+      { "@type": "ListItem", "position": 2, "name": "Microsoft AI Training", "item": "https://scalestreet.com/microsoft-ai-training" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are these official Microsoft courses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street delivers official Microsoft courseware through Tyler S. Wallace, Ph.D., a Microsoft Certified Trainer (MCT). Courses include AB-730 and AB-900." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between AB-730 and AB-900?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AB-730 (Microsoft 365 Copilot for End Users) trains staff to use Copilot in Word, Excel, Outlook, and Teams. AB-900 (Microsoft 365 Copilot for Admins) is designed for IT administrators managing Copilot deployment, security, and governance." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do participants receive a certificate after completing a Microsoft course?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Participants receive an official Microsoft course completion certificate. These are recognized Microsoft credentials tied to official courseware." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can these courses be delivered on-site at our organization?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street can deliver Microsoft-certified AI courses virtually or in person at your location. Contact us to schedule a session for your team." }
+      }
+    ]
   })} />
 
   <!-- Page Hero -->

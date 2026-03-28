@@ -16,6 +16,15 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
   description="Scale Street is a healthcare AI training company based in Athens, Georgia, led by Tyler S. Wallace, Ph.D. We deliver AI training through webinars, workshops, and coaching."
 >
 
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
+      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://scalestreet.com/about" }
+    ]
+  })} />
+
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-inner">

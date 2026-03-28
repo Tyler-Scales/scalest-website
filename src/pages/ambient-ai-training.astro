@@ -14,7 +14,43 @@ import data from '../../content/pages/ambient-ai-training.json';
     "name": "Ambient AI Training for Healthcare Providers",
     "description": "Hands-on training for Nuance DAX and Sunoh.ai by eClinicalWorks. Ambient clinical documentation AI training.",
     "provider": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
-    "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." }
+    "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." },
+    "courseMode": ["online", "onsite"],
+    "audience": { "@type": "EducationalAudience", "educationalRole": "Clinical providers" }
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
+      { "@type": "ListItem", "position": 2, "name": "Ambient AI Training", "item": "https://scalestreet.com/ambient-ai-training" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which ambient AI tools does Scale Street train on?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Scale Street trains clinical providers on Nuance DAX (Microsoft) and Sunoh.ai by eClinicalWorks — the two most widely adopted ambient clinical documentation tools in healthcare." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is ambient AI documentation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ambient AI documentation tools like Nuance DAX and Sunoh.ai listen to patient-provider conversations and automatically generate clinical notes, reducing documentation burden and allowing providers to focus on care." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can training be delivered at the time of go-live?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street specializes in go-live support training, helping providers adopt ambient AI tools from day one of deployment to maximize adoption and reduce workflow disruption." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ambient AI training available for large health systems?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street has trained clinical providers across large health systems and can scale training programs to fit organizations of any size, including multi-site deployments." }
+      }
+    ]
   })} />
 
   <!-- Page Hero -->

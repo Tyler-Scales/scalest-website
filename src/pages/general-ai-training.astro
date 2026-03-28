@@ -16,7 +16,43 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
     "name": "General AI Training for Healthcare",
     "description": "Build AI fluency across your healthcare organization. Webinars, workshops, and coaching designed for leadership, clinical teams, and administrative staff.",
     "provider": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
-    "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." }
+    "instructor": { "@type": "Person", "name": "Tyler S. Wallace, Ph.D." },
+    "courseMode": ["online", "onsite"],
+    "audience": { "@type": "EducationalAudience", "educationalRole": "Healthcare professionals" }
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
+      { "@type": "ListItem", "position": 2, "name": "General AI Training", "item": "https://scalestreet.com/general-ai-training" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is general AI training designed for?",
+        "acceptedAnswer": { "@type": "Answer", "text": "General AI training is designed for all healthcare staff — clinical teams, administrative staff, and leadership — at any stage of AI adoption." }
+      },
+      {
+        "@type": "Question",
+        "name": "What formats does Scale Street offer for AI training?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Scale Street offers webinars, virtual workshops, in-person workshops, and ongoing coaching to fit your organization's needs and schedule." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do participants need technical experience to attend?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No technical background is required. General AI training is designed for non-technical healthcare professionals and focuses on practical, responsible AI use." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can training be customized for our organization?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street customizes every training program to your organization's tools, workflows, and team. Contact us to discuss your specific needs." }
+      }
+    ]
   })} />
 
   <!-- Page Hero -->
