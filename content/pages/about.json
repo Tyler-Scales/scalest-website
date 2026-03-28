@@ -25,18 +25,23 @@
   },
   "values": [
     {
-      "title": "Mission-Driven",
-      "description": "We work in healthcare because it matters. Every training is measured by its impact on the people and communities our clients serve.",
+      "title": "Courage",
+      "description": "To be willing to lead in uncertainty -- to step forward when the path isn't clear and the stakes are real.",
       "color": "blue"
     },
     {
-      "title": "Practically Minded",
-      "description": "We bridge theory and practice. Academic rigor informs our approach, but real-world skills are what we deliver.",
+      "title": "Curiosity",
+      "description": "To explore and question everything -- to stay open, keep learning, and never assume we have it all figured out.",
       "color": "green"
     },
     {
-      "title": "Locally Connected",
-      "description": "Based in Athens, Georgia, we're embedded in the communities we serve. We understand the unique challenges of healthcare in the Southeast.",
+      "title": "Growth",
+      "description": "We have to grow as a company and as individuals -- every challenge is an opportunity to get better.",
+      "color": "blue"
+    },
+    {
+      "title": "Grace",
+      "description": "We will mess up. We will extend grace to ourselves and to others -- because that's how trust is built.",
       "color": "peach"
     }
   ],
