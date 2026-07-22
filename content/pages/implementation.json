@@ -1,0 +1,61 @@
+{
+  "heroTitle": "From pilot to ",
+  "heroTitleGradient": "point of care.",
+  "heroSubtitle": "Buying an AI tool is easy. Getting clinicians to use it well is the hard part. We deploy AI tools hands-on — configuration, go-live, and the adoption work that makes them stick.",
+  "services": {
+    "title": "What We ",
+    "titleGradient": "Implement",
+    "subtitle": "Deployment and adoption support for the AI tools healthcare teams actually use.",
+    "items": [
+      {
+        "title": "Ambient AI Documentation",
+        "description": "End-to-end deployment of Nuance DAX and Sunoh.ai by eClinicalWorks — provider onboarding, workflow integration, go-live support, and note-quality optimization. 140+ providers onboarded across multi-site Emergency Departments."
+      },
+      {
+        "title": "Microsoft Copilot Rollout",
+        "description": "Deployment of Microsoft 365 Copilot across your organization — configuration and governance, admin enablement, staff training, and adoption tracking."
+      },
+      {
+        "title": "AI Workflow Integration",
+        "description": "Putting AI to work inside your real workflows — clinical, administrative, and operational — so new tools reduce burden instead of adding to it."
+      },
+      {
+        "title": "Adoption & Optimization",
+        "description": "Post-go-live coaching, usage analysis, and continuous improvement that turn a launched tool into a used one."
+      }
+    ]
+  },
+  "approach": {
+    "title": "How We ",
+    "titleGradient": "Deploy",
+    "subtitle": "A go-live playbook built from real multi-site deployments.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Plan & Configure",
+        "description": "We map the tool to your workflows, configure it for your environment, and define success metrics before anyone goes live."
+      },
+      {
+        "number": "02",
+        "title": "Pilot",
+        "description": "A focused pilot with early adopters surfaces workflow issues while the stakes are low — and builds internal champions."
+      },
+      {
+        "number": "03",
+        "title": "Go-Live",
+        "description": "Elbow-to-elbow support during launch. We're on site (or on screen) with your teams when it matters most."
+      },
+      {
+        "number": "04",
+        "title": "Optimize & Sustain",
+        "description": "Adoption coaching, quality review, and usage data keep the tool improving long after launch day."
+      }
+    ]
+  },
+  "stats": [
+    { "value": "140+", "label": "Providers Onboarded" },
+    { "value": "Multi-Site", "label": "ED Deployments" }
+  ],
+  "ctaTitle": "Have a Tool That Needs to Actually Get Used?",
+  "ctaSubtitle": "Let's talk about your rollout — whether it's ahead of you or already stalled."
+}

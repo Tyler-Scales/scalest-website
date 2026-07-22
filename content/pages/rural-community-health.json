@@ -1,0 +1,59 @@
+{
+  "heroTitle": "AI for the communities that ",
+  "heroTitleGradient": "need it most.",
+  "heroSubtitle": "Critical access hospitals, FQHCs, and community health centers run lean — which is exactly why AI matters for them, and exactly why generic AI consulting doesn't fit. We bring right-sized strategy, training, and implementation to rural and community health.",
+  "challenge": {
+    "title": "Rural health can't afford ",
+    "titleGradient": "to sit AI out.",
+    "description": "Workforce shortages, thin margins, and heavy administrative burden hit rural and community health hardest. AI can ease all three — but most rural organizations don't have an informaticist, an AI budget line, or time for a two-year transformation program. They need a partner who's actually worked in their world.",
+    "bottomText": "That's the work we've built our practice around."
+  },
+  "services": {
+    "title": "How We ",
+    "titleGradient": "Help",
+    "subtitle": "The same three service lines — sized for rural and community health.",
+    "items": [
+      {
+        "title": "Right-Sized Strategy",
+        "description": "AI readiness and roadmaps scoped to a critical access hospital or health center's real budget and capacity — not a big-system playbook.",
+        "link": "/strategy"
+      },
+      {
+        "title": "Shared & On-Site Training",
+        "description": "Webinars and workshops for individual organizations or entire networks — like our 10-session AI series delivered with Hometown Health.",
+        "link": "/training"
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Deployment of high-impact tools — ambient documentation, Copilot, workflow automation — with hands-on go-live support your staff can lean on.",
+        "link": "/implementation"
+      }
+    ]
+  },
+  "whoWeServe": {
+    "title": "Who ",
+    "titleGradient": "We Serve",
+    "description": "We work with the organizations that hold rural and community health together.",
+    "items": [
+      {
+        "title": "Critical Access & Rural Hospitals",
+        "description": "Small hospitals that need AI expertise without a full-time hire."
+      },
+      {
+        "title": "FQHCs & Community Health Centers",
+        "description": "Safety-net organizations using AI to extend their reach to underserved populations."
+      },
+      {
+        "title": "Networks, PCAs & Associations",
+        "description": "State associations and networks that want to bring AI capability to all their members at once."
+      }
+    ]
+  },
+  "stats": [
+    { "value": "10", "label": "Session AI Series with Hometown Health" },
+    { "value": "2,000+", "label": "Professionals Trained" },
+    { "value": "GA", "label": "Rooted in Georgia, Serving the Southeast" }
+  ],
+  "ctaTitle": "Serving a Rural or Community Population?",
+  "ctaSubtitle": "Let's talk about what AI can realistically do for your organization — and your patients."
+}

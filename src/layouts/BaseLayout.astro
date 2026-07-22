@@ -5,12 +5,12 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = "Scale Street delivers healthcare AI training. From general AI literacy to Microsoft-certified courses and ambient AI implementation. Give your team the skills they need.", ogImage = "/images/hero-healthcare.jpg" } = Astro.props;
+const { title, description = "Scale Street delivers AI enablement for healthcare — strategy, training, and implementation. Focused on rural and community health and ambient AI optimization.", ogImage = "/images/hero-healthcare.jpg" } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
-const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${title} | Scale Street`;
+const fullTitle = isHomepage ? "Scale Street | AI Enablement for Healthcare" : `${title} | Scale Street`;
 ---
 
 <!doctype html>
@@ -63,7 +63,7 @@ const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${titl
       "alternateName": "Scale Street",
       "url": "https://scalestreet.com",
       "logo": "https://scalestreet.com/logo.avif",
-      "description": "Scale Street delivers healthcare AI training. From general AI literacy to Microsoft-certified courses and ambient AI implementation. Give your team the skills they need.",
+      "description": "Scale Street delivers AI enablement for healthcare — strategy, training, and implementation. Focused on rural and community health and ambient AI optimization.",
       "email": "hello@scalestreet.com",
       "telephone": "+1-706-206-2530",
       "address": {
@@ -95,43 +95,47 @@ const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${titl
       "priceRange": "$$",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Healthcare AI Training Programs",
+        "name": "Healthcare AI Enablement Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "General AI Training",
-              "description": "AI literacy and adoption training for healthcare teams through webinars, workshops, and coaching.",
-              "url": "https://scalestreet.com/general-ai-training"
+              "name": "AI Strategy",
+              "description": "AI readiness assessments, roadmaps, governance, and vendor selection for healthcare organizations.",
+              "url": "https://scalestreet.com/strategy"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Microsoft-Certified AI Training",
-              "description": "Microsoft-certified AI courses including AB-730, AB-900, and Copilot Builders for healthcare organizations.",
-              "url": "https://scalestreet.com/microsoft-ai-training"
+              "name": "AI Training",
+              "description": "General AI literacy, Microsoft-certified courses, and provider training through webinars, workshops, and coaching.",
+              "url": "https://scalestreet.com/training"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ambient AI Training",
-              "description": "Training for ambient clinical documentation tools including Nuance DAX and Sunoh.ai/eClinicalWorks.",
-              "url": "https://scalestreet.com/ambient-ai-training"
+              "name": "AI Implementation",
+              "description": "Hands-on deployment of AI tools — ambient documentation, Microsoft Copilot, and workflow integration with go-live support.",
+              "url": "https://scalestreet.com/implementation"
             }
           }
         ]
       },
       "serviceType": [
-        "General AI Training",
-        "Microsoft-Certified AI Training",
-        "Ambient AI Training"
+        "AI Strategy",
+        "AI Training",
+        "AI Implementation"
       ],
       "knowsAbout": [
+        "Healthcare AI Enablement",
+        "AI Strategy",
+        "AI Governance",
+        "AI Readiness Assessment",
         "Healthcare AI Training",
         "AI Literacy",
         "Microsoft AI Certification",
@@ -141,6 +145,8 @@ const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${titl
         "Microsoft Nuance DAX",
         "Ambient Clinical Documentation",
         "eClinicalWorks Sunoh.ai",
+        "Rural Health",
+        "Community Health Centers",
         "AI Workforce Development"
       ],
       "sameAs": [
@@ -162,14 +168,20 @@ const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${titl
         </button>
         <ul class="nav-links">
           <li class="nav-dropdown">
-            <button class="nav-dropdown-toggle" aria-expanded="false">Training <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="nav-dropdown-toggle" aria-expanded="false">Services <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             <ul class="nav-dropdown-menu">
-              <li><a href="/general-ai-training">General AI</a></li>
-              <li><a href="/microsoft-ai-training">Microsoft</a></li>
-              <li><a href="/ambient-ai-training">Providers</a></li>
+              <li><a href="/strategy">Strategy</a></li>
+              <li><a href="/training">Training</a></li>
+              <li><a href="/implementation">Implementation</a></li>
             </ul>
           </li>
-          <li><a href="/courses">Upcoming Courses</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-expanded="false">Focus Areas <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/rural-community-health">Rural &amp; Community Health</a></li>
+              <li><a href="/ambient-ai-training">Ambient AI</a></li>
+            </ul>
+          </li>
           <li><a href="/about">About</a></li>
           <li><a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cta">Book a Call</a></li>
         </ul>
@@ -184,16 +196,22 @@ const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${titl
       <div class="footer-container">
         <div class="footer-brand">
           <img src="/logo.avif" alt="Scale Street" class="footer-logo-img" />
-          <p>Healthcare AI training that gives your team the skills to adopt AI on their terms.</p>
+          <p>AI enablement for healthcare — strategy, training, and implementation that helps your organization adopt AI on its terms.</p>
         </div>
         <div class="footer-links">
           <div class="footer-col">
-            <h4>Training</h4>
+            <h4>Services</h4>
             <ul>
-              <li><a href="/general-ai-training">General AI Training</a></li>
-              <li><a href="/microsoft-ai-training">Microsoft Training</a></li>
-              <li><a href="/ambient-ai-training">Provider Training</a></li>
-              <li><a href="/courses">Upcoming Courses</a></li>
+              <li><a href="/strategy">Strategy</a></li>
+              <li><a href="/training">Training</a></li>
+              <li><a href="/implementation">Implementation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Focus Areas</h4>
+            <ul>
+              <li><a href="/rural-community-health">Rural &amp; Community Health</a></li>
+              <li><a href="/ambient-ai-training">Ambient AI</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -231,21 +249,31 @@ const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${titl
         navLinks?.classList.toggle('open');
       });
 
-      // Dropdown toggle
-      const dropdown = document.querySelector('.nav-dropdown');
-      const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-      dropdownToggle?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdown?.classList.toggle('open');
-        const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
-        dropdownToggle.setAttribute('aria-expanded', String(!expanded));
+      // Dropdown toggles (supports multiple dropdowns)
+      const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
+      const closeAllDropdowns = () => {
+        dropdowns.forEach(d => {
+          d.classList.remove('open');
+          d.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
+      };
+      dropdowns.forEach(dropdown => {
+        const dropdownToggle = dropdown.querySelector('.nav-dropdown-toggle');
+        dropdownToggle?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const wasOpen = dropdown.classList.contains('open');
+          closeAllDropdowns();
+          if (!wasOpen) {
+            dropdown.classList.add('open');
+            dropdownToggle.setAttribute('aria-expanded', 'true');
+          }
+        });
       });
 
-      // Close dropdown when clicking outside
+      // Close dropdowns when clicking outside
       document.addEventListener('click', (e) => {
-        if (!dropdown?.contains(e.target as Node)) {
-          dropdown?.classList.remove('open');
-          dropdownToggle?.setAttribute('aria-expanded', 'false');
+        if (!dropdowns.some(d => d.contains(e.target as Node))) {
+          closeAllDropdowns();
         }
       });
 
@@ -253,7 +281,7 @@ const fullTitle = isHomepage ? "Scale Street | Healthcare AI Training" : `${titl
       navLinks?.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           navLinks.classList.remove('open');
-          dropdown?.classList.remove('open');
+          closeAllDropdowns();
           toggle?.setAttribute('aria-expanded', 'false');
         });
       });

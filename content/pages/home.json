@@ -1,48 +1,66 @@
 {
-  "heroLabel": "Healthcare AI Training",
-  "heroTitle": "Give your team the ",
-  "heroTitleGradient": "AI skills",
-  "heroSubtitle": "Scale Street delivers healthcare-focused AI training, from general literacy to Microsoft-certified courses and hands-on ambient documentation. Webinars, workshops, and coaching designed for your organization.",
-  "challengeTitle": "AI is moving fast. ",
-  "challengeTitleGradient": "Your team can keep up.",
-  "challengeDescription": "Healthcare organizations know they need AI, but most teams haven't been trained to use it. The gap between potential and adoption is a skills gap, and that's exactly what we solve.",
+  "heroLabel": "AI Enablement for Healthcare",
+  "heroTitle": "Put AI to work in ",
+  "heroTitleGradient": "your organization.",
+  "heroSubtitle": "Scale Street is an AI enablement partner for healthcare. We help you set the strategy, train your people, and implement the tools — so AI actually delivers at the point of care.",
+  "challengeTitle": "AI won't transform healthcare ",
+  "challengeTitleGradient": "on its own.",
+  "challengeDescription": "Most healthcare organizations know AI matters. But pilots stall, tools sit unused, and teams are left untrained. The gap between AI's potential and real results isn't a technology gap — it's an enablement gap.",
   "challengeBottomText": "Scale Street was built to close that gap.",
   "challengeStats": [
     { "value": "94%", "label": "report AI skills gaps" },
     { "value": "2,000+", "label": "professionals trained" }
   ],
-  "trainingFocuses": [
+  "services": [
     {
-      "tag": "General AI",
+      "tag": "Strategy",
+      "title": "Chart your ",
+      "titleGradient": "AI roadmap.",
+      "description": "AI readiness assessments, governance frameworks, vendor selection, and executive advisory that turn AI ambition into a plan your board and your clinicians can get behind.",
+      "checklistTitle": "Assess, Plan & Govern",
+      "checklistDescription": "Readiness assessments, AI roadmaps, governance and policy, and vendor evaluation.",
+      "link": "/strategy"
+    },
+    {
+      "tag": "Training",
       "title": "Build AI skills ",
       "titleGradient": "across your organization.",
-      "description": "From leadership to frontline staff, we help your team understand what AI can do, how to use it responsibly, and where it fits in their work.",
+      "description": "From general AI literacy to Microsoft-certified courses and provider training, we give leadership, clinical, and administrative teams the skills to use AI well.",
       "checklistTitle": "Webinars, Workshops & Coaching",
-      "checklistDescription": "Flexible training formats that meet your team where they are, virtual or in-person.",
-      "link": "/general-ai-training",
-      "color": "var(--color-mint)"
+      "checklistDescription": "General AI, Microsoft-certified, and provider training — delivered virtually or on site.",
+      "link": "/training"
     },
     {
-      "tag": "Microsoft Training",
-      "title": "Microsoft-certified ",
-      "titleGradient": "AI training.",
-      "description": "Official Microsoft AI courses for users, admins, and builders. Certification-aligned training delivered by a Microsoft Certified Trainer.",
-      "checklistTitle": "AB-730, AB-900 & Copilot Builders",
-      "checklistDescription": "From end-user adoption to M365 administration to building custom Copilot solutions.",
-      "link": "/microsoft-ai-training",
-      "color": "var(--color-blue)"
-    },
-    {
-      "tag": "Provider Training",
-      "title": "Train your clinicians on ",
-      "titleGradient": "ambient documentation.",
-      "description": "Hands-on training for the tools transforming clinical documentation: Nuance DAX and Sunoh.ai by eClinicalWorks.",
-      "checklistTitle": "Nuance DAX & Sunoh.ai/eCW",
-      "checklistDescription": "Onboarding, workflow optimization, and adoption coaching for ambient clinical documentation.",
-      "link": "/ambient-ai-training",
-      "color": "var(--color-peach)"
+      "tag": "Implementation",
+      "title": "Deploy AI tools ",
+      "titleGradient": "that stick.",
+      "description": "Hands-on deployment of ambient documentation, Microsoft Copilot, and AI-powered workflows — from configuration and go-live to adoption coaching and optimization.",
+      "checklistTitle": "Go-Live & Adoption Support",
+      "checklistDescription": "Ambient AI rollouts, Copilot deployment, workflow integration, and post-go-live optimization.",
+      "link": "/implementation"
     }
   ],
+  "focusAreas": {
+    "title": "Where we go ",
+    "titleGradient": "deep.",
+    "subtitle": "Two areas where healthcare needs AI enablement most — and where we've done the work.",
+    "items": [
+      {
+        "title": "AI in Rural & Community Health",
+        "description": "Critical access hospitals, FQHCs, and community health centers deserve the same AI advantage as large systems. We bring right-sized strategy, training, and implementation to the organizations that need it most.",
+        "link": "/rural-community-health",
+        "image": "/images/rural-community.jpg",
+        "imageAlt": "Rural community healthcare"
+      },
+      {
+        "title": "Ambient AI Optimization & Training",
+        "description": "From vendor selection to go-live to note-quality optimization, we've onboarded 140+ providers on ambient documentation tools like Nuance DAX and Sunoh.ai by eClinicalWorks.",
+        "link": "/ambient-ai-training",
+        "image": "/images/ambient.jpg",
+        "imageAlt": "Ambient AI clinical documentation"
+      }
+    ]
+  },
   "credentials": [
     {
       "metric": "2,000+",
@@ -71,6 +89,6 @@
     "Hometown Health",
     "MedLink Georgia"
   ],
-  "ctaTitle": "Ready to Upskill Your Team?",
-  "ctaSubtitle": "Let's talk about which training fits your organization."
+  "ctaTitle": "Ready to Put AI to Work?",
+  "ctaSubtitle": "Let's talk about where your organization is today — and what it will take to get where you want to go."
 }

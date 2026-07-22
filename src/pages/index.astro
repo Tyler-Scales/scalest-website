@@ -10,16 +10,16 @@ const focusColors = [
 ---
 
 <BaseLayout
-  title="Healthcare AI Training"
-  description="Scale Street delivers healthcare AI training for clinical, administrative, and leadership teams. Webinars, workshops, Microsoft-certified courses, and ambient AI training across the Southeast."
+  title="AI Enablement for Healthcare"
+  description="Scale Street delivers AI enablement for healthcare — strategy, training, and implementation. Focused on rural and community health and ambient AI optimization."
 >
 
   <!-- Homepage Structured Data -->
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Scale Street | Healthcare AI Training",
-    "description": "Scale Street delivers healthcare AI training. From general AI literacy to Microsoft-certified courses and ambient AI implementation.",
+    "name": "Scale Street | AI Enablement for Healthcare",
+    "description": "Scale Street delivers AI enablement for healthcare — strategy, training, and implementation. Focused on rural and community health and ambient AI optimization.",
     "url": "https://scalestreet.com",
     "speakable": {
       "@type": "SpeakableSpecification",
@@ -28,7 +28,7 @@ const focusColors = [
     "mainEntity": {
       "@type": "ProfessionalService",
       "name": "Scale St. Solutions",
-      "description": "Healthcare AI training firm based in Athens, Georgia. We deliver AI training through webinars, workshops, and coaching.",
+      "description": "Healthcare AI enablement firm based in Athens, Georgia. We deliver AI strategy, training, and implementation for healthcare organizations.",
       "url": "https://scalestreet.com"
     }
   })} />
@@ -38,11 +38,11 @@ const focusColors = [
     <div class="hero-inner">
       <div class="hero-text">
         <p class="hero-label">{data.heroLabel}</p>
-        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span> they need.</h1>
+        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span></h1>
         <p class="hero-sub">{data.heroSubtitle}</p>
         <div class="hero-actions">
-          <a href="/courses" class="btn btn-primary btn-lg">Enroll in a Course <span class="arrow">&rarr;</span></a>
-          <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-outline btn-lg">Bring Us On Site</a>
+          <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Call <span class="arrow">&rarr;</span></a>
+          <a href="#services" class="btn btn-outline btn-lg">Explore Our Services</a>
         </div>
       </div>
       <div class="hero-image">
@@ -78,37 +78,62 @@ const focusColors = [
     </div>
   </section>
 
-  <!-- Training Focus Areas -->
-  {data.trainingFocuses?.map((focus, i) => (
-    <section class={`section ${i % 2 === 0 ? '' : 'section-alt'}`}>
+  <!-- Service Lines -->
+  {data.services?.map((service, i) => (
+    <section class={`section ${i % 2 === 0 ? '' : 'section-alt'}`} id={i === 0 ? 'services' : undefined}>
       <div class="section-inner">
         <div class={`split-row ${i % 2 === 1 ? 'reverse' : ''}`}>
           <div class="split-text">
-            <p class="label-tag">{focus.tag}</p>
-            <h2>{focus.title}<span class="gradient-text">{focus.titleGradient}</span></h2>
-            <p class="split-desc">{focus.description}</p>
+            <p class="label-tag">{service.tag}</p>
+            <h2>{service.title}<span class="gradient-text">{service.titleGradient}</span></h2>
+            <p class="split-desc">{service.description}</p>
             <ul class="check-list">
               <li>
                 <svg class="check-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill={focusColors[i] || 'var(--color-blue)'}/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <div>
-                  <strong>{focus.checklistTitle}</strong>
-                  <span>{focus.checklistDescription}</span>
+                  <strong>{service.checklistTitle}</strong>
+                  <span>{service.checklistDescription}</span>
                 </div>
               </li>
             </ul>
-            <a href={focus.link} class="btn btn-primary">Learn More <span class="arrow">&rarr;</span></a>
+            <a href={service.link} class="btn btn-primary">Learn More <span class="arrow">&rarr;</span></a>
           </div>
           <div class={`split-image ${i === 1 ? 'mct-badge-wrap' : ''}`}>
             {i === 1 ? (
               <img src="/images/MCTBadgeMark.svg" alt="Microsoft Certified Trainer" class="mct-badge" />
             ) : (
-              <img src={`/images/${i === 0 ? 'training-room.jpg' : 'Ambient.png'}`} alt={focus.tag + ' training'} />
+              <img src={`/images/${i === 0 ? 'training-room.jpg' : 'Ambient.png'}`} alt={service.tag} />
             )}
           </div>
         </div>
       </div>
     </section>
   ))}
+
+  <!-- Focus Areas -->
+  <section class="section">
+    <div class="section-inner section-center">
+      <p class="label-tag" style="text-align:center;">Focus Areas</p>
+      <h2 class="section-title">{data.focusAreas?.title}<span class="gradient-text">{data.focusAreas?.titleGradient}</span></h2>
+      <p class="section-subtitle">{data.focusAreas?.subtitle}</p>
+    </div>
+    <div class="section-inner">
+      <div class="focus-grid">
+        {data.focusAreas?.items?.map((area) => (
+          <a href={area.link} class="focus-card">
+            <div class="focus-card-image">
+              <img src={area.image} alt={area.imageAlt} />
+            </div>
+            <div class="focus-card-body">
+              <h3>{area.title}</h3>
+              <p>{area.description}</p>
+              <span class="focus-card-link">Learn More <span class="arrow">&rarr;</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- Credentials -->
   <section class="section section-alt">
@@ -167,8 +192,8 @@ const focusColors = [
       <h2>{data.ctaTitle}</h2>
       <p>{data.ctaSubtitle}</p>
       <div class="cta-actions">
-        <a href="/courses" class="btn btn-white btn-lg">Enroll in a Course <span class="arrow">&rarr;</span></a>
-        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">Bring Us On Site <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-white btn-lg">Book a Call <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">hello@scalestreet.com</a>
       </div>
     </div>
     <div class="cta-deco cta-deco-1"></div>
@@ -283,6 +308,77 @@ const focusColors = [
 
     .hero-deco {
       display: none;
+    }
+  }
+
+  /* ===== FOCUS AREA CARDS ===== */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .focus-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .focus-card:hover {
+    box-shadow: 0 10px 40px rgba(11, 34, 57, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .focus-card-image {
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .focus-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .focus-card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .focus-card-body h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .focus-card-body p {
+    font-size: 0.9375rem;
+    color: var(--color-gray-500);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+
+  .focus-card-link {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  @media (max-width: 768px) {
+    .focus-grid {
+      grid-template-columns: 1fr;
     }
   }
 
