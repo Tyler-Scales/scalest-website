@@ -46,7 +46,7 @@ const focusColors = [
         </div>
       </div>
       <div class="hero-image">
-        <img src="/images/Tyler%20Training%201.jpg" alt="Tyler Wallace leading an AI training session" />
+        <img src="/images/Tyler%20Training%201.jpg" alt="Tyler Wallace leading a healthcare AI training session" fetchpriority="high" loading="eager" />
       </div>
     </div>
     <div class="hero-deco hero-deco-1"></div>
@@ -102,7 +102,7 @@ const focusColors = [
             {i === 1 ? (
               <img src="/images/MCTBadgeMark.svg" alt="Microsoft Certified Trainer" class="mct-badge" />
             ) : (
-              <img src={`/images/${i === 0 ? 'training-room.jpg' : 'Ambient.png'}`} alt={service.tag} />
+              <img src={`/images/${i === 0 ? 'training-room.jpg' : 'ambient.jpg'}`} alt={i === 0 ? 'Healthcare AI strategy workshop' : 'Ambient AI implementation in a clinical setting'} />
             )}
           </div>
         </div>
@@ -143,7 +143,7 @@ const focusColors = [
       <p class="section-subtitle">Real credentials. Real healthcare experience. Real results.</p>
     </div>
     <div class="section-inner">
-      <div class="card-grid">
+      <div class="card-grid cols-3">
         {data.credentials?.map((cred) => (
           <div class="card">
             <span class="card-metric">{cred.metric}</span>

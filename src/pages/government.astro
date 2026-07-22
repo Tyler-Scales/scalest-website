@@ -8,6 +8,7 @@ const stateColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-gree
 <BaseLayout
   title="AI for Government"
   description="AI strategy, training, and implementation for state and federal government. Scale Street is a small business with federal contracting experience, serving agencies and public institutions."
+  ogImage="/images/UGA-Arches.jpg"
 >
 
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
@@ -25,6 +26,27 @@ const stateColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-gree
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
       { "@type": "ListItem", "position": 2, "name": "Government", "item": "https://scalestreet.com/government" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Scale Street a small business for federal contracting purposes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street is a small business with federal contracting experience, and has delivered training and technical work for federal audiences including the FDA and USAID." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Scale Street work with state and local government?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street works with state agencies, public universities and technical colleges, and public health organizations — including the University of Georgia and Athens Technical College." }
+      },
+      {
+        "@type": "Question",
+        "name": "What AI services does Scale Street offer government agencies?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI literacy training for the government workforce, responsible AI and governance advisory aligned with federal guidance, and Microsoft-certified Copilot training adapted to government M365 environments." }
+      }
     ]
   })} />
 

@@ -8,6 +8,7 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
 <BaseLayout
   title="AI Strategy for Healthcare"
   description="AI readiness assessments, roadmaps, governance, and vendor selection for healthcare organizations. Strategy grounded in real clinical and operational experience."
+  ogImage="/images/conference-room.jpg"
 >
 
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
@@ -25,6 +26,32 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
       { "@type": "ListItem", "position": 2, "name": "Strategy", "item": "https://scalestreet.com/strategy" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does an AI readiness assessment for a healthcare organization include?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Scale Street's AI readiness assessment reviews your organization's data, infrastructure, workflows, and workforce so you know exactly where you stand before investing in AI tools or programs." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Scale Street help us evaluate AI vendors?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street provides independent, healthcare-savvy evaluation of AI vendors and tools — from ambient documentation to Microsoft Copilot — so you buy what will actually get used." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Scale Street help with AI governance and policy?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build policies, guardrails, and oversight structures that let healthcare teams use AI confidently while protecting patients, data, and the organization." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with organizations that are just starting with AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whether you're starting the AI conversation or untangling a stalled initiative, strategy engagements are scoped to your organization's stage, budget, and capacity." }
+      }
     ]
   })} />
 
