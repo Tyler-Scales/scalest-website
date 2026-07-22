@@ -43,7 +43,7 @@
   "focusAreas": {
     "title": "Where we go ",
     "titleGradient": "deep.",
-    "subtitle": "Two areas where healthcare needs AI enablement most — and where we've done the work.",
+    "subtitle": "The areas where AI enablement is needed most — and where we've done the work.",
     "items": [
       {
         "title": "AI in Rural & Community Health",
@@ -58,6 +58,13 @@
         "link": "/ambient-ai-training",
         "image": "/images/ambient.jpg",
         "imageAlt": "Ambient AI clinical documentation"
+      },
+      {
+        "title": "Government",
+        "description": "AI enablement for state and federal agencies and public institutions. Scale Street is a small business with federal contracting experience — we've delivered for audiences including the FDA and USAID.",
+        "link": "/government",
+        "image": "/images/UGA-Arches.jpg",
+        "imageAlt": "Public institution"
       }
     ]
   },

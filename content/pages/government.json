@@ -1,0 +1,56 @@
+{
+  "heroTitle": "AI enablement for ",
+  "heroTitleGradient": "the public sector.",
+  "heroSubtitle": "State and federal agencies face the same AI mandate as everyone else — with higher stakes, tighter rules, and a workforce that deserves real training. Scale Street is a small business with federal contracting experience, bringing AI strategy, training, and implementation to government.",
+  "federal": {
+    "title": "Federal ",
+    "titleGradient": "Experience",
+    "description": "We've delivered training and technical work for federal audiences including the FDA and USAID — and we understand what it takes to work inside federal structures: procurement processes, security expectations, and outcomes that hold up to oversight.",
+    "items": [
+      {
+        "title": "AI Literacy for the Federal Workforce",
+        "description": "Webinars and workshops that bring agency staff up to speed on what AI can do, how to use it responsibly, and where it fits within policy and mission."
+      },
+      {
+        "title": "Responsible AI & Governance",
+        "description": "Training and advisory aligned with federal AI guidance — helping teams adopt AI within the guardrails their agencies require."
+      },
+      {
+        "title": "Microsoft AI in Government Environments",
+        "description": "Microsoft-certified Copilot training delivered by an MCT, adapted to government M365 tenants and security postures."
+      }
+    ]
+  },
+  "state": {
+    "title": "State & Local ",
+    "titleGradient": "Partners",
+    "description": "From state agencies to public universities and technical colleges, we help public institutions build AI capability across their workforce.",
+    "items": [
+      {
+        "title": "State Agencies",
+        "description": "AI readiness, workforce training, and implementation support sized for state budgets and procurement."
+      },
+      {
+        "title": "Public Universities & Colleges",
+        "description": "Faculty at the University of Georgia and training partner to Athens Technical College — we know public higher education from the inside."
+      },
+      {
+        "title": "Public Health Organizations",
+        "description": "Where our government and healthcare work meet: health departments, public health programs, and safety-net systems."
+      }
+    ]
+  },
+  "smallBusiness": {
+    "title": "A small business built for ",
+    "titleGradient": "government work.",
+    "description": "Scale Street is a small business with federal contracting experience. That means agencies get senior expertise directly — no layers, no hand-offs — with the responsiveness and accountability small-business partners are known for.",
+    "highlights": [
+      "Small business with federal contracting experience",
+      "Senior expertise on every engagement — you work directly with the principal",
+      "Experience delivering for federal audiences including FDA and USAID",
+      "Agile scoping that fits government procurement and timelines"
+    ]
+  },
+  "ctaTitle": "Bringing AI to a Public Mission?",
+  "ctaSubtitle": "Let's talk about what your agency or institution needs — and how a small business partner can deliver it."
+}
