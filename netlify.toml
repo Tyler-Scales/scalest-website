@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Upcoming Courses page removed — send old links to Training
+[[redirects]]
+  from = "/courses"
+  to = "/training"
+  status = 301

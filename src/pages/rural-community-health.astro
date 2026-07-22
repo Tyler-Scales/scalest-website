@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import data from '../../content/pages/rural-community-health.json';
+
+const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)'];
+---
+
+<BaseLayout
+  title="AI in Rural & Community Health"
+  description="AI strategy, training, and implementation sized for critical access hospitals, FQHCs, community health centers, and rural health networks."
+>
+
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI in Rural & Community Health",
+    "description": "AI strategy, training, and implementation sized for critical access hospitals, FQHCs, community health centers, and rural health networks.",
+    "provider": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
+    "serviceType": "Healthcare AI Enablement",
+    "audience": { "@type": "Audience", "audienceType": "Rural and community health organizations" }
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
+      { "@type": "ListItem", "position": 2, "name": "Rural & Community Health", "item": "https://scalestreet.com/rural-community-health" }
+    ]
+  })} />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <p class="hero-badge">Focus Area</p>
+        <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span></h1>
+        <p class="hero-sub">{data.heroSubtitle}</p>
+        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="hero-image">
+        <img src="/images/rural-community.jpg" alt="Rural community" />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Challenge -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="split-row reverse">
+        <div class="split-image">
+          <img src="/images/hospital-exterior.jpg" alt="Rural hospital" />
+        </div>
+        <div class="split-text">
+          <p class="label-tag">The Challenge</p>
+          <h2>{data.challenge?.title}<span class="gradient-text">{data.challenge?.titleGradient}</span></h2>
+          <p class="split-desc">{data.challenge?.description}</p>
+          <p class="split-cta-text"><strong>{data.challenge?.bottomText}</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Help -->
+  <section class="section">
+    <div class="section-inner section-center">
+      <p class="label-tag" style="text-align:center;">Our Services</p>
+      <h2 class="section-title">{data.services?.title}<span class="gradient-text">{data.services?.titleGradient}</span></h2>
+      <p class="section-subtitle">{data.services?.subtitle}</p>
+    </div>
+    <div class="section-inner">
+      <div class="card-grid cols-3">
+        {data.services?.items?.map((item) => (
+          <a href={item.link} class="card service-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span class="service-link">Learn More <span class="arrow">&rarr;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="split-row">
+        <div class="split-text">
+          <p class="label-tag">Who We Serve</p>
+          <h2>{data.whoWeServe?.title}<span class="gradient-text">{data.whoWeServe?.titleGradient}</span></h2>
+          <p class="split-desc">{data.whoWeServe?.description}</p>
+          <ul class="check-list">
+            {data.whoWeServe?.items?.map((item, i) => (
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill={whoColors[i] || 'var(--color-blue)'}/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div>
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="split-image">
+          <img src="/images/training-room.jpg" alt="AI training for rural health teams" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section">
+    <div class="section-inner section-center">
+      <p class="label-tag" style="text-align:center;">Track Record</p>
+      <h2 class="section-title">Work We've <span class="gradient-text">Already Done</span></h2>
+    </div>
+    <div class="section-inner">
+      <div class="card-grid cols-3">
+        {data.stats?.map((stat) => (
+          <div class="card" style="text-align:center;">
+            <span class="card-metric">{stat.value}</span>
+            <p>{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Logos -->
+  <section class="section-sm section-alt">
+    <div class="section-inner section-center">
+      <p class="partners-label">Rural & Community Health Organizations We've Worked With</p>
+      <div class="logo-grid">
+        <img src="/images/logos/elbert-memorial.png" alt="Elbert Memorial Hospital" />
+        <img src="/images/logos/medlink-georgia.png" alt="MedLink Georgia" />
+        <img src="/images/logos/georgia-primary-care.png" alt="Georgia Primary Care Association" />
+        <img src="/images/logos/hope-for-georgia-moms.png" alt="Hope for Georgia Moms" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="section-inner section-center">
+      <h2>{data.ctaTitle}</h2>
+      <p>{data.ctaSubtitle}</p>
+      <div class="cta-actions">
+        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-white btn-lg">Book a Call <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">hello@scalestreet.com</a>
+      </div>
+    </div>
+    <div class="cta-deco cta-deco-1"></div>
+    <div class="cta-deco cta-deco-2"></div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .service-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card p {
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 3rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .logo-grid img {
+    max-height: 70px;
+    max-width: 180px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    .logo-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 2rem;
+    }
+  }
+</style>

@@ -1,14 +1,14 @@
 {
-  "heroTitle": "AI training built for ",
+  "heroTitle": "AI enablement built for ",
   "heroTitleGradient": "the communities we serve.",
   "heroSubtitle": "Based in Athens, Georgia, where academic rigor meets real-world healthcare experience.",
   "story": {
-    "title": "Training that ",
+    "title": "Enablement that ",
     "titleGradient": "actually sticks.",
     "paragraphs": [
-      "Healthcare organizations know they need AI, but their teams haven't been trained to use it.",
-      "Scale Street combines academic depth from the University of Georgia with hands-on experience from the organizations we serve. The result is training that's grounded in evidence and built for the real world.",
-      "Our goal is simple: give your people the skills they need so your organization can move forward on its own terms."
+      "Healthcare organizations know they need AI. But strategy decks gather dust, tools go unused, and teams are left untrained. Buying AI is easy — being enabled to use it is the hard part.",
+      "Scale Street combines academic depth from the University of Georgia with hands-on experience from the organizations we serve. We work across the whole journey — strategy, training, and implementation — so nothing falls into the gap between the plan and the point of care.",
+      "Our goal is simple: give your organization the direction, the skills, and the working tools it needs to move forward on its own terms."
     ]
   },
   "leadership": {
@@ -47,7 +47,7 @@
   ],
   "approach": {
     "title": "How We Work",
-    "subtitle": "Four principles that guide every training.",
+    "subtitle": "Four principles that guide every engagement.",
     "steps": [
       {
         "number": "Step 01",
@@ -73,23 +73,23 @@
   },
   "whoWeWorkWith": {
     "title": "Healthcare organizations ",
-    "titleGradient": "ready to upskill.",
-    "description": "From large health systems to rural critical access hospitals, we train teams that are serious about getting their people ready.",
+    "titleGradient": "ready to move.",
+    "description": "From large health systems to rural critical access hospitals, we partner with organizations that are serious about putting AI to work.",
     "items": [
       {
         "title": "Health Systems",
-        "description": "Multi-site organizations building skills across clinical and administrative teams."
+        "description": "Multi-site organizations building AI strategy, skills, and deployments across clinical and administrative teams."
       },
       {
         "title": "Critical Access Hospitals",
-        "description": "Rural hospitals that need training but can't justify a full-time hire to deliver it."
+        "description": "Rural hospitals that need AI expertise but can't justify a full-time hire to deliver it."
       },
       {
         "title": "Federally Qualified Health Centers",
-        "description": "Community health centers equipping staff with the skills to serve underserved populations more effectively."
+        "description": "Community health centers using AI to serve underserved populations more effectively."
       }
     ]
   },
   "ctaTitle": "We'd Love to Learn About Your Organization.",
-  "ctaSubtitle": "Let's talk about which training fits your team."
+  "ctaSubtitle": "Let's talk about where AI fits for your team."
 }

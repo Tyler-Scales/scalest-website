@@ -4,8 +4,8 @@ import data from '../../content/pages/ambient-ai-training.json';
 ---
 
 <BaseLayout
-  title="Ambient AI Training"
-  description="Hands-on training for Nuance DAX and Sunoh.ai by eClinicalWorks. We train your clinicians to use ambient AI documentation tools effectively from day one."
+  title="Ambient AI Optimization & Training"
+  description="Full-lifecycle ambient AI support: vendor selection, provider training, go-live support, and note-quality optimization for Nuance DAX and Sunoh.ai by eClinicalWorks."
 >
 
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
@@ -23,7 +23,7 @@ import data from '../../content/pages/ambient-ai-training.json';
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
-      { "@type": "ListItem", "position": 2, "name": "Ambient AI Training", "item": "https://scalestreet.com/ambient-ai-training" }
+      { "@type": "ListItem", "position": 2, "name": "Ambient AI Optimization & Training", "item": "https://scalestreet.com/ambient-ai-training" }
     ]
   })} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
@@ -57,7 +57,7 @@ import data from '../../content/pages/ambient-ai-training.json';
   <section class="page-hero">
     <div class="page-hero-inner">
       <div>
-        <p class="hero-badge">Ambient AI Training</p>
+        <p class="hero-badge">Focus Area</p>
         <h1>{data.heroTitle}<span class="gradient-text">{data.heroTitleGradient}</span></h1>
         <p class="hero-sub">{data.heroSubtitle}</p>
         <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Discovery Call <span class="arrow">&rarr;</span></a>
@@ -68,9 +68,27 @@ import data from '../../content/pages/ambient-ai-training.json';
     </div>
   </section>
 
+  <!-- Ambient Lifecycle -->
+  <section class="section section-alt">
+    <div class="section-inner section-center">
+      <p class="label-tag" style="text-align:center;">Beyond Training</p>
+      <h2 class="section-title">{data.lifecycle?.title}<span class="gradient-text">{data.lifecycle?.titleGradient}</span></h2>
+      <p class="section-subtitle">{data.lifecycle?.subtitle}</p>
+      <div class="format-grid">
+        {data.lifecycle?.items?.map((item) => (
+          <div class="format-card">
+            <p class="format-num">{item.number}</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- Products -->
   {data.products?.items?.map((product, i) => (
-    <section class={`section ${i % 2 === 0 ? 'section-alt' : ''}`}>
+    <section class={`section ${i % 2 === 0 ? '' : 'section-alt'}`}>
       <div class="section-inner">
         <div class={`split-row ${i % 2 === 1 ? 'reverse' : ''}`}>
           <div class="split-text">
@@ -97,7 +115,7 @@ import data from '../../content/pages/ambient-ai-training.json';
   ))}
 
   <!-- Training Formats -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="section-inner section-center">
       <p class="label-tag" style="text-align:center;">How We Train</p>
       <h2 class="section-title">{data.formats?.title}<span class="gradient-text">{data.formats?.titleGradient}</span></h2>
@@ -115,7 +133,7 @@ import data from '../../content/pages/ambient-ai-training.json';
   </section>
 
   <!-- Stats -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="section-inner section-center">
       <p class="label-tag" style="text-align:center;">Track Record</p>
       <h2 class="section-title">Proven <span class="gradient-text">Results</span></h2>
@@ -138,8 +156,8 @@ import data from '../../content/pages/ambient-ai-training.json';
       <h2>{data.ctaTitle}</h2>
       <p>{data.ctaSubtitle}</p>
       <div class="cta-actions">
-        <a href="/courses" class="btn btn-white btn-lg">Enroll in a Course <span class="arrow">&rarr;</span></a>
-        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">Bring Us On Site <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-white btn-lg">Book a Call <span class="arrow">&rarr;</span></a>
+        <a href="mailto:hello@scalestreet.com" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">hello@scalestreet.com</a>
       </div>
     </div>
     <div class="cta-deco cta-deco-1"></div>

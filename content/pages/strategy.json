@@ -1,0 +1,76 @@
+{
+  "heroTitle": "AI strategy grounded in ",
+  "heroTitleGradient": "healthcare reality.",
+  "heroSubtitle": "Before the tools and the training comes the plan. We help healthcare organizations figure out where AI fits, what to buy, how to govern it, and how to bring your board and your clinicians along.",
+  "services": {
+    "title": "Strategy ",
+    "titleGradient": "Services",
+    "subtitle": "Practical, right-sized engagements that turn AI ambition into an actionable plan.",
+    "items": [
+      {
+        "title": "AI Readiness Assessment",
+        "description": "A clear-eyed look at your organization's data, infrastructure, workflows, and workforce — so you know exactly where you stand before you invest."
+      },
+      {
+        "title": "AI Roadmap",
+        "description": "A prioritized, phased plan that matches AI opportunities to your strategic goals, budget, and capacity. No moonshots — real projects with real returns."
+      },
+      {
+        "title": "Governance & Responsible AI",
+        "description": "Policies, guardrails, and oversight structures that let your teams use AI confidently while protecting patients, data, and your organization."
+      },
+      {
+        "title": "Vendor Selection & Evaluation",
+        "description": "Independent, healthcare-savvy evaluation of AI vendors and tools — from ambient documentation to Copilot — so you buy what will actually get used."
+      }
+    ]
+  },
+  "approach": {
+    "title": "How We ",
+    "titleGradient": "Work",
+    "subtitle": "Strategy engagements built around your organization, not a template.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Listen & Assess",
+        "description": "We start with your people, your workflows, and your data. Interviews, walkthroughs, and a readiness assessment establish the real baseline."
+      },
+      {
+        "number": "02",
+        "title": "Align Leadership",
+        "description": "We facilitate executive sessions that build shared understanding of what AI can and can't do — so decisions get made with eyes open."
+      },
+      {
+        "number": "03",
+        "title": "Build the Roadmap",
+        "description": "Together we prioritize use cases by impact and feasibility, sequence the work, and define what success looks like."
+      },
+      {
+        "number": "04",
+        "title": "Set Up Governance",
+        "description": "We put the policies, review processes, and accountability structures in place so AI adoption scales safely."
+      }
+    ]
+  },
+  "whoItsFor": {
+    "title": "Built for organizations ",
+    "titleGradient": "at every stage.",
+    "description": "Whether you're just starting the AI conversation or untangling a stalled initiative, we meet you where you are.",
+    "items": [
+      {
+        "title": "Health Systems",
+        "description": "Multi-site organizations that need a coherent AI strategy across clinical and administrative teams."
+      },
+      {
+        "title": "Rural & Critical Access Hospitals",
+        "description": "Hospitals that need expert guidance but can't justify a full-time AI leader on staff."
+      },
+      {
+        "title": "FQHCs & Community Health Centers",
+        "description": "Community organizations that want AI to extend their reach without stretching their teams."
+      }
+    ]
+  },
+  "ctaTitle": "Not Sure Where to Start with AI?",
+  "ctaSubtitle": "That's exactly the conversation we're built for. Let's talk."
+}

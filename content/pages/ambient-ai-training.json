@@ -1,7 +1,34 @@
 {
-  "heroTitle": "Ambient ",
-  "heroTitleGradient": "AI Training",
-  "heroSubtitle": "Hands-on training for the tools transforming clinical documentation. We train your clinicians to use Nuance DAX and Sunoh.ai by eClinicalWorks effectively from day one.",
+  "heroTitle": "Ambient AI ",
+  "heroTitleGradient": "Optimization & Training",
+  "heroSubtitle": "Ambient documentation is the highest-impact AI tool in healthcare today — when it's used well. We support the full lifecycle: vendor selection, provider training, go-live support, and note-quality optimization for Nuance DAX and Sunoh.ai by eClinicalWorks.",
+  "lifecycle": {
+    "title": "The Full Ambient ",
+    "titleGradient": "Lifecycle",
+    "subtitle": "Most vendors hand you a license and a help doc. We cover everything in between.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Selection & Planning",
+        "description": "Independent evaluation of ambient vendors against your EHR, specialties, and budget — plus rollout planning that sets realistic expectations."
+      },
+      {
+        "number": "02",
+        "title": "Provider Training",
+        "description": "Hands-on onboarding that teaches providers how to work with the tool — encounter flow, note review, and specialty-specific techniques."
+      },
+      {
+        "number": "03",
+        "title": "Go-Live Support",
+        "description": "Elbow-to-elbow support during launch, on site or on screen, so adoption starts strong instead of stalling in week one."
+      },
+      {
+        "number": "04",
+        "title": "Optimization",
+        "description": "Note-quality review, workflow tuning, and usage analysis that keep documentation quality and provider satisfaction climbing after go-live."
+      }
+    ]
+  },
   "products": {
     "title": "Tools We ",
     "titleGradient": "Train On",
@@ -61,6 +88,6 @@
     { "value": "140+", "label": "Providers Onboarded" },
     { "value": "Multi-Site", "label": "ED Deployments" }
   ],
-  "ctaTitle": "Planning an Ambient Rollout?",
-  "ctaSubtitle": "Let's make sure your providers are ready from day one."
+  "ctaTitle": "Planning — or Rescuing — an Ambient Rollout?",
+  "ctaSubtitle": "Whether you're selecting a vendor, preparing for go-live, or trying to fix low adoption, let's talk."
 }
