@@ -13,7 +13,8 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
 
 <BaseLayout
   title="About Us"
-  description="Scale Street is a healthcare AI enablement company based in Athens, Georgia, led by Tyler S. Wallace, Ph.D. We deliver AI strategy, training, and implementation for healthcare organizations."
+  description="Scale Street is a healthcare AI enablement company in Athens, Georgia, led by Tyler S. Wallace, Ph.D. — AI strategy, training, and implementation."
+  ogImage="/images/UGA-Arches.jpg"
 >
 
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
@@ -23,6 +24,20 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
       { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://scalestreet.com/about" }
     ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tyler S. Wallace",
+    "honorificSuffix": "Ph.D.",
+    "jobTitle": "Founder & Principal",
+    "worksFor": { "@type": "Organization", "name": "Scale St. Solutions", "url": "https://scalestreet.com" },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Georgia" },
+    "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified Trainer" },
+    "knowsAbout": ["Healthcare AI", "AI Training", "Health Informatics", "Ambient Clinical Documentation", "Microsoft 365 Copilot"],
+    "image": "https://scalestreet.com/images/Tyler%20Headshot.jpg",
+    "url": "https://scalestreet.com/about",
+    "sameAs": ["https://linkedin.com/in/tylerwallace"]
   })} />
 
   <!-- Page Hero -->

@@ -3,9 +3,10 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
-const { title, description = "Scale Street delivers AI enablement for healthcare — strategy, training, and implementation. Focused on rural and community health and ambient AI optimization.", ogImage = "/images/hero-healthcare.jpg" } = Astro.props;
+const { title, description = "Scale Street delivers AI enablement for healthcare — strategy, training, and implementation. Focused on rural and community health and ambient AI optimization.", ogImage = "/images/Tyler%20Training%201.jpg", noindex = false } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
@@ -24,7 +25,6 @@ const fullTitle = isHomepage ? "Scale Street | AI Enablement for Healthcare" : `
     <link rel="canonical" href={canonicalURL.href} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!-- Page title -->
@@ -47,7 +47,7 @@ const fullTitle = isHomepage ? "Scale Street | AI Enablement for Healthcare" : `
 
     <!-- Additional SEO -->
     <meta name="author" content="Scale St. Solutions" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
     <meta name="theme-color" content="#0f0fbd" />
 
     <!-- Fonts -->
@@ -152,6 +152,7 @@ const fullTitle = isHomepage ? "Scale Street | AI Enablement for Healthcare" : `
         "AI Workforce Development"
       ],
       "sameAs": [
+        "https://www.linkedin.com/company/scalestreet",
         "https://github.com/Tyler-Scales"
       ]
     })} />
@@ -332,9 +333,15 @@ const fullTitle = isHomepage ? "Scale Street | AI Enablement for Healthcare" : `
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
-      // Lazy loading for below-fold images
-      document.querySelectorAll('img').forEach((img, i) => {
-        if (i > 0) img.setAttribute('loading', 'lazy');
+      // Image loading: prioritize hero images, lazy-load everything below the fold
+      document.querySelectorAll('img').forEach((img) => {
+        img.setAttribute('decoding', 'async');
+        if (img.closest('.hero, .page-hero')) {
+          img.setAttribute('loading', 'eager');
+          if (!img.hasAttribute('fetchpriority')) img.setAttribute('fetchpriority', 'high');
+        } else if (!img.closest('.site-header') && !img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
       });
     </script>
   </body>

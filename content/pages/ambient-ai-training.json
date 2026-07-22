@@ -85,7 +85,7 @@
     ]
   },
   "stats": [
-    { "value": "140+", "label": "Providers Onboarded" },
+    { "value": "Hundreds", "label": "Providers Onboarded" },
     { "value": "Multi-Site", "label": "ED Deployments" }
   ],
   "ctaTitle": "Planning — or Rescuing — an Ambient Rollout?",

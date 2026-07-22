@@ -54,7 +54,7 @@
       },
       {
         "title": "Ambient AI Optimization & Training",
-        "description": "From vendor selection to go-live to note-quality optimization, we've onboarded 140+ providers on ambient documentation tools like Nuance DAX and Sunoh.ai by eClinicalWorks.",
+        "description": "From vendor selection to go-live to note-quality optimization, we've onboarded hundreds of providers on ambient documentation tools like Nuance DAX and Sunoh.ai by eClinicalWorks.",
         "link": "/ambient-ai-training",
         "image": "/images/ambient.jpg",
         "imageAlt": "Ambient AI clinical documentation"
@@ -75,14 +75,9 @@
       "description": "Delivered 70+ training sessions consistently rated the best technical training participants have ever attended."
     },
     {
-      "metric": "140+",
+      "metric": "Hundreds",
       "title": "Providers Onboarded",
       "description": "Deployed ambient documentation (Nuance DAX) across multi-site Emergency Departments with hands-on clinician training."
-    },
-    {
-      "metric": "MHA",
-      "title": "University of Georgia",
-      "description": "Faculty in the UGA Master of Health Administration program, teaching Health Informatics and connecting training to the next generation of healthcare leaders."
     },
     {
       "metric": "MCT",

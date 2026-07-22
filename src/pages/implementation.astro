@@ -6,6 +6,7 @@ import data from '../../content/pages/implementation.json';
 <BaseLayout
   title="AI Implementation for Healthcare"
   description="Hands-on AI deployment for healthcare — ambient documentation (Nuance DAX, Sunoh.ai), Microsoft Copilot rollout, workflow integration, and go-live support."
+  ogImage="/images/ambient.jpg"
 >
 
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
@@ -23,6 +24,27 @@ import data from '../../content/pages/implementation.json';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
       { "@type": "ListItem", "position": 2, "name": "Implementation", "item": "https://scalestreet.com/implementation" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What AI tools does Scale Street implement for healthcare organizations?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Scale Street implements ambient AI documentation (Nuance DAX and Sunoh.ai by eClinicalWorks), Microsoft 365 Copilot, and AI-powered workflow integrations — with configuration, go-live support, and adoption coaching." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide go-live support during AI deployments?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street provides elbow-to-elbow support during launch, on site or on screen, and has onboarded hundreds of providers across multi-site Emergency Department deployments." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Scale Street help with an AI rollout that has stalled?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We diagnose low adoption, retrain teams, tune workflows, and use usage data to turn a launched tool into one that's actually used." }
+      }
     ]
   })} />
 

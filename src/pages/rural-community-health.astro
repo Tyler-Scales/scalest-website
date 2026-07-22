@@ -8,6 +8,7 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
 <BaseLayout
   title="AI in Rural & Community Health"
   description="AI strategy, training, and implementation sized for critical access hospitals, FQHCs, community health centers, and rural health networks."
+  ogImage="/images/rural-community.jpg"
 >
 
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
@@ -25,6 +26,27 @@ const whoColors = ['var(--color-blue)', 'var(--color-mint)', 'var(--color-green)
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scalestreet.com" },
       { "@type": "ListItem", "position": 2, "name": "Rural & Community Health", "item": "https://scalestreet.com/rural-community-health" }
+    ]
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does Scale Street work with critical access hospitals?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street brings AI strategy, training, and implementation sized for critical access and rural hospitals that need AI expertise without a full-time hire." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can FQHCs and community health centers afford AI enablement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Scale Street right-sizes engagements to a health center's real budget and capacity, and offers shared training models — like the 10-session AI series delivered with Hometown Health — that spread cost across a network." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with rural health networks and state associations?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scale Street partners with networks, primary care associations, and state associations that want to bring AI capability to all their members at once." }
+      }
     ]
   })} />
 
