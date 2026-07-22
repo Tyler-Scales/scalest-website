@@ -9,7 +9,7 @@
   "challengeBottomText": "Scale Street was built to close that gap.",
   "challengeStats": [
     { "value": "94%", "label": "report AI skills gaps" },
-    { "value": "2,000+", "label": "professionals trained" }
+    { "value": "3,000+", "label": "professionals trained" }
   ],
   "services": [
     {
@@ -63,9 +63,9 @@
   },
   "credentials": [
     {
-      "metric": "2,000+",
+      "metric": "3,000+",
       "title": "Professionals Trained",
-      "description": "Delivered 50+ training sessions consistently rated the best technical training participants have ever attended."
+      "description": "Delivered 70+ training sessions consistently rated the best technical training participants have ever attended."
     },
     {
       "metric": "140+",
