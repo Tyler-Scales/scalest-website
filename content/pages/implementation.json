@@ -9,7 +9,7 @@
     "items": [
       {
         "title": "Ambient AI Documentation",
-        "description": "End-to-end deployment of Nuance DAX and Sunoh.ai by eClinicalWorks — provider onboarding, workflow integration, go-live support, and note-quality optimization. 140+ providers onboarded across multi-site Emergency Departments."
+        "description": "End-to-end deployment of Nuance DAX and Sunoh.ai by eClinicalWorks — provider onboarding, workflow integration, go-live support, and note-quality optimization. Hundreds of providers onboarded across multi-site Emergency Departments."
       },
       {
         "title": "Microsoft Copilot Rollout",
@@ -53,7 +53,7 @@
     ]
   },
   "stats": [
-    { "value": "140+", "label": "Providers Onboarded" },
+    { "value": "Hundreds", "label": "Providers Onboarded" },
     { "value": "Multi-Site", "label": "ED Deployments" }
   ],
   "ctaTitle": "Have a Tool That Needs to Actually Get Used?",
