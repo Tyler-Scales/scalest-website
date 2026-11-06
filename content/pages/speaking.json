@@ -1,0 +1,45 @@
+{
+  "heroTitle": "AI in rural and ",
+  "heroTitleGradient": "community health.",
+  "heroSubtitle": "Tyler Wallace, Ph.D. speaks on AI in rural and community healthcare. Keynotes, conference sessions, webinars, and hands-on workshops for hospitals, FQHCs, physician groups, and state associations.",
+  "intro": {
+    "title": "Practical talks, ",
+    "titleGradient": "real examples.",
+    "paragraphs": [
+      "Every talk is practical. The time goes to what a hospital or clinic can do with AI now, with real examples from the ambient AI, analytics, and training work Scale Street does every week.",
+      "People leave with tangible action items."
+    ]
+  },
+  "engagementsTitle": "Speaking ",
+  "engagementsTitleGradient": "Engagements",
+  "engagementsSubtitle": "Talks since 2025.",
+  "engagements": [
+    { "title": "AI in Rural Health: Lessons Learned from Early Adopters", "role": "Speaker", "event": "HomeTown Health Rural Conference", "location": "Pine Mountain, GA", "date": "October 2026" },
+    { "title": "AI in Emergency Medicine", "role": "Panelist", "event": "ApolloMD Leadership Conference", "location": "Atlanta, GA", "date": "September 2026" },
+    { "title": "AI in Rural Health", "role": "Speaker", "event": "Mid-South Critical Access Hospital Conference", "location": "New Orleans, LA", "date": "August 2026" },
+    { "title": "Industry Benefits: AI Integration in Healthcare", "role": "Webinar", "event": "U.S. Department of Labor", "date": "July 2026" },
+    { "title": "AI and Rural Health", "role": "Virtual session", "event": "Iowa Rural Health Workshop", "date": "July 2026" },
+    { "title": "AI in Rural Health", "role": "Virtual session", "event": "Florida Rural Health Association Conference", "date": "July 2026" },
+    { "title": "AI Adoption in Healthcare: Four Perspectives", "role": "Panelist", "event": "ACHE of Georgia virtual panel", "date": "June 2026" },
+    { "title": "Creating the Digital Workforce of the Future", "role": "Keynote with Ronel Saintvil (UGA MHA student)", "event": "Georgia HIMSS Summit", "location": "Columbus, GA", "date": "June 2026" },
+    { "title": "Building Viable Governance for Safe AI in Rural & Community Health", "role": "Speaker with Laura Kreofsky (Microsoft)", "event": "National Rural Health Association Annual Conference", "location": "San Diego, CA", "date": "May 2026" },
+    { "title": "AI and Public Health Research", "role": "Keynote", "event": "UGA College of Public Health Research Day", "location": "Athens, GA", "date": "April 2026" },
+    { "title": "AI in Rural Health: Where Are We and Where Are We Headed?", "role": "Speaker", "event": "Rural Health Idaho Conference", "location": "Boise, ID", "date": "April 2026" },
+    { "title": "AI in Nursing Education", "role": "Speaker", "event": "Nursing Science Symposium", "location": "Rome, GA", "date": "April 2026" },
+    { "title": "AI in Rural Health", "role": "Speaker", "event": "Atlanta AI Week", "location": "Atlanta, GA", "date": "April 2026" },
+    { "title": "AI in Rural Health", "role": "Speaker", "event": "HomeTown Health Conference", "location": "Jekyll Island, GA", "date": "April 2026" },
+    { "title": "AI in Rural Communities", "role": "Panelist", "event": "UGA Archway Partnership", "location": "Athens, GA", "date": "March 2026" },
+    { "title": "AI Healthcare Trends", "role": "Speaker", "event": "2026 Georgia Cancer Summit", "location": "Columbus, GA", "date": "February 2026" },
+    { "title": "Implementing AI in Rural Health", "role": "Virtual session", "event": "5th International Conference on Trends in Electronics and Health Informatics (TEHI 2025), Samarkand State University", "date": "November 2025" },
+    { "title": "Preparing the Public Health Workforce for AI", "role": "Speaker", "event": "State of the Public's Health Conference, UGA College of Public Health", "location": "Athens, GA", "date": "October 2025" },
+    { "title": "Preparing Workforce for AI", "role": "Speaker", "event": "Georgia Primary Care Association Conference", "location": "Atlanta, GA", "date": "September 2025" },
+    { "title": "Responsible AI", "role": "Panelist", "event": "ACHE of Georgia Lunch & Learn", "location": "Atlanta, GA", "date": "June 2025" }
+  ],
+  "photos": [
+    { "src": "/images/speaking/tyler-wallace-speaking-uga.jpg", "alt": "Tyler Wallace speaking at a podium during a healthcare conference" },
+    { "src": "/images/speaking/tyler-wallace-speaking-stage.jpg", "alt": "Tyler Wallace on stage delivering a keynote" },
+    { "src": "/images/speaking/tyler-wallace-presenting.jpg", "alt": "Tyler Wallace presenting AI workforce data to an audience" }
+  ],
+  "ctaTitle": "Need a speaker for your next conference?",
+  "ctaSubtitle": "Keynotes, panels, webinars, and workshops on AI in healthcare."
+}
