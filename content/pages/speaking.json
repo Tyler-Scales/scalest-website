@@ -14,6 +14,8 @@
   "engagementsTitleGradient": "Engagements",
   "engagementsSubtitle": "Talks since 2025.",
   "engagements": [
+    { "title": "AI in K-12 Education: Research for Moving Forward", "role": "Keynote", "event": "Charter System Foundation", "location": "Athens, GA", "date": "November 2026" },
+    { "title": "AI in Rural Health: Laying a Foundation", "role": "Keynote", "event": "Iowa HIMSS Annual Conference", "location": "Waterloo, IA", "date": "November 2026" },
     { "title": "AI in Rural Health: Lessons Learned from Early Adopters", "role": "Speaker", "event": "HomeTown Health Rural Conference", "location": "Pine Mountain, GA", "date": "October 2026" },
     { "title": "AI in Emergency Medicine", "role": "Panelist", "event": "ApolloMD Leadership Conference", "location": "Atlanta, GA", "date": "September 2026" },
     { "title": "AI in Rural Health", "role": "Speaker", "event": "Mid-South Critical Access Hospital Conference", "location": "New Orleans, LA", "date": "August 2026" },
