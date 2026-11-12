@@ -39,6 +39,10 @@
   to = "/rural-community-health#training"
   status = 301
 [[redirects]]
+  from = "/who-we-serve"
+  to = "/"
+  status = 301
+[[redirects]]
   from = "/government"
   to = "/about#government"
   status = 301
