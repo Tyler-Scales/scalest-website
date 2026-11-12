@@ -1,30 +1,10 @@
-# Scale Street Website
+# scalestreet.com
 
-Source for [scalestreet.com](https://scalestreet.com), the marketing site for Scale Street, an AI enablement partner for healthcare organizations offering strategy, training and implementation.
+Plain static site on Netlify. There is no build step: Netlify publishes `public/` as is (see `netlify.toml`).
 
-## Highlights
+- `public/`: the website. Pages are flat HTML files (`about.html` serves at `/about`).
+- `netlify.toml`: publish settings, redirects from old URLs, security and cache headers.
 
-- **Static-first.** Built with Astro, so every page ships as plain HTML for fast loads and full crawlability, with no client-side framework.
-- **Content separated from layout.** Page copy lives in `content/pages/*.json`, separate from the Astro templates, so wording can change without touching markup.
-- **SEO basics built in.** An auto-generated sitemap, a robots policy, 301 redirects for retired URLs and security headers through `public/_headers`.
-- **Continuous deployment.** Netlify builds and deploys on every push to `main`.
+**Where edits happen:** this repo is the deploy target for the "Rebrand Initiative" project folder on Tyler's Mac, which holds the source of truth (shared CSS, header and footer partials, copy decks, fact audit, and QA tools). Edit there, run `node tools/sync.mjs` and the checks, then `tools/stage_repos.sh` to copy the result here on a branch. Small text fixes made directly in `public/*.html` are fine; copy them back to the project so the next sync doesn't overwrite them. Don't edit inside the `<!-- @meta -->`, `<!-- @header -->` or `<!-- @footer -->` blocks; the sync script owns them.
 
-## Structure
-
-```
-content/pages/    # JSON content for each page (home, strategy, training, implementation, …)
-src/layouts/      # Shared BaseLayout: navigation, footer, meta tags
-src/pages/        # One .astro file per route
-public/           # Static assets, headers, robots.txt
-netlify.toml      # Build settings and redirects
-```
-
-## Develop
-
-```bash
-npm install
-npm run dev       # http://localhost:4321
-npm run build     # outputs to dist/
-```
-
-**Stack:** Astro 5 · @astrojs/sitemap · Netlify
+**Deploys:** open a pull request to get a Netlify deploy preview. Merging to `main` publishes to production.
