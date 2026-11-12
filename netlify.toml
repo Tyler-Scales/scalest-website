@@ -1,12 +1,97 @@
+# scalestreet.com: plain static site, no build step.
+# In the GitHub repo this file sits at the repo root and the site files live in public/.
+# (tools/stage_repos.sh copies sites/scalestreet/ into that layout.)
+# These settings override the Netlify UI (which still says npm run build -> dist from the old Astro site).
 [build]
-  command = "npm run build"
-  publish = "dist"
+  publish = "public"
+  command = "echo 'Static site: no build step'"
 
-[build.environment]
-  NODE_VERSION = "20"
-
-# Upcoming Courses page removed — send old links to Training
+# ---------------------------------------------------------------------------
+# 301s from the old Astro site's URLs to their new homes.
+# Netlify matches with or without a trailing slash. First match wins.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "/strategy"
+  to = "/fractional-transformation-officer"
+  status = 301
+[[redirects]]
+  from = "/implementation"
+  to = "/fractional-transformation-officer"
+  status = 301
+[[redirects]]
+  from = "/training"
+  to = "/rural-community-health#training"
+  status = 301
+[[redirects]]
+  from = "/ambient-ai-training"
+  to = "/rural-community-health#ambient-ai-adoption"
+  status = 301
+[[redirects]]
+  from = "/general-ai-training"
+  to = "/rural-community-health#training"
+  status = 301
+[[redirects]]
+  from = "/microsoft-ai-training"
+  to = "/rural-community-health#training"
+  status = 301
 [[redirects]]
   from = "/courses"
-  to = "/training"
+  to = "/rural-community-health#training"
   status = 301
+[[redirects]]
+  from = "/government"
+  to = "/about#government"
+  status = 301
+[[redirects]]
+  from = "/speaking"
+  to = "https://www.tylerswallace.com/speaking"
+  status = 301
+[[redirects]]
+  from = "/sitemap-index.xml"
+  to = "/sitemap.xml"
+  status = 301
+[[redirects]]
+  from = "/sitemap-0.xml"
+  to = "/sitemap.xml"
+  status = 301
+[[redirects]]
+  from = "/admin/*"
+  to = "/"
+  status = 301
+
+# ---------------------------------------------------------------------------
+# Security headers. The CSP allows Google Fonts, the one inline script
+# (adds the "js" class; its hash is below), and form posts to this site
+# (Netlify Forms), and frames from app.netlify.com (the review toolbar Netlify adds to
+# deploy previews only). If that inline script ever changes, update the hash:
+#   printf "%s" "<script body>" | openssl dgst -sha256 -binary | base64
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src https://app.netlify.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# CSS and JS are linked with ?v=<content hash> (tools/sync.mjs), so they can be cached forever.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+# Images: give a replaced image a new filename, or browsers keep the old one for a year.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
